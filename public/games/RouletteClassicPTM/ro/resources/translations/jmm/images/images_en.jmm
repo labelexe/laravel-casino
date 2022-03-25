@@ -1,7 +1,0 @@
-{
-    "resources": {
-        "images": {
-            "neighbors": {"url": "../../translations/images/Neighbors_en.png", "preload": "main-scene"}
-        }
-    }
-}

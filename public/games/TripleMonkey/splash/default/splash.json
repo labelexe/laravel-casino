@@ -1,9 +1,0 @@
-{
-    "html": "splash.html",
-    "css": "splash.css",
-    "files": [
-        "images/logotext-spr.png:34.2",
-        "images/logo-spr.png"
-    ],
-    "duration": 2500
-}
