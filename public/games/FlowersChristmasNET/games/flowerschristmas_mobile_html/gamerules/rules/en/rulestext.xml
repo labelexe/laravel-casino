@@ -1,0 +1,242 @@
+﻿<defaults xml:lang="en">
+  <!-- English locale -->
+  <!-- 
+
+i plus auto-publish notes: 
+
+This XML file contains content for game flowerschristmas (Flowers Christmas Edition™)
+
+Publication of content generated at 09:28:12 (FLE Standard Time) on Thursday 21 March 2019.
+
+ -->
+  <ds Jurisdiction="*" name="advancedAutoplayOptionsHeading" id="advancedAutoplayOptionsHeading">Advanced Autoplay Options</ds>
+  <ds Jurisdiction="*" name="anyWinDesc" id="anyWinDesc">Stops Autoplay when you win in a round.</ds>
+  <ds Jurisdiction="*" name="c" id="c">(not available in all casinos).</ds>
+  <ds Jurisdiction="*" name="featuresNotAvailablePFF" id="featuresNotAvailablePFF">Some features may not be available in &lt;b&gt;PLAYING FOR FUN&lt;/b&gt; mode.</ds>
+  <ds Jurisdiction="Spain" name="freeSpinsAtActivatingRound" id="freeSpinsAtActivatingRound">Free Spins are played at the same bet as the round activating Free Spins.</ds>
+  <ds Jurisdiction="*" name="gameSettingIntro" id="gameSettingIntro">To access game settings, click the spanner icon in the game panel.</ds>
+  <ds Jurisdiction="*" name="gameSettingOptionsHeading" id="gameSettingOptionsHeading">Game Setting Options</ds>
+  <ds Jurisdiction="*" name="maxbetPlaysBetLevelCoinValue" id="maxbetPlaysBetLevelCoinValue">&lt;b&gt;MAX BET&lt;/b&gt; plays the game at the highest bet level and the pre-selected coin value.</ds>
+  <ds Jurisdiction="*" name="OBRTbetLevel" id="OBRTbetLevel">Stake level is the number of coins bet per line.</ds>
+  <ds Jurisdiction="*" name="OBRTbetLevelInstruction" id="OBRTbetLevelInstruction">The stake level is set using the &lt;b&gt;LEVEL&lt;/b&gt; selector.</ds>
+  <ds Jurisdiction="*" name="OBRTmaxbetPlaysNoBetLine" id="OBRTmaxbetPlaysNoBetLine">&lt;b&gt;MAX STAKE&lt;/b&gt; plays the game at the highest stake level and the pre-selected coin value.</ds>
+  <ds Jurisdiction="*" name="RTadditionalInformation" id="RTadditionalInformation">Additional Information</ds>
+  <ds Jurisdiction="*" name="RTadvancedAutoplayButton" id="RTadvancedAutoplayButton">To set advanced autoplay options click &lt;b&gt;AUTOPLAY&lt;/b&gt;, and then click &lt;b&gt;Advanced settings&lt;/b&gt;.</ds>
+  <ds Jurisdiction="*" name="RTadvancedAutoplayButtonRev" id="RTadvancedAutoplayButtonRev">To set advanced Autoplay settings click &lt;b&gt;AUTOPLAY&lt;/b&gt;, and then click &lt;b&gt;Advanced settings&lt;/b&gt;.</ds>
+  <ds Jurisdiction="*" name="RTAutoplayDisconnect" id="RTAutoplayDisconnect">&lt;b&gt;Note:&lt;/b&gt; If you are disconnected while playing, all Autoplay settings will return to default when you reload the game.</ds>
+  <ds Jurisdiction="*" name="RTautoplayGameTrans" id="RTautoplayGameTrans">&lt;b&gt;Note:&lt;/b&gt; When changing Autoplay settings during a game round or Free Spins, all settings will take effect once the game round or feature is completed.</ds>
+  <ds Jurisdiction="*" name="RTautoplayNote" id="RTautoplayNote">&lt;b&gt;Note:&lt;/b&gt; Some autoplay options are mandatory for some jurisdictions.</ds>
+  <ds Jurisdiction="*" name="RTautoPlays" id="RTautoPlays">&lt;b&gt;AUTOPLAY&lt;/b&gt; automatically plays the game for the selected number of rounds.</ds>
+  <ds Jurisdiction="*" name="RTautoplaySelectSpins" id="RTautoplaySelectSpins">Select the number of spins to Autoplay or view the Advanced Settings to configure stop Autoplay options.</ds>
+  <ds Jurisdiction="*" name="RTbetAnmountByMultiplier" id="RTbetAnmountByMultiplier">When 3 or more Free Spin symbols appear anywhere on the reels, the bet amount is multiplied by the bet multiplier.</ds>
+  <ds Jurisdiction="*" name="RTbetLevel" id="RTbetLevel">Bet level is the number of coins bet per bet line.</ds>
+  <ds Jurisdiction="*" name="RTbetLevelInstruction" id="RTbetLevelInstruction">The bet level is set using the &lt;b&gt;LEVEL&lt;/b&gt; selector.</ds>
+  <ds Jurisdiction="*" name="RTbetLevelInstructionVikings" id="RTbetLevelInstructionVikings">The bet level is set using the &lt;b&gt;LEVEL&lt;/b&gt; selector.</ds>
+  <ds Jurisdiction="*" name="RTbuttonTableHead" id="RTbuttonTableHead">Button</ds>
+  <ds Jurisdiction="*" name="RTCalcBetLineCoinNoMultiplierTransNew" id="RTCalcBetLineCoinNoMultiplierTransNew">A bet line win in coins is equal to the value shown in the Paytable multiplied by the bet level.</ds>
+  <ds Jurisdiction="*" name="RTcashDecreasesDescRev" id="RTcashDecreasesDescRev">Stops Autoplay if cash decreases by the amount you specify.</ds>
+  <ds Jurisdiction="*" name="RTcashIncreasesDescRev" id="RTcashIncreasesDescRev">Stops Autoplay if cash increases by the amount you specify.</ds>
+  <ds Jurisdiction="*" name="RTclickResetToClear" id="RTclickResetToClear">Click &lt;b&gt;Reset&lt;/b&gt; to clear all selected Stop Autoplay options.</ds>
+  <ds Jurisdiction="*" name="RTcoinsDisplayValuesNew" id="RTcoinsDisplayValuesNew">&lt;b&gt;COINS&lt;/b&gt; displays the number of coins available to wager.</ds>
+  <ds Jurisdiction="*" name="RTcoinValueInstruction" id="RTcoinValueInstruction">The coin value is set using the &lt;b&gt;COIN VALUE&lt;/b&gt; selector.</ds>
+  <ds Jurisdiction="*" name="RTcolHeadFSpinSyms" id="RTcolHeadFSpinSyms">Free Spins symbols*</ds>
+  <ds Jurisdiction="*" name="RTdoubleSymBetline3to10" id="RTdoubleSymBetline3to10">With Double symbols, a winning bet line can have from 3 to 10 symbols in total.</ds>
+  <ds Jurisdiction="*" name="RTdoubleSymbols" id="RTdoubleSymbols">Free Spin symbols and medium win symbols can be either single or Double symbols.</ds>
+  <ds Jurisdiction="*" name="RTdoubleSymsHeader" id="RTdoubleSymsHeader">Double symbols</ds>
+  <ds Jurisdiction="*" name="RTdoubleSymsOn23and4" id="RTdoubleSymsOn23and4">Double Free Spin symbols can appear on reels 2, 3 and 4.</ds>
+  <ds Jurisdiction="*" name="RTflowersChristmasIntro" id="RTflowersChristmasIntro">Flowers Christmas Edition™ is a 5-reel, 3-row video slot featuring Double symbols, Wild substitutions, and Free Spins with Stacked Wild symbols.</ds>
+  <ds Jurisdiction="*" name="RTflowersChristmasRulesHeading" id="RTflowersChristmasRulesHeading">Flowers Christmas Edition™ Game Rules</ds>
+  <ds Jurisdiction="*" name="RTflowersChristmasTouchIntro" id="RTflowersChristmasTouchIntro">Flowers Christmas Edition Touch™ is a 5-reel, 3-row video slot featuring Double symbols, Wild substitutions and Free Spins with Stacked Wild symbols.</ds>
+  <ds Jurisdiction="*" name="RTflowersIntro" id="RTflowersIntro">Flowers™ is a 5-reel, 3-row video slot featuring Double symbols, Wild substitutions, and Free Spins with Stacked Wild symbols.</ds>
+  <ds Jurisdiction="*" name="RTflowersRulesHeading" id="RTflowersRulesHeading">Flowers™ Game Rules</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinIsScatter" id="RTfreeSpinIsScatter">The Free Spin symbol is a Scatter symbol.</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinMultiplierTable" id="RTfreeSpinMultiplierTable">The bet that activates Free Spins is multiplied according to the table based on the number of Free Spin symbols. This amount is added to any bet line wins on that spin.</ds>
+  <ds Jurisdiction="*" name="RTfreeSpins4retrigger" id="RTfreeSpins4retrigger">In Free Spins, 4 or more Free Spin symbols appearing anywhere on the reels activate additional Free Spins.</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinsWins3x" id="RTfreeSpinsWins3x">Free Spins wins are x3.</ds>
+  <ds Jurisdiction="*" name="RTFreeSpinsWinsAdded" id="RTFreeSpinsWinsAdded">Free Spin wins are added to any bet line wins.</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinswithStackWildHead" id="RTfreeSpinswithStackWildHead">Free Spins with Stacked Wild</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinsWonDescRev" id="RTfreeSpinsWonDescRev">Stops Autoplay when Free Spins is won.</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinsWonStop" id="RTfreeSpinsWonStop">Stops Autoplay if Free Spins is won.</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinsWonStopCrosstown" id="RTfreeSpinsWonStopCrosstown">Stops Autoplay if Crosstown Traffic Free Spins is won.</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinsWonStopLittleWing" id="RTfreeSpinsWonStopLittleWing">Stops Autoplay if Little WIng Free Spins is won.</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinsWonStopPurpleHaze" id="RTfreeSpinsWonStopPurpleHaze">Stops Autoplay if Purple Haze Free Spins is won.</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinSymActivates" id="RTfreeSpinSymActivates">4 or more Free Spin symbols appearing anywhere on the reels activate Free Spins.</ds>
+  <ds Jurisdiction="*" name="RTfreeSpinWinsAdded" id="RTfreeSpinWinsAdded">Any Free Spins won are automatically added to the current Free Spins.</ds>
+  <ds Jurisdiction="*" name="RTfunctionTableHead" id="RTfunctionTableHead">Function</ds>
+  <ds Jurisdiction="*" name="RTGameHistNoPlayForFun" id="RTGameHistNoPlayForFun">(not available when &lt;b&gt;PLAYING FOR FUN&lt;/b&gt;).</ds>
+  <ds Jurisdiction="*" name="RTgameHistoryDesc" id="RTgameHistoryDesc">Click to view your latest game history</ds>
+  <ds Jurisdiction="*" name="RTgameRulesHeadingFlowersTouchChristmas" id="RTgameRulesHeadingFlowersTouchChristmas">Flowers Christmas Edition Touch™ Game Rules</ds>
+  <ds Jurisdiction="Italy" name="RTgameSessions2" id="RTgameSessions2">The time after which inactive game sessions automatically end.</ds>
+  <ds Jurisdiction="Afghanistan" name="RTifCrosstownTrafficFreeSpins" id="RTifCrosstownTrafficFreeSpins">&lt;b&gt;If Crosstown Traffic Free Spins is won.&lt;/b&gt;</ds>
+  <ds Jurisdiction="Afghanistan" name="RTifFreeSpinsIsStarted" id="RTifFreeSpinsIsStarted">&lt;b&gt;If Free Spins is won.&lt;/b&gt;</ds>
+  <ds Jurisdiction="Afghanistan" name="RTifLittleWingFreeSpins" id="RTifLittleWingFreeSpins">&lt;b&gt;If Little Wing Free Spins is won.&lt;/b&gt;</ds>
+  <ds Jurisdiction="United States of America" name="RTifPurpleHazeFreeSpins" id="RTifPurpleHazeFreeSpins">&lt;b&gt;If Purple Haze Free Spins is won.&lt;/b&gt;</ds>
+  <ds Jurisdiction="*" name="RTinformationIconButtonDesc" id="RTinformationIconButtonDesc">Click to view the Paytable.</ds>
+  <ds Jurisdiction="*" name="RTinformationIconButtonDescJimi" id="RTinformationIconButtonDescJimi">Click to view the &lt;b&gt;PAYTABLE&lt;/b&gt;.</ds>
+  <ds Jurisdiction="*" name="RTintroOffRev" id="RTintroOffRev">Turns the intro screen on or off.</ds>
+  <ds Jurisdiction="Italy" name="RTmalfunction" id="RTmalfunction">In the event of malfunction of the gaming hardware/software, all affected game bets and payouts are rendered void and all affected bets refunded.</ds>
+  <ds Jurisdiction="*" name="RTMG30LinesDiffLevels" id="RTMG30LinesDiffLevels">You can play 30 fixed bet lines at different bet levels and coin values.</ds>
+  <ds Jurisdiction="*" name="RTMGadditionalInformation" id="RTMGadditionalInformation">Additional Information</ds>
+  <ds Jurisdiction="*" name="RTMGautoOptions" id="RTMGautoOptions">Drag or tap the slider to enable autoplay to set the autoplay options and the number of rounds. Autoplay plays the game for the selected number of spins.</ds>
+  <ds Jurisdiction="*" name="RTMGautoplayDisconnect" id="RTMGautoplayDisconnect">&lt;b&gt;Note:&lt;/b&gt; If you are disconnected while playing, all Autoplay settings will return to default when you reload the game.</ds>
+  <ds Jurisdiction="*" name="RTMGautoplayPanelLabel" id="RTMGautoplayPanelLabel">Autoplay</ds>
+  <ds Jurisdiction="*" name="RTMGautoplayPutOnOffRevNew" id="RTMGautoplayPutOnOffRevNew">Drag or tap the slider to enable Autoplay and set the number of rounds. Autoplay plays the game for the selected number of spins.</ds>
+  <ds Jurisdiction="*" name="RTMGautoplayQuickSpinHeading" id="RTMGautoplayQuickSpinHeading">Autoplay and Quick Spin</ds>
+  <ds Jurisdiction="*" name="RTMGAutoplaySpins" id="RTMGAutoplaySpins">The number of spins selected is displayed on the button.</ds>
+  <ds Jurisdiction="*" name="RTMGautoplayUI" id="RTMGautoplayUI">Tap to turn Autoplay on or off without going to the settings menu. Sets 50  rounds by default.</ds>
+  <ds Jurisdiction="*" name="RTMGback" id="RTMGback">Back</ds>
+  <ds Jurisdiction="*" name="RTMGbackMainGame" id="RTMGbackMainGame">Tap to go back to the main game.</ds>
+  <ds Jurisdiction="*" name="RTMGbetInCash" id="RTMGbetInCash">Bet in cash</ds>
+  <ds Jurisdiction="*" name="RTMGbetInCoins" id="RTMGbetInCoins">Bet in coins</ds>
+  <ds Jurisdiction="*" name="RTMGbetlevel" id="RTMGbetlevel">Bet level</ds>
+  <ds Jurisdiction="*" name="RTMGbetLevelInstruction" id="RTMGbetLevelInstruction">The bet level is set using the &lt;b&gt;Bet level&lt;/b&gt; selector.</ds>
+  <ds Jurisdiction="*" name="RTMGBetLineWinsLeftRight" id="RTMGBetLineWinsLeftRight">Bet lines win if the winning symbols are in succession from the leftmost reel to right. </ds>
+  <ds Jurisdiction="*" name="RTMGbuttonsMainGame" id="RTMGbuttonsMainGame">Main Game</ds>
+  <ds Jurisdiction="*" name="RTMGcoinvalue" id="RTMGcoinvalue">Coin value</ds>
+  <ds Jurisdiction="*" name="RTMGcoinValueInstruction" id="RTMGcoinValueInstruction">The coin value is set using the COIN VALUE selector.</ds>
+  <ds Jurisdiction="*" name="RTMGdisableAutoplay" id="RTMGdisableAutoplay">Tap to disable Autoplay, if Free Spins is won before the set number of autoplay rounds.</ds>
+  <ds Jurisdiction="*" name="RTMGdisableAutoplayPickClick" id="RTMGdisableAutoplayPickClick">Tap to disable Autoplay, if Pick and Click is won before the set number of autoplay rounds.</ds>
+  <ds Jurisdiction="*" name="RTMGdoubleCountsAs2" id="RTMGdoubleCountsAs2">Double symbols count as 2 single symbols.</ds>
+  <ds Jurisdiction="*" name="RTMGdoubleScatters" id="RTMGdoubleScatters">Free Spin symbols can appear as single or Double symbols.</ds>
+  <ds Jurisdiction="*" name="RTMGdoubleSymBetline10" id="RTMGdoubleSymBetline10">With Double symbols, a winning bet line can have from 3 to 10 symbols in total.</ds>
+  <ds Jurisdiction="*" name="RTMGdoubleSymbols" id="RTMGdoubleSymbols">Free Spin symbols and medium win symbols can be either single or Double symbols.</ds>
+  <ds Jurisdiction="*" name="RTMGdoubleSymsHeader" id="RTMGdoubleSymsHeader">Double Symbols</ds>
+  <ds Jurisdiction="*" name="RTMGdoubleSymsOn23and4" id="RTMGdoubleSymsOn23and4">Double Free Spin symbols can appear on reels 2, 3 and 4.</ds>
+  <ds Jurisdiction="*" name="RTMGexit" id="RTMGexit">Exit</ds>
+  <ds Jurisdiction="*" name="RTMGextraFreeSpinWinsAdded" id="RTMGextraFreeSpinWinsAdded">Extra Free Spins won are automatically added to the current Free Spins.</ds>
+  <ds Jurisdiction="*" name="RTMGflowersIntro" id="RTMGflowersIntro">Flowers Touch™ is a 5-reel, 3-row video slot featuring Double symbols, Wild substitutions and Free Spins with Stacked Wild symbols.</ds>
+  <ds Jurisdiction="*" name="RTMGfreeSpin4retriggerRev" id="RTMGfreeSpin4retriggerRev">In Free Spins, 4 or more Free Spin symbols anywhere on the reels activate additional Free Spins.</ds>
+  <ds Jurisdiction="*" name="RTMGfreeSpinIsScatter" id="RTMGfreeSpinIsScatter">The Free Spin symbol is a Scatter symbol.</ds>
+  <ds Jurisdiction="*" name="RTMGfreeSpinsActivatingRound" id="RTMGfreeSpinsActivatingRound">Free Spins are played at the same bet as the round activating Free Spins.</ds>
+  <ds Jurisdiction="*" name="RTMGfreeSpinsWinsAdded" id="RTMGfreeSpinsWinsAdded">Free Spins wins are added to any bet line wins.</ds>
+  <ds Jurisdiction="*" name="RTMGfreeSpinswithStackWildHead" id="RTMGfreeSpinswithStackWildHead">Free Spins with Stacked Wild</ds>
+  <ds Jurisdiction="*" name="RTMGfreeSpinSymActivates" id="RTMGfreeSpinSymActivates">4 or more Free Spin symbols appearing anywhere on the reels activate Free Spins.</ds>
+  <ds Jurisdiction="*" name="RTMGgameHistoryDesc" id="RTMGgameHistoryDesc">Tap to view your latest game history.</ds>
+  <ds Jurisdiction="*" name="RTMGgameHistoryHeading" id="RTMGgameHistoryHeading">Game History</ds>
+  <ds Jurisdiction="*" name="RTMGgameRules" id="RTMGgameRules">Game Rules</ds>
+  <ds Jurisdiction="*" name="RTMGgameRulesHeadingFlowers" id="RTMGgameRulesHeadingFlowers">Flowers Touch™ Game Rules</ds>
+  <ds Jurisdiction="*" name="RTMGgameSessions2" id="RTMGgameSessions2">The time after which inactive game sessions automatically end.</ds>
+  <ds Jurisdiction="*" name="RTMGgameSettingIntroDevNew" id="RTMGgameSettingIntroDevNew">Tap to access the game settings and game information.</ds>
+  <ds Jurisdiction="*" name="RTMGgameSettings" id="RTMGgameSettings">Game Settings and Game Information</ds>
+  <ds Jurisdiction="*" name="RTMGhistoryNotAvailable" id="RTMGhistoryNotAvailable">The game history is available only when playing for money.</ds>
+  <ds Jurisdiction="*" name="RTMGjimiwinCalculationBetLinesCoinsNoMultiplier" id="RTMGjimiwinCalculationBetLinesCoinsNoMultiplier">A bet line win in coins is equal to the value shown in the &lt;b&gt;Paytable&lt;/b&gt; multiplied by the bet level.</ds>
+  <ds Jurisdiction="*" name="RTMGleaveGame" id="RTMGleaveGame">Tap to leave the game.</ds>
+  <ds Jurisdiction="*" name="RTMGleftHandMode" id="RTMGleftHandMode">Left Hand Mode</ds>
+  <ds Jurisdiction="*" name="RTMGmalfunction" id="RTMGmalfunction">In the event of malfunction of the gaming hardware/software, all affected game bets and payouts are rendered void and all affected bets refunded.</ds>
+  <ds Jurisdiction="*" name="RTMGmultiplier3ExcludesScatterWins" id="RTMGmultiplier3ExcludesScatterWins">Bet line wins are tripled in Free Spins, excluding additional Free Spins won.</ds>
+  <ds Jurisdiction="*" name="RTMGnoAutoplayLeft" id="RTMGnoAutoplayLeft">The number of spins remaining is displayed on the button.</ds>
+  <ds Jurisdiction="*" name="RTMGnoMultiRetrig" id="RTMGnoMultiRetrig">Additional Free Spins won are not multiplied by the Free Spins multiplier.</ds>
+  <ds Jurisdiction="*" name="RTMGpaytable" id="RTMGpaytable">Paytable</ds>
+  <ds Jurisdiction="*" name="RTMGpaytableHighest" id="RTMGpaytableHighest">Only the highest win per active bet line is paid.</ds>
+  <ds Jurisdiction="*" name="RTMGpaytableJimi" id="RTMGpaytableJimi">Paytable</ds>
+  <ds Jurisdiction="*" name="RTMGplay30differentLevelsCoins" id="RTMGplay30differentLevelsCoins">You can play 30 bet lines at different bet levels and coin values.</ds>
+  <ds Jurisdiction="*" name="RTMGquickSettings" id="RTMGquickSettings">Quick settings menu</ds>
+  <ds Jurisdiction="*" name="RTMGquickSettingsMenu" id="RTMGquickSettingsMenu">Tap the plus sign to access the Quick settings menu.</ds>
+  <ds Jurisdiction="*" name="RTMGquickSpin" id="RTMGquickSpin">Quick Spin</ds>
+  <ds Jurisdiction="*" name="RTMGquickSpinGameSetting" id="RTMGquickSpinGameSetting">Quick spin</ds>
+  <ds Jurisdiction="*" name="RTMGquickSpinUI" id="RTMGquickSpinUI">Tap to turn Quick spin on or off without going to the settings menu.</ds>
+  <ds Jurisdiction="*" name="RTMGquickStop" id="RTMGquickStop">Quick Stop</ds>
+  <ds Jurisdiction="*" name="RTMGreferWebSite" id="RTMGreferWebSite">The following game features and settings may be subject to the terms and conditions of the gaming site. For more information on the following, refer to the gaming website:</ds>
+  <ds Jurisdiction="*" name="RTMGreturnToPlayer" id="RTMGreturnToPlayer">&lt;b&gt;Return to Player&lt;/b&gt;</ds>
+  <ds Jurisdiction="*" name="RTMGselectBetLevelRevNew" id="RTMGselectBetLevelRevNew">Drag or tap the slider to select the number of coins to bet per bet line.</ds>
+  <ds Jurisdiction="*" name="RTMGselectCoinValueRevNew" id="RTMGselectCoinValueRevNew">Drag or tap the slider to select the coin value.</ds>
+  <ds Jurisdiction="*" name="RTMGsettingsDisclaimer" id="RTMGsettingsDisclaimer">&lt;b&gt;Note:&lt;/b&gt; Some operators may not offer all of the listed game settings.</ds>
+  <ds Jurisdiction="*" name="RTMGshowsBetCoins" id="RTMGshowsBetCoins">Shows your bet amount in coins.</ds>
+  <ds Jurisdiction="*" name="RTMGshowsBetCurrency" id="RTMGshowsBetCurrency">Shows your bet amount in selected currency.</ds>
+  <ds Jurisdiction="*" name="RTMGsimultaneousWinsAdded" id="RTMGsimultaneousWinsAdded">Simultaneous wins on different bet lines are added.</ds>
+  <ds Jurisdiction="*" name="RTMGsoundOnOffRev" id="RTMGsoundOnOffRev">Tap the switch to turn sounds on or off.</ds>
+  <ds Jurisdiction="*" name="RTMGsounds" id="RTMGsounds">Game Sounds</ds>
+  <ds Jurisdiction="*" name="RTMGsoundSettings" id="RTMGsoundSettings">Sound Settings</ds>
+  <ds Jurisdiction="Anguilla" name="RTMGsoundSettingsUI" id="RTMGsoundSettingsUI">Tap to turn Sound on or off without going to the settings menu.</ds>
+  <ds Jurisdiction="*" name="RTMGspinButton" id="RTMGspinButton">Spin Button</ds>
+  <ds Jurisdiction="*" name="RTMGspinButtonLeft" id="RTMGspinButtonLeft">Tap to turn the left hand mode on or off.</ds>
+  <ds Jurisdiction="*" name="RTMGspinSettingsRev" id="RTMGspinSettingsRev">Spin Settings</ds>
+  <ds Jurisdiction="*" name="RTMGstartAutoplay" id="RTMGstartAutoplay">Tap to start Autoplay.</ds>
+  <ds Jurisdiction="*" name="RTMGstartQuickSpin" id="RTMGstartQuickSpin">Tap to start Quick spin.</ds>
+  <ds Jurisdiction="*" name="RTMGstopAutoplay" id="RTMGstopAutoplay">Tap to stop Autoplay.</ds>
+  <ds Jurisdiction="*" name="RTMGstopAutoplayOnOff" id="RTMGstopAutoplayOnOff">Stop Autoplay</ds>
+  <ds Jurisdiction="*" name="RTMGstopIfFreeSpins" id="RTMGstopIfFreeSpins">Stop if Free Spins is won</ds>
+  <ds Jurisdiction="*" name="RTMGtapDuringSpin" id="RTMGtapDuringSpin">Tap the game area during a spin to stop the reels.</ds>
+  <ds Jurisdiction="*" name="RTMGtapOnOffRev" id="RTMGtapOnOffRev">Tap the switch to turn Quick spin on or off.</ds>
+  <ds Jurisdiction="*" name="RTMGtapSpinButtonRev" id="RTMGtapSpinButtonRev">Tap to start playing at the current bet lines, bet level and coin value.</ds>
+  <ds Jurisdiction="*" name="RTMGtheoreticalReturn" id="RTMGtheoreticalReturn">The theoretical return to player for this game is</ds>
+  <ds Jurisdiction="*" name="RTMGtotalSymsBetlineWins" id="RTMGtotalSymsBetlineWins">Wins are determined by the total number of symbols appearing on a bet line.</ds>
+  <ds Jurisdiction="*" name="RTMGtouchMainGameNew" id="RTMGtouchMainGameNew">In landscape mode, touch the game area to hide the Spin button.</ds>
+  <ds Jurisdiction="*" name="RTMGunfinishedGameSession2" id="RTMGunfinishedGameSession2">The procedures used to manage unfinished game rounds.</ds>
+  <ds Jurisdiction="*" name="RTMGviewGamesRules" id="RTMGviewGamesRules">Tap to view the game rules.</ds>
+  <ds Jurisdiction="*" name="RTMGwildSubDoublesymAsSingleSym" id="RTMGwildSubDoublesymAsSingleSym">Wild symbols substituting Double symbols pay the value of a single symbol when appearing on a winning line.</ds>
+  <ds Jurisdiction="*" name="RTMGwildsubstitutesDouble" id="RTMGwildsubstitutesDouble">Wild symbol substitutes for all symbols except Free Spin and Double symbols.</ds>
+  <ds Jurisdiction="*" name="RTMGwildsubstitutesSingel" id="RTMGwildsubstitutesSingel">Wild symbol can count as a single symbol only.</ds>
+  <ds Jurisdiction="*" name="RTMGwinCalculationBetLinesCoinsNoMultiplier" id="RTMGwinCalculationBetLinesCoinsNoMultiplier">A bet line win in coins is equal to the value shown in the &lt;b&gt;Paytable&lt;/b&gt; multiplied by the bet level.</ds>
+  <ds Jurisdiction="*" name="RTMGwinCalculationBetLinesCurrency" id="RTMGwinCalculationBetLinesCurrency">A bet line win in currency is equal to the win in coins multiplied by the coin value.</ds>
+  <ds Jurisdiction="*" name="RTMGwinComb" id="RTMGwinComb">Tap to view winning combinations and payouts.</ds>
+  <ds Jurisdiction="*" name="RTMGwinCombinations" id="RTMGwinCombinations">Winning combinations and payouts are made according to the &lt;b&gt;Paytable&lt;/b&gt;.</ds>
+  <ds Jurisdiction="*" name="RTMGwinSelectedLineExceptFS" id="RTMGwinSelectedLineExceptFS">All wins pay on selected bet lines only, except for wins with Free Spin symbols.</ds>
+  <ds Jurisdiction="*" name="RTmuteSoundSliderRev" id="RTmuteSoundSliderRev">Click to mute the game sounds or use the slider to adjust the sound volume.</ds>
+  <ds Jurisdiction="*" name="RTnoMultiRetrig" id="RTnoMultiRetrig">Additional Free Spins won are not multiplied by the Free Spins multiplier.</ds>
+  <ds Jurisdiction="*" name="RTOBspinPlaysCoinValueBetLevel" id="RTOBspinPlaysCoinValueBetLevel">The spin button plays the game at the current coin value and stake level.</ds>
+  <ds Jurisdiction="*" name="RTOBwinCalculationBetLinesCoinsNoMultiplier" id="RTOBwinCalculationBetLinesCoinsNoMultiplier">A line win in coins is equal to the value shown in the &lt;b&gt;PAYTABLE&lt;/b&gt; multiplied by the stake level.</ds>
+  <ds Jurisdiction="*" name="RTopenAutoplayMenu" id="RTopenAutoplayMenu">Click to view the Autoplay settings menu and play the game automatically.</ds>
+  <ds Jurisdiction="*" name="RTopenGameRules" id="RTopenGameRules">Click to open the game rules.</ds>
+  <ds Jurisdiction="*" name="RTopenSettingsMenu" id="RTopenSettingsMenu">Click to view the game settings menu and select game options. Refer to Game Settings section below.</ds>
+  <ds Jurisdiction="*" name="RTpaytableButtonsDescRev" id="RTpaytableButtonsDescRev">Click the arrows pointing to the left or right to scroll through the Paytable pages. Click the center button to return to the game.</ds>
+  <ds Jurisdiction="*" name="RTpickandClickWonStop" id="RTpickandClickWonStop">Stops Autoplay if Pick and Click is won.</ds>
+  <ds Jurisdiction="*" name="RTquickSpinDescRev" id="RTquickSpinDescRev">Turns the Quick spin option on or off</ds>
+  <ds Jurisdiction="*" name="RTquickSpinDisclaimer" id="RTquickSpinDisclaimer">(not available in all casinos).</ds>
+  <ds Jurisdiction="Italy" name="RTreferWebSite" id="RTreferWebSite">The following game features and settings may be subject to the terms and conditions of the gaming site. For more information on the following, refer to the gaming website:</ds>
+  <ds Jurisdiction="*" name="RTreturnToPlayer" id="RTreturnToPlayer">Return to Player</ds>
+  <ds Jurisdiction="*" name="RTrulesGenerated" id="RTrulesGenerated">Game rules generated:</ds>
+  <ds Jurisdiction="*" name="RTsetBetLevel" id="RTsetBetLevel">The bet level is set using the &lt;b&gt;BET LEVEL&lt;/b&gt; selector.</ds>
+  <ds Jurisdiction="*" name="RTsettingListIntroScreenREV" id="RTsettingListIntroScreenREV">Intro Screen</ds>
+  <ds Jurisdiction="*" name="RTsettingListQuickSpin" id="RTsettingListQuickSpin">Quick Spin</ds>
+  <ds Jurisdiction="*" name="RTsingleWinDescRev" id="RTsingleWinDescRev">Stops Autoplay when the amount you win exceeds or equals the amount you specify.</ds>
+  <ds Jurisdiction="*" name="RTsoundButton" id="RTsoundButton">&lt;b&gt;Sound&lt;/b&gt;</ds>
+  <ds Jurisdiction="*" name="RTspacebarspin" id="RTspacebarspin">Turns the spacebar function on or off.</ds>
+  <ds Jurisdiction="*" name="RTstackedWildFSNew" id="RTstackedWildFSNew">Stacked Wild symbols can only appear in Free Spins and substitute for all symbols, except Free Spin and Double symbols.</ds>
+  <ds Jurisdiction="*" name="RTtablePlayLangThnEng" id="RTtablePlayLangThnEng">&lt;b&gt;Note&lt;/b&gt;: The following table is only applicable if you are playing in a language other than English.</ds>
+  <ds Jurisdiction="Italy" name="RTtheoreticalReturn" id="RTtheoreticalReturn">The theoretical return to player for this game is</ds>
+  <ds Jurisdiction="*" name="RTtotalSymsBetlineWins" id="RTtotalSymsBetlineWins">Wins are determined by the total number of symbols appearing on a bet line.</ds>
+  <ds Jurisdiction="*" name="RTtransGameTerms" id="RTtransGameTerms">Translations of Game Terminology</ds>
+  <ds Jurisdiction="*" name="RTtripleWinsExceptFS" id="RTtripleWinsExceptFS">Bet line wins are tripled in Free Spins, excluding additional Free Spins won.</ds>
+  <ds Jurisdiction="Italy" name="RTunfinishedGameSession2" id="RTunfinishedGameSession2">The procedures used to manage unfinished game rounds.</ds>
+  <ds Jurisdiction="*" name="RTwildSubDoublesymAsSingleSym" id="RTwildSubDoublesymAsSingleSym">Wild symbols substituting Double symbols pay the value of a single symbol when appearing on a winning line.</ds>
+  <ds Jurisdiction="*" name="RTwildSubstitutesDouble" id="RTwildSubstitutesDouble">Wild symbol substitutes for all symbols except Free Spin and Double symbols.</ds>
+  <ds Jurisdiction="*" name="RTwinCalculationBetLinesCoinsNoMultiplierTrans" id="RTwinCalculationBetLinesCoinsNoMultiplierTrans">A bet line win in coins is equal to the value shown on the &lt;b&gt;PAYTABLE&lt;/b&gt; multiplied by the bet level.</ds>
+  <ds Jurisdiction="*" name="RTwinCalculationBetLinesCurrency" id="RTwinCalculationBetLinesCurrency">A bet line win in currency is equal to the win in coins multiplied by the coin value.</ds>
+  <ds Jurisdiction="*" name="RTwinCalculationWinMatchCurrency" id="RTwinCalculationWinMatchCurrency">A win match win in currency is equal to the win in coins multiplied by the coin value.</ds>
+  <ds Jurisdiction="*" name="RTwinningCombinationsPaytable" id="RTwinningCombinationsPaytable">Winning combinations and payouts are made according to the &lt;b&gt;PAYTABLE&lt;/b&gt;.</ds>
+  <ds Jurisdiction="*" name="RTwinSelectedLineExceptFS" id="RTwinSelectedLineExceptFS">All wins pay on selected bet lines only, except for wins with Free Spin symbols.</ds>
+  <ds Jurisdiction="*" name="simultaneousWinsAdded" id="simultaneousWinsAdded">Simultaneous wins on different bet lines are added.</ds>
+  <ds Jurisdiction="*" name="singleWinDesc" id="singleWinDesc">Stop Autoplay when the amount you win exceeds or equals the amount you specify.</ds>
+  <ds Jurisdiction="*" name="soundButtonNoBold" id="soundButtonNoBold">Sound</ds>
+  <ds Jurisdiction="*" name="spinPlaysCoinValueBetLevel" id="spinPlaysCoinValueBetLevel">The spin button plays the game at the current coin value and bet level.</ds>
+  <ds Jurisdiction="*" name="termDouble" id="termDouble">Double</ds>
+  <ds Jurisdiction="*" name="termDoubleFreeSpins" id="termDoubleFreeSpins">Double Free Spins</ds>
+  <ds Jurisdiction="*" name="termEnglish" id="termEnglish">English Term</ds>
+  <ds Jurisdiction="*" name="termFreeSpins" id="termFreeSpins">Free Spins</ds>
+  <ds Jurisdiction="*" name="termMultiplier" id="termMultiplier">Multiplier</ds>
+  <ds Jurisdiction="*" name="termScatter" id="termScatter">Scatter</ds>
+  <ds Jurisdiction="*" name="termSingle" id="termSingle">Single</ds>
+  <ds Jurisdiction="*" name="termStackedWild" id="termStackedWild">Stacked Wild</ds>
+  <ds Jurisdiction="*" name="termTranslatedTerm" id="termTranslatedTerm">Translated Term</ds>
+  <ds Jurisdiction="*" name="termWild" id="termWild">Wild</ds>
+  <ds Jurisdiction="*" name="RTautoplayDuringGameRev" id="RTautoplayDuringGameRev">&lt;b&gt;Note:&lt;/b&gt; When changing Autoplay settings during a game round, all settings will take effect once the game round or feature is completed.</ds>
+  <!-- Content below is applicable to all games (from the _all mapping) -->
+  <ds Jurisdiction="*" name="featuresNotAvailablePFF" id="featuresNotAvailablePFF">Some features may not be available in &lt;b&gt;PLAYING FOR FUN&lt;/b&gt; mode.</ds>
+  <ds Jurisdiction="*" name="RTadditionalInformation" id="RTadditionalInformation">Additional Information</ds>
+  <ds Jurisdiction="*" name="RTadvancedAutoplayButtonSettings" id="RTadvancedAutoplayButtonSettings">To set advanced autoplay settings click &lt;b&gt;AUTOPLAY&lt;/b&gt;, and then click &lt;b&gt;Advanced settings&lt;/b&gt;.</ds>
+  <ds Jurisdiction="*" name="RTadvancedAutoplaySettings" id="RTadvancedAutoplaySettings">Advanced Autoplay Settings</ds>
+  <ds Jurisdiction="*" name="RTautoplayNote" id="RTautoplayNote">&lt;b&gt;Note:&lt;/b&gt; Some autoplay options are mandatory for some jurisdictions.</ds>
+  <ds Jurisdiction="*" name="RTgameFunctionsHeading" id="RTgameFunctionsHeading">Game Functions</ds>
+  <ds Jurisdiction="*" name="RTMGautoSettings" id="RTMGautoSettings">Drag or tap the slider to enable Autoplay to set the autoplay settings and the number of rounds. Autoplay plays the game for the selected number of spins.</ds>
+  <ds Jurisdiction="*" name="RTMGmenu" id="RTMGmenu">Menu</ds>
+  <ds Jurisdiction="*" name="RTsingleWinDescRevNew" id="RTsingleWinDescRevNew">Stops Autoplay when the amount you win exceeds or equals the amount you specify.</ds>
+  <ds Jurisdiction="*" name="RTstartGameRound" id="RTstartGameRound">Click to start a game round at the current bet level and coin value (alternatively, press the spacebar).</ds>
+  <ds Jurisdiction="*" name="RTtableDescribes" id="RTtableDescribes">The table below lists the different buttons found in the game and describes their functions.</ds>
+  <ds Jurisdiction="*" name="RTtablePlayLangThnEng" id="RTtablePlayLangThnEng">&lt;b&gt;Note&lt;/b&gt;: The following table is only applicable if you are playing in a language other than English.</ds>
+  <ds Jurisdiction="*" name="RTtransGameTerms" id="RTtransGameTerms">Translations of Game Terminology</ds>
+  <ds Jurisdiction="*" name="termEnglish" id="termEnglish">English Term</ds>
+  <ds Jurisdiction="*" name="termTranslatedTerm" id="termTranslatedTerm">Translated Term</ds>
+  <ds Jurisdiction="*" name="RTautoplayNoteSettings" id="RTautoplayNoteSettings">&lt;b&gt;Note:&lt;/b&gt; Some Autoplay settings are mandatory for some jurisdictions.</ds>
+  <ds Jurisdiction="*" name="RTclickResetToClearSettings" id="RTclickResetToClearSettings">Click &lt;b&gt;Reset&lt;/b&gt; to clear all selected Stop Autoplay settings.</ds>
+</defaults>

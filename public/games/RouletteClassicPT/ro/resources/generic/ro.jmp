@@ -1,0 +1,40 @@
+{
+    "modules": {
+        "default": {
+            "window":{
+                "pos": "center",
+                "size": [1136, 640]
+            },
+
+            "jmms": [
+                "coins.jmm",
+                "roulette/common/config.jmm",
+                "roulette/common/controls.jmm",
+                "roulette/common/scroll_paytable.jmm",
+                "config.jmm",
+                "resources.jmm",
+                "ball.jmm",
+                "ball_sprite.jmm",
+                "roulette/common/ui_desktop.jmm",
+                "roulette/common/ui_tab.jmm",
+                "desktop/scene.jmm",
+                "desktop/tables.jmm",
+                "widgets.jmm",
+                "brand.jmm"
+            ],
+
+            "localizedBrandedJmms": [
+                "../../translations/jmm/roulette/common/controls_en.jmm",
+                "../../translations/jmm/images/images_en.jmm",
+                "../../translations/jmm/roulette/common/texts/texts_en.jmm",
+                "../../translations/jmm/texts/texts_en.jmm",
+                "../../translations/jmm/media/media_en.jmm"
+            ],
+
+			"branding": [
+                "slot/common/branding/brand.jmm",
+                "slot/common/branding/desktop-brand.jmm"
+            ]
+        }
+    }
+}

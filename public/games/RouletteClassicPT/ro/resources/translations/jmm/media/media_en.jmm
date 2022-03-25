@@ -1,0 +1,74 @@
+{
+    "resources": {
+
+        "audio": {
+            "pools": {
+                "sfx":      {"url": {"audio/mpeg": "../../translations/media/ro_desktop_en.mp3"},       "polyphony": 5},
+                "ambient":  {"url": {"audio/mpeg": "../../translations/media/ro_desktop_en.mp3"},       "polyphony": 1},
+                "ball":     {"url": {"audio/mpeg": "../../translations/media/ro_desktop_en.mp3"},       "polyphony": 2}
+            },
+
+            "sounds": {
+                "ambient":                {"frame": [  2000, 17780], "mono": "ignore", "pool": "ambient"},
+                "ball_circle":            {"frame": [ 20380,  8466], "mono": "skip", "pool": "ball", "type": "fade-soundtrack", "fade_out": 900, "fade_in": 0},
+                "ball_stop_0":            {"frame": [ 28546,  1823], "mono": "skip", "pool": "ball"},
+                "ball_stop_1":            {"frame": [ 30200,  2001], "mono": "skip", "pool": "ball"},
+                "ball_stop_2":            {"frame": [ 32000,  1734], "mono": "skip", "pool": "ball"},
+                "ball_stop_3":            {"frame": [ 33534,  2417], "mono": "skip", "pool": "ball"},
+                "ball_stop_4":            {"frame": [ 35571,  2399], "mono": "skip", "pool": "ball"},
+                "ball_stop_5":            {"frame": [ 37770,  1669], "mono": "skip", "pool": "ball"},
+
+                "chip_on_table":          {"frame": [131376,   476], "mono": "skip"},
+                "chip_on_chip":           {"frame": [130834,   417], "mono": "force"},
+                "Spin_button":            {"frame": [124445,   392], "mono": "force"},
+                "select_chip":            {"frame": [125038,   454], "mono": "skip"},
+                "autoplay_slide_in":      {"frame": [125792,   615], "mono": "skip"},
+                "autoplay_slide_out":     {"frame": [126707,   585], "mono": "skip"},
+                "autoplay_start":         {"frame": [127593,   717], "mono": "skip"},
+                "autoplay_stop":          {"frame": [128610,   774], "mono": "skip"},
+                "max_bet":                {"frame": [129684,   426], "mono": "force"},
+                "button_click":           {"frame": [130310,   399], "mono": "force"},
+                "num_0":                  {"frame": [ 45444,  1016], "mono": "force"},
+                "num_1":                  {"frame": [ 46760,  1290], "mono": "force"},
+                "num_2":                  {"frame": [ 48350,  1387], "mono": "force"},
+                "num_3":                  {"frame": [ 50037,  1374], "mono": "force"},
+                "num_4":                  {"frame": [ 51711,  1616], "mono": "force"},
+                "num_5":                  {"frame": [ 53627,  1575], "mono": "force"},
+                "num_6":                  {"frame": [ 55503,  1645], "mono": "force"},
+                "num_7":                  {"frame": [ 57447,  1526], "mono": "force"},
+                "num_8":                  {"frame": [ 59274,  1380], "mono": "force"},
+                "num_9":                  {"frame": [ 60954,  1395], "mono": "force"},
+                "num_10":                 {"frame": [ 62648,  1470], "mono": "force"},
+                "num_11":                 {"frame": [ 64418,  1494], "mono": "force"},
+                "num_12":                 {"frame": [ 66213,  1356], "mono": "force"},
+                "num_13":                 {"frame": [ 67869,  1613], "mono": "force"},
+                "num_14":                 {"frame": [ 69783,  1842], "mono": "force"},
+                "num_15":                 {"frame": [ 71925,  1755], "mono": "force"},
+                "num_16":                 {"frame": [ 73979,  1964], "mono": "force"},
+                "num_17":                 {"frame": [ 76244,  1766], "mono": "force"},
+                "num_18":                 {"frame": [ 78310,  1999], "mono": "force"},
+                "num_19":                 {"frame": [ 80609,  1801], "mono": "force"},
+                "num_20":                 {"frame": [ 82710,  1801], "mono": "force"},
+                "num_21":                 {"frame": [ 84811,  2022], "mono": "force"},
+                "num_22":                 {"frame": [ 87134,  2022], "mono": "force"},
+                "num_23":                 {"frame": [ 89455,  2011], "mono": "force"},
+                "num_24":                 {"frame": [ 91766,  1902], "mono": "force"},
+                "num_25":                 {"frame": [ 93969,  1932], "mono": "force"},
+                "num_26":                 {"frame": [ 96201,  2132], "mono": "force"},
+                "num_27":                 {"frame": [ 98634,  2195], "mono": "force"},
+                "num_28":                 {"frame": [101129,  2173], "mono": "force"},
+                "num_29":                 {"frame": [103603,  2011], "mono": "force"},
+                "num_30":                 {"frame": [105914,  1894], "mono": "force"},
+                "num_31":                 {"frame": [108107,  2028], "mono": "force"},
+                "num_32":                 {"frame": [110435,  2428], "mono": "force"},
+                "num_33":                 {"frame": [113164,  2015], "mono": "force"},
+                "num_34":                 {"frame": [115479,  2208], "mono": "force"},
+                "num_35":                 {"frame": [117987,  2260], "mono": "force"},
+                "num_36":                 {"frame": [120547,  2260], "mono": "force"},
+                "you_win":                {"frame": [123107,  1138], "mono": "force"},
+                "chips_draging":          {"frame": [132153,   384], "mono": "force"},
+                "place_your_bets_please": {"frame": [40642,   1152], "mono": "force"}
+            }
+        }
+    }
+}

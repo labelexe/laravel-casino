@@ -1,0 +1,132 @@
+{
+    "clips": {"main": {
+        "winShockwaveSnd": {
+            "duration": 2.276439909297052,
+            "volume": 0.5,
+            "start": 0
+        },
+        "bigWinStart": {
+            "duration": 4.630748299319728,
+            "volume": 0.8,
+            "start": 2.578299319727891
+        },
+        "winSymbolMedSnd": {
+            "duration": 3.4027437641723357,
+            "volume": 0.7,
+            "duck": {
+                "ambienceGeneral": {
+                    "duration": 1.3,
+                    "attack": 0.01,
+                    "release": 0.8,
+                    "value": 0
+                },
+                "ambienceRespin": {
+                    "duration": 1.3,
+                    "attack": 0.01,
+                    "release": 0.8,
+                    "value": 0
+                }
+            },
+            "start": 7.510907029478458
+        },
+        "buttonClick": {
+            "duration": 0.08405895691609977,
+            "volume": 0.8,
+            "start": 11.215510204081633
+        },
+        "quickStop": {
+            "duration": 0.9165986394557823,
+            "volume": 0.8,
+            "start": 11.601428571428572
+        },
+        "paytableButtonClick": {
+            "duration": 0.08988662131519275,
+            "volume": 0.8,
+            "start": 12.819886621315193
+        },
+        "bigWinAmbienceSnd": {
+            "duration": 10.989750566893424,
+            "volume": 0.8,
+            "duck": {
+                "ambienceGeneral": {
+                    "attack": 0.01,
+                    "release": 3.5,
+                    "value": 0
+                },
+                "ambienceRespin": {
+                    "attack": 0.01,
+                    "release": 3.5,
+                    "value": 0
+                }
+            },
+            "start": 13.211632653061224
+        },
+        "reSpin": {
+            "duration": 9.0397052154195,
+            "volume": 0.8,
+            "start": 24.503242630385486
+        },
+        "ambienceRespin": {
+            "duration": 32.54238095238095,
+            "volume": 0.8,
+            "start": 33.844807256235825
+        },
+        "wildRainbowExitSnd": {
+            "duration": 1.2775056689342403,
+            "volume": 0.8,
+            "start": 66.68904761904761
+        },
+        "countUpLoopEnd": {
+            "duration": 1.9385034013605442,
+            "volume": 0.8,
+            "start": 68.26841269841269
+        },
+        "smallWin": {
+            "duration": 4.4459410430839,
+            "volume": 0.8,
+            "start": 70.50877551020407
+        },
+        "wildExpansionSnd": {
+            "duration": 2.1981632653061225,
+            "volume": 0.8,
+            "start": 75.25657596371882
+        },
+        "countUpLoop": {
+            "duration": 0.11140589569160998,
+            "volume": 0.8,
+            "start": 77.75659863945577
+        },
+        "reelSpin": {
+            "duration": 5.019047619047619,
+            "volume": 0.8,
+            "start": 78.16986394557823
+        },
+        "ambienceGeneral": {
+            "duration": 32.54238095238095,
+            "volume": 0.8,
+            "start": 83.49077097505669
+        },
+        "reelBounce": {
+            "duration": 0.2964625850340136,
+            "volume": 0.8,
+            "start": 116.33501133786848
+        },
+        "spinButtonClick": {
+            "duration": 1.5254195011337868,
+            "volume": 0.8,
+            "start": 116.93333333333334
+        },
+        "mediumWin": {
+            "duration": 4.95156462585034,
+            "volume": 0.8,
+            "start": 118.76061224489796
+        },
+        "largeWin": {
+            "duration": 5.974353741496599,
+            "volume": 0.8,
+            "start": 124.01403628117913
+        }
+    }},
+    "files": {"main": "multimedia/audio/webAudio_mobile/main.mp3"},
+    "fileSizes": {"main": 782306}
+}

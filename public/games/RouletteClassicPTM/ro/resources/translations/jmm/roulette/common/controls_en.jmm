@@ -1,0 +1,14 @@
+{
+    "resources": {
+        "images": {
+            "gc_info":              {"url": "../../translations/images/roulette/common/golden_chips/info_en.png"},
+            "gc_info_v2":           {"url": "../../translations/images/roulette/common/golden_chips_v2/en.png"},
+            "desktop_gc_info_v2":   {"url": "../../translations/images/roulette/common/desktop/golden_chips_v2/en.png"},
+            "gc_tip":               {"url": "../../translations/images/roulette/common/golden_chips_v2/tip_en.png"},
+            "buttons":              {"url": "../../translations/images/roulette/common/buttons/en.png"}
+        },
+        "slices": {
+            "gc_info_v2":           {"image": "gc_info_v2", "size": [817, 464], "insets": "-3 -4"}
+        }
+    }
+}

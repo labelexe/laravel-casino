@@ -1,0 +1,456 @@
+{
+    "variables": {
+        "zoom_duration": 500
+    },
+
+    "resources": {
+        "animations": {
+            "zoom.out.delay":               {"type": "delay", "duration": 0},
+            "zoom.wheel.maximize":          {"type": "scale", "to.x": "1.35", "to.y": "1.35", "pivot.x": "50%", "pivot.y": "0%",   "duration": "${zoom_duration}", "interpolator": "ease.out"},
+            "zoom.wheel.maximize_1024x768": {"type": "scale", "to.x": "1.28", "to.y": "1.28", "pivot.x": "50%", "pivot.y": "0%",   "duration": "${zoom_duration}", "interpolator": "ease.out"},
+            "zoom.wheel.minimize":          {"type": "scale", "to.x": "100%", "to.y": "100%", "pivot.x": "50%", "pivot.y": "0%",   "duration": "${zoom_duration}", "interpolator": "ease.out"},
+            "zoom.table.maximize":          {"type": "scale", "to.x": "100%", "to.y": "100%", "pivot.x": "50%", "pivot.y": "100%", "duration": "${zoom_duration}", "interpolator": "ease.out"},
+            "zoom.table.minimize":          {"type": "scale", "to.x": "50%",  "to.y": "50%",  "pivot.x": "50%", "pivot.y": "100%", "duration": "${zoom_duration}", "interpolator": "ease.out"},
+            "zoom.history.move_right":      {"type": "translate", "duration": "${zoom_duration}", "interpolator": "ease.out"},
+            "zoom.history.move_left":       {"type": "translate", "duration": "${zoom_duration}", "interpolator": "ease.out", "to.x": 0},
+            "zoom.result.move_left":        {"type": "translate", "duration": "${zoom_duration}", "interpolator": "ease.out"},
+            "zoom.result.move_right":       {"type": "translate", "duration": "${zoom_duration}", "interpolator": "ease.out", "to.x": 0},
+            "zoom.limits.move_down":        {"type": "translate", "duration": "${zoom_duration}", "interpolator": "ease.out"},
+            "zoom.limits.move_up":          {"type": "translate", "duration": "${zoom_duration}", "interpolator": "ease.out", "to.y": 0},
+            "table_switch.slide_out":       {"type": "translate", "duration": 1000, "interpolator": "ease.out"},
+            "table_switch.slide_in":        {"type": "translate", "duration": 1000, "interpolator": "ease.out", "to.x": 0}
+        }
+    },
+
+    "ui":{
+        "bp.msg": {"@O": {
+            "landscape": {"props": {"anchor.fit": "20 1 50 1"}},
+            "portrait":  {"props": {"anchor.fit": "20 1 50 1"}}
+        }},
+
+        "bottom_panel": {"id": "bottom_panel", "content": {
+            "#base": {"id": "_content", "content": [
+                {"id": "_game_name", "@O": {
+                    "landscape": {"props": {"anchor.fit": "60 34.1 20 34.1"}},
+                    "portrait":  {"props": {"anchor.fit": "60 25 20 25"}}
+                }}
+            ]}
+        }},
+        "buttons_container_state": {"type": "vport", "id": "buttons_container_state", "props": {"anchor.relative": true}, "layout": {"relative": true}, "@O": {
+            "landscape": {"layout": {"type": "stack"}, "size": [586, 178], "ratio": 3.2921, "@H": {
+                "right": {"layout": {"base": [586, 178]}, "props": {"anchor.fit": "73.5 7 9 39", "anchor.alignment": "bottom-right"}},
+                "left":  {"layout": {"base": [586, 178]}, "props": {"anchor.fit": "73.5 39 9 7", "anchor.alignment": "bottom-left"}}
+            }},
+            "portrait": {"layout": {"type": "stack"}, "size": [586, 178], "ratio": 3.2921, "@H": {
+                "right": {"layout": {"base": [586, 178]}, "props": {"anchor.fit": "76 11 9 11", "anchor.alignment": "bottom-center"}},
+                "left":  {"layout": {"base": [586, 178]}, "props": {"anchor.fit": "76 11 9 11", "anchor.alignment": "bottom-center"}}
+            }}
+        }},
+        "buttons_container_state_gc": {"type": "vport", "id": "buttons_container_state", "props": {"anchor.relative": true},
+            "layout": {"relative": true, "type": "stack"}, "size": [592, 136], "ratio": 4.352, "@H": {
+                "right": {"layout": {"base": [592, 136]}, "props": {"anchor.fit": "71.5 7 8.5 7", "anchor.alignment": "bottom-right"}},
+                "left":  {"layout": {"base": [592, 136]}, "props": {"anchor.fit": "71.5 7 8.5 7", "anchor.alignment": "bottom-left"}}
+        }},
+        "buttons_container_cr": {"id": "buttons_container", "type": "multistate", "props": {"anchor.fit": "0 10px", "anchor.relative": true}, "layout": {"type": "anchor", "relative": true}, "content": {
+            "idle": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/spin_autoplay_button"}
+            ]},
+            "bet_placed": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_3", "id": "undo_btn",  "action": "undo",  "slice": "b.undo"},
+                {"@P": "ui/button_2", "id": "clear_btn", "action": "clear", "slice": "b.clear-bets"},
+                {"@P": "ui/spin_autoplay_button"}
+            ]},
+            "wheel_no_bet": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/spin_autoplay_button"}
+            ]},
+            "wheel_bet_placed": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/spin_autoplay_button"}
+            ]},
+            "dealing": {"@P": "ui/buttons_container_state", "content": []},
+            "after_round_wheel": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_2",   "id": "double_and_spin_btn", "action": "double_and_spin", "slice": "b.double-and-spin"},
+                {"@P": "ui/button_big", "id": "rebet_and_spin_btn",  "action": "rebet_and_spin",  "slice": "b.rebet-and-spin"}
+            ]},
+            "after_round_bet_placed": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_3",   "id": "clear_btn",          "action": "clear",          "slice": "b.clear-bets"},
+                {"@P": "ui/button_2",   "id": "spin_btn",           "action": "spin",           "slice": "b.spin.small"},
+                {"@P": "ui/button_big", "id": "rebet_and_spin_btn", "action": "rebet_and_spin", "slice": "b.rebet-and-spin"}
+            ]},
+            "after_round_no_bet": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_2",   "id": "rebet_btn",          "action": "rebet",          "slice": "b.rebet"},
+                {"@P": "ui/button_big", "id": "rebet_and_spin_btn", "action": "rebet_and_spin", "slice": "b.rebet-and-spin"}
+            ]},
+            "autoplay": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_big", "id": "stop_autoplay_btn", "action": "stop_autoplay", "slice": "b.stop-autoplay"},
+                {"@P": "ui/autoplay.spins_left"}
+            ]},
+
+            "gc_idle": {"@P": "ui/buttons_container_state_gc", "content": [
+                {"@P": "ui/spin_autoplay_button_gc"}
+            ]},
+            "gc_bet_placed": {"@P": "ui/buttons_container_state_gc", "content": [
+                {"@P": "ui/button_3_gc", "id": "undo_btn",  "action": "undo",  "slice": "b.undo"},
+                {"@P": "ui/button_2_gc", "id": "clear_btn", "action": "clear", "slice": "b.clear-bets"},
+                {"@P": "ui/spin_autoplay_button_gc"}
+            ]},
+            "gc_wheel_no_bet": {"@P": "ui/buttons_container_state_gc", "content": [
+                {"@P": "ui/spin_autoplay_button_gc"}
+            ]},
+            "gc_wheel_bet_placed": {"@P": "ui/buttons_container_state_gc", "content": [
+                {"@P": "ui/spin_autoplay_button_gc"}
+            ]},
+            "gc_dealing": {"@P": "ui/buttons_container_state_gc", "content": []},
+            "gc_after_round_wheel": {"@P": "ui/buttons_container_state_gc", "content": [
+                {"@P": "ui/button_2_gc",   "id": "double_and_spin_btn", "action": "double_and_spin", "slice": "b.double-and-spin"},
+                {"@P": "ui/button_big_gc", "id": "rebet_and_spin_btn",  "action": "rebet_and_spin",  "slice": "b.rebet-and-spin"}
+            ]},
+            "gc_after_round_bet_placed": {"@P": "ui/buttons_container_state_gc", "content": [
+                {"@P": "ui/button_3_gc",   "id": "clear_btn",          "action": "clear",          "slice": "b.clear-bets"},
+                {"@P": "ui/button_2_gc",   "id": "spin_btn",           "action": "spin",           "slice": "b.spin.small"},
+                {"@P": "ui/button_big_gc", "id": "rebet_and_spin_btn", "action": "rebet_and_spin", "slice": "b.rebet-and-spin"}
+            ]},
+            "gc_after_round_no_bet": {"@P": "ui/buttons_container_state_gc", "content": [
+                {"@P": "ui/button_2_gc",   "id": "rebet_btn",          "action": "rebet",          "slice": "b.rebet"},
+                {"@P": "ui/button_big_gc", "id": "rebet_and_spin_btn", "action": "rebet_and_spin", "slice": "b.rebet-and-spin"}
+            ]},
+            "gc_autoplay": {"@P": "ui/buttons_container_state_gc", "content": [
+                {"@P": "ui/button_big_gc", "id": "stop_autoplay_btn", "action": "stop_autoplay", "slice": "b.stop-autoplay"},
+                {"@P": "ui/autoplay.spins_left"}
+            ]}
+        }}
+    },
+
+    "scenes": {
+        "main-scene": {"id": "main-scene", "layout": {"type": "anchor", "relative": true}, "background": "green_bg", "content": [
+            {"type": "anchor", "layout": {"relative": true}, "@O": {
+                "landscape": {"props": {"anchor.fit": 0}},
+                "portrait": {"props": {"anchor.fit": "0 0 0 0"}}
+            }, "content": [
+
+                {"id": "content_panel", "type": "anchor", "layout": {"relative": true}, "@O": {
+                    "landscape": {"props": {"anchor.fit": "0"}, "@M": {
+                        "0x0": {"ratio": null}
+                    }},
+                    "portrait": {"props": {"anchor.fit": "null 0 null 0"},"bias": "hor","@M": {
+                        "0x0":   { "ratio": 0.32},
+                        "<0.52": { "ratio": 0.31}
+                    }}
+                }, "content": [
+
+                    {"id":"content_panel_portrait", "type":"anchor", "layout": {"relative": true}, "@O": {
+                        "landscape": {"@M": {
+                            "0x0": {"props": {"anchor.fit": "0 null 0 null"}}
+                        }, "bias": "ver", "ratio": 2.26},
+                        "portrait": {"@M": {
+                            "0x0":   {"props": {"anchor.fit": "0"}},
+                            "<0.52": {"props": {"anchor.fit": "0 0 3 0"}}
+                        }, "ratio": null}
+                    }, "content":[
+                        {"@P": "ui/wheel", "group": "animated", "zoom_animation": "zoom.wheel.maximize"},
+
+                        {"id": "history_widget", "@P": "ui/cr_phone_history_widget",
+                            "@O": {
+                                "landscape": {"props": {"anchor.fit": "9.3 59.5 30 30.4"}},
+                                "portrait":  {"props": {"anchor.fit": "28.70 2 63.25 4"}}
+                            }
+                        },
+
+                        {"id": "table_container", "type": "anchor", "layout": {"relative": true}, "group": "animated", "@O": {
+                            "landscape": {"props": {"anchor.fit": "9 5.35 30 31.05"}},
+                            "portrait":  {"props": {"anchor.fit": "33 0 11 0"}}
+                        }, "content": [
+                            {"@P": "ui/table", "props": {"anchor.fit": 0}},
+                            {"id": "switch_button_container", "type": "anchor", "layout": {"relative": true}, "props": {"anchor.fit": 0, "anchor.alignment": "center"},
+                                "@O": {
+                                    "landscape": {"ratio": 2.2072829},
+                                    "portrait":  {"ratio": 0.4518987}
+                                }, "content": [
+                                {"id": "table_switch_button", "type": "ms-button", "layout": {"type": "stack"}, "state": "table", "group": "animated",
+                                    "@O": {
+                                        "landscape": {"props": {"anchor.fit": "63.25 -1 -1 93.25"}, "ratio": 0.42},
+                                        "portrait":  {"props": {"anchor.fit": "92.5 61 0 0"}, "ratio": 2.38}
+                                    }, "content": {
+                                    "table": {"type": "stack", "@O": {
+                                        "landscape": {"background": "switch_neighbors"},
+                                        "portrait":  {"background": "switch_neighbors_p"}}
+                                    },
+                                    "neighbors": {"type": "stack",  "@O": {
+                                        "landscape": {"background": "switch_table"},
+                                        "portrait":  {"background": "switch_table_p"}}
+                                    }
+                                }}
+                            ]},
+                            {"id": "neighbors_container", "type": "anchor", "layout": {"relative": true}, "props": {"anchor.fit": 0, "anchor.alignment": "center"}, "ratio": 2.2072829, "visible": false, "group": "animated", "@O": {
+                                "landscape": {"ratio": 2.2072829},
+                                "portrait":  {"ratio":  0.4518987}
+                            }, "content": [
+                                {"id": "logo", "type": "image", "@O": {
+                                    "landscape": {"slice": "logo", "props": {"anchor.fit": "66 92.5 9 1"}},
+                                    "portrait": {"slice": "logo_p", "props": {"anchor.fit": "3 65 94.5 7.5"}}
+                                }},
+                                {"@P": "ui/neighbors_table", "@O": {
+                                    "landscape": {  "props": {"anchor.fit": "0 0 25 0"}},
+                                    "portrait":  {  "props": {"anchor.fit": "0 0 0 30"}}
+                                }},
+                                {"@P": "ui/neighbors_controls", "@O": {
+                                    "landscape": {"props": {"anchor.fit": "75 12 9 7"}},
+                                    "portrait":  {"props": {"anchor.fit": "8 75 20 8"}}
+                                }}
+                            ]},
+                            {"@P": "ui/table_message_panel"}
+                        ]},
+
+                        {"id": "result_widget", "@P": "ui/result_widget_new", "opacity": 1, "group": "animated"}
+                    ]},
+
+
+                    {"type": "stack", "propagative": false, "background": "components_bg", "@O": {
+                        "landscape": {"@M": {
+                            "0x0": {"props": {"anchor.fit": "73 0 0 0"}}
+                        }},
+                        "portrait":  {"@M": {
+                            "0x0":   {"props": {"anchor.fit": "90 0 0 0"}},
+                            "<0.52": {"props": {"anchor.fit": "87 0 0 0"}}
+                        }}
+                    }},
+
+                    {"@P": "ui/buttons_container_cr", "@O": {
+                        "landscape": {"@M": {"0x0": {"props": {"anchor.fit": "0 0 0 0"}}}},
+                        "portrait":  {"@M": {
+                            "0x0":   {"props": {"anchor.fit": "60 0 0 0"}},
+                            "<0.52": {"props": {"anchor.fit": "57.7 0 2.3 0"}}
+                        }}
+                    }},
+                    {"type":"anchor", "@M": {
+                        "0x0":   {"props": {"anchor.fit": "60 0 0 0"}},
+                        "<0.52": {"props": {"anchor.fit": "57.7 0 2.3 0"}}
+                    }, "layout": {"relative": true}, "content":[
+                        {"@P": "ui/buttons_container_state", "content":[
+                            {"type": "anchor", "size": [160, 160], "@H": {
+                                "right": {"pos": [499, 13]},
+                                "left": {"pos": [-71, 13]}
+                            }, "content":[
+                                {"id": "chip_tray_pos", "type":"anchor", "props":{"anchor.fit": "-1000 0 0 0"}}
+                            ]}
+                        ]},
+                        {"@P": "ui/buttons_container_state_gc", "content":[
+                            {"id": "chip_tray_pos_with_gc", "type": "anchor", "size": [102, 102], "@H": {
+                                "left": {"pos": [131, 17]},
+                                "right": {"pos": [361, 17]}
+                            }, "content":[
+                                {"id": "chip_tray_pos_with_gc_parent", "type":"anchor", "props":{"anchor.fit": "-1000 0 0 0"}}
+                            ]},
+                            {"id": "gc_chip_tray_pos", "type": "anchor", "size": [102, 102], "@H": {
+                                "left": {"pos": [ 17,  17]},
+                                "right": {"pos": [475, 17]}
+                            },"content":[
+                                {"type":"anchor", "props":{"anchor.fit": "-1000 0 0 0"}, "content":[
+                                    {"id":"gc_chips_panel", "ratio":1, "@P": "ui/golden_chips_panel", "type":"cr_golden-chips-panel",
+                                        "layout": {"relative": true}, "@O": {
+                                        "landscape": {"anchor.landscape": "10", "@H": {
+                                            "right": {"props": {"anchor.fit": "76.5 65 11.5 10"}},
+                                            "left":  {"props": {"anchor.fit": "76.5 10 11.5 65"}}
+                                        }},
+                                        "portrait": {"chips.orientation": "portrait", "chips.bg": "chips.tray.bg.portrait",
+                                            "chips.clip_mask": "chips.mask.portrait", "chips.overlay": "chips.tray.face.portrait", "@H": {
+                                                "right": {"props": {"anchor.fit": "0", "anchor.alignment": "bottom-center"}},
+                                                "left":  {"props": {"anchor.fit": "0", "anchor.alignment": "bottom-center"}}
+                                            }}
+                                    }, "content": [
+                                        {"id": "clip_panel", "content": [
+                                            {"id": "container_panel", "anchor.landscape": "3", "anchor.portrait": "3", "@O": {
+                                                "landscape": {"props": {"anchor.fit": "10 3 6 3", "anchor.alignment": "center"}},
+                                                "portrait": {"props": {"anchor.fit": "10 3 6 3", "anchor.alignment": "center"}}
+                                            }}
+                                        ]}
+                                    ]}
+                                ]}
+                            ]}
+                        ]}
+                    ]},
+
+                    {"@P": "ui/golden_chips_panel", "@O": {
+                        "landscape": {"anchor.landscape": "10", "ratio":null, "@H": {
+                            "right": {"props": {"anchor.fit": "76.5 65 11.5 10"}},
+                            "left":  {"props": {"anchor.fit": "76.5 10 11.5 65"}}
+                        }},
+                        "portrait": {"anchor.landscape": "26", "chips.orientation": "portrait", "ratio":1,
+                            "chips.bg": "chips.tray.bg.portrait", "chips.clip_mask": "chips.mask.portrait", "chips.overlay": "chips.tray.face.portrait", "@H": {
+                                "right": {"props": {"anchor.fit": "0", "anchor.alignment": "bottom-center"}},
+                                "left":  {"props": {"anchor.fit": "0", "anchor.alignment": "bottom-center"}}
+                            }}
+                    }, "content": [
+                        {"id": "clip_panel", "content": [
+                            {"id": "container_panel", "anchor.landscape": "3", "anchor.portrait": "3", "@O": {
+                                "landscape": {"props": {"anchor.fit": "10 3 6 3", "anchor.alignment": "center"}},
+                                "portrait": {"props": {"anchor.fit": "10 3 6 3", "anchor.alignment": "center"}}
+                            }}
+                        ]},
+                        {"type": "anchor",  "ratio": 1, "props":{"anchor.fit": 0, "anchor.alignment": "bottom-center"},  "content": [
+                            {"id": "chip_tray_background_with_gc_parent", "visible":true, "type": "image", "slice": "chips_bg", "ratio": 1, "props":{"anchor.fit": "-3"},
+                                "@O": {
+                                    "landscape": {"visible":false},
+                                    "portrait":  {"visible":true}
+                            }},
+                            {"id":"new_vertical_chiptray_btn", "ratio":1, "type":"ibutton", "props": {"anchor.fit": "2.5"},
+                                "slice":"chips_2d.1", "@O": {
+                                "landscape": {"visible":false},
+                                "portrait":  {"visible":true}
+                            }}
+                        ]}
+
+                    ]},
+
+                    {"@P": "ui/golden_chips_button", "anchor.landscape": "10", "anchor.portrait": "10", "@O": {
+                        "landscape": {"@H": {
+                            "right": {"props": {"anchor.fit": "73.5 91 9 1.2", "anchor.alignment": "center-right"}},
+                            "left":  {"props": {"anchor.fit": "73.5 1.2 9 91", "anchor.alignment": "center-left"}}
+                        }},
+                        "portrait":  {"@H": {
+                            "right": {"props": {"anchor.fit": "0", "anchor.alignment": "bottom-center"}},
+                            "left":  {"props": {"anchor.fit": "0", "anchor.alignment": "bottom-center"}}
+                        }}
+                    }, "content": [
+                        {"id": "amount",  "@O": {
+                            "landscape": {"props": {"anchor.fit": "0 0 60 70"}},
+                            "portrait":  {"props": {"anchor.fit": "0 0 60 70"}}
+                        }}
+                    ]}
+
+                ]}
+            ]},
+
+            {"id": "fixed_panel", "type": "anchor", "layout": {"relative": true}, "props": {"anchor.fit": 0}, "content": [
+                {"id": "top_container", "type": "anchor", "layout": {"relative": true}, "background": "#88000000", "@O": {
+                    "landscape": {"props": {"anchor.fit": "0 0 93.75 0"}},
+                    "portrait":  {"props": {"anchor.fit": "0 0 96 0"}}
+                }, "content": [
+                    {"id": "limits_container", "type": "anchor", "layout": {"relative": true}, "group": "animated", "@O": {
+                        "landscape": {"props": {"anchor.fit": "0 75 0 0"}},
+                        "portrait":  {"props": {"anchor.fit": "0 50 0 0"}}},
+                        "content":[
+                            {"@P": "ui/limits_panel", "props": {"anchor.fit": "0 0 0 5"}}
+                        ]},
+
+                    {"id": "coverage_container", "type": "anchor", "@O": {
+                        "landscape": {"layout": {"relative": true}, "props": {"anchor.fit": "0 0 0 80"}},
+                        "portrait":  {"layout": {"relative": true}, "props": {"anchor.fit": "0 0 0 62"}}},
+                        "content": [
+                            {"@P": "ui/table_coverage", "props": {"anchor.alignment": "center-right", "anchor.fit": "32 5 32 0"}}
+                        ]}
+                ]},
+
+                {"id": "controls_panel", "type": "anchor", "layout": {"relative": true}, "props": {"anchor.fit": 0}, "content": [
+
+                    {"@P": "ui/bottom-panel", "@O": {
+                        "landscape": {"props": {"anchor.relative": true, "anchor.fit": "91 0 0 0"}},
+                        "portrait":  {"props": {"anchor.relative": true, "anchor.fit": "90 0 0 0"}}
+                    }, "content": [
+                        {"id": "_middle_container", "@O": {"landscape": {"ratio": 15.75}, "portrait": {"ratio": 9}}}
+                    ]}
+                ]},
+
+                {"type": "anchor", "id": "table_holder_interactive_panel", "propagative": true,  "@O": {
+                    "landscape": {"props": {"anchor.fit": "0 0 27 0"}},
+                    "portrait":  {"props": {"anchor.fit": "0 0 30 0"}}
+                }}
+            ]},
+
+            {"@P": "ui/tablet_autoplay_popup"},
+            {"@P": "ui/default_paytable", "props" : {"anchor.fit" : 0, "anchor.alignment" : "center"}, "content": [
+                {"id": "content", "@O": {
+                    "landscape": {"props" : {"anchor.relative": true, "anchor.fit" : "10 10 10 10", "anchor.alignment": "center"}, "ratio": null},
+                    "portrait":  {"props" : {"anchor.relative": true, "anchor.fit" : "10 3 35 3", "anchor.alignment": "center"}, "ratio": 1.58}
+                }}
+            ]},
+            {"@P": "ui/settings"},
+            {"@P": "ui/golden_chips_popup"},
+            {"@P": "ui/golden_chips_info_v2"},
+            {"@P": "ui/insufficient_gc_popup"},
+            {"@P": "ui/no_suitable_gc_popup"},
+            {"@P": "ui/phone_autoplay_popup"},
+            {"@P": "ui/only_one_gc_popup"},
+            {"@P": "ui/error_messages"},
+            {"@P": "ui/golden-chips-tip-popup", "id": "golden_chips_tip_popup", "content": [
+                {"id": "_container", "@O": {
+                    "landscape": {"ratio": null,"@H": {
+                        "right": {"props": {"anchor.fit": "0","anchor.alignment": "bottom-left"}},
+                        "left":  {"props": {"anchor.fit": "0","anchor.alignment": "bottom-right"}}
+                    }},
+                    "portrait": {"ratio": 1.5, "@H": {
+                        "right": {"props": {"anchor.fit": "0", "anchor.alignment": "bottom-left"}},
+                        "left":  {"props": {"anchor.fit": "0", "anchor.alignment": "bottom-right"}}
+                    }}
+                }, "content": [
+                    {"id": "golden_chips_button_tip", "managed": true,  "@O": {
+                        "landscape": {"@H": {
+                            "right": {"@M": {
+                                "0x0": {"props": {"anchor.fit": "73.5 91 9 1.2", "anchor.alignment": "center-right"}}
+                            }},
+                            "left":  {"@M": {
+                                "0x0": {"props": {"anchor.fit": "73.5 1.2 9 91", "anchor.alignment": "center-left"}}
+                            }}
+                        }},
+                        "portrait":  {"@H": {
+                            "right": {"@M": {
+                                "0x0":   {"props": {"anchor.fit": "58 9 20 76.3", "anchor.alignment": "center-left"}},
+                                "<0.52": {"props": {"anchor.fit": "47 9 31 76.3", "anchor.alignment": "center-left"}}
+                                }},
+                            "left":  {"@M": {
+                                "0x0":   {"props": {"anchor.fit": "58 75.6 19.7 9.6", "anchor.alignment": "center-right"}},
+                                "<0.52": {"props": {"anchor.fit": "47 75.6 31 9.6", "anchor.alignment": "center-right"}}
+                            }}
+                        }}
+                    }, "content": [
+                        {"id": "amount",  "@O": {
+                            "landscape": {"props": {"anchor.fit": "0 0 60 70"}},
+                            "portrait":  {"props": {"anchor.fit": "0 0 60 70"}}
+                        }}
+                    ]},
+                    {"id": "tip_box", "@O": {
+                        "landscape": {"@H": {
+                            "right": {"@M": {
+                                "0x0": {"props": {"anchor.fit": "50 39.9 30.5 7.3","anchor.alignment": "bottom-left"}}
+                            }},
+                            "left":  {"@M": {
+                                "0x0": {"props": {"anchor.fit": "50 7.3 30.5 39.9","anchor.alignment": "bottom-right"}}
+                            }}
+                        }},
+                        "portrait": {"@H": {
+                            "right": {"@M": {
+                                "0x0":   {"props": {"anchor.fit": "32.2 20.2 25 20.2", "anchor.alignment": "top-left"}},
+                                "<0.52": {"props": {"anchor.fit": "22.2 20.2 25 20.2", "anchor.alignment": "top-left"}}
+                            }},
+                            "left":  {"@M": {
+                                "0x0":   {"props": {"anchor.fit": "32.2 20.2 25 20.2", "anchor.alignment": "top-right"}},
+                                "<0.52": {"props": {"anchor.fit": "22.2 20.2 25 20.2", "anchor.alignment": "top-right"}}
+                            }}
+                        }}
+                    }},
+                    {"id": "tip_arrow", "@O": {
+                        "landscape": {"@H": {
+                            "right": {"@M": {
+                                "0x0": {"props": {"anchor.fit": "70 84.7 16 9.3"}, "slice": "gc.tip_arrow_r"}
+                            }},
+                            "left":  {"@M": {
+                                "0x0": {"props": {"anchor.fit": "70 9.3 16 84.7"}, "slice": "gc.tip_arrow_l"}
+                            }}
+                        }},
+                        "portrait": {"@H": {
+                                "right": {"@M": {
+                                    "0x0":   {"props": {"anchor.fit": "54 25.3 30 65.2"}, "slice": "gc.tip_arrow_l"},
+                                    "<0.52": {"props": {"anchor.fit": "44 25.3 41 65.2"}, "slice": "gc.tip_arrow_l"}
+                                }},
+                                "left":  {"@M": {
+                                    "0x0":   {"props": {"anchor.fit": "54 65.2 30 25.3"}, "slice": "gc.tip_arrow_r"},
+                                    "<0.52": {"props": {"anchor.fit": "44 65.2 41 25.3"}, "slice": "gc.tip_arrow_r"}
+                                }}
+                            }}
+                    }}
+                ]}
+            ]},
+
+            {"id": "webView", "type": "webview", "props": {"anchor.fit": 0}, "layout": {"type": "anchor"}, "visible": false}
+        ]}
+    }
+}

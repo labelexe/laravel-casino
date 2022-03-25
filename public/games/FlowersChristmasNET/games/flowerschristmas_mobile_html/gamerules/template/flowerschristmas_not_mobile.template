@@ -1,0 +1,320 @@
+<link rel="stylesheet" href="../../../gamerules/styles/desktopstyle.css" type="text/css"/>
+<p class="largeHeader">
+	<#RTflowersChristmasRulesHeading#/>
+	<!-- Flowers Christmas™ Game Rules -->
+</p>
+	
+<ul>
+	<li><#RTflowersChristmasIntro#/></li>
+    
+	<li><#RTMG30LinesDiffLevels#/></li>
+	<!-- You can play 30 bet lines at different bet levels and coin values. -->
+    <li><#spinPlaysCoinValueBetLevel#/></li>
+	<!-- The spin button plays the game at the current coin value and bet level. -->
+	<li><#RTbetLevelInstruction#/></li>
+    <!-- The bet level is set using the LEVEL selector. -->
+	<li><#RTcoinValueInstruction#/></li>
+    <!-- The coin value is set using the COIN VALUE selector. -->
+	<li><#RTcoinsDisplayValuesNew#/></li>
+	<!-- COINS displays the number of coins available to wager.-->
+    
+	<li><#maxbetPlaysBetLevelCoinValue#/></li>
+   <!-- MAX BET plays the game at the highest bet level and the pre-selected coin value. -->
+	<li><#RTautoPlays#/></li>
+    
+	<li><#RTwinningCombinationsPaytable#/></li>
+	<li><#RTbetLevel#/></li>
+    <!-- Bet level is the number of coins bet per bet line. -->
+    
+	<li><#RTwinCalculationBetLinesCoinsNoMultiplierTrans#/></li>
+
+	<li><#RTwinCalculationBetLinesCurrency#/></li>
+    
+	<li><#RTwildSubstitutesDouble#/></li>
+
+	<li><#RTwildSubDoublesymAsSingleSym#/></li>
+
+	<li><#wildsubstitutesSingel#/></li>
+
+	<li><#RTwinSelectedLineExceptFS#/></li>
+    
+	<li><#paytableHighest#/></li>
+    
+	<li><#BetLineWinsLeftRight#/></li>
+    
+	<li><#simultaneousWinsAdded#/></li>
+
+	<li><#RTFreeSpinsWinsAdded#/></li>
+    
+	<li><#featuresNotAvailablePFF#/></li>
+    
+</ul>
+
+<p class="smallHeader">
+	<#RTdoubleSymsHeader#/>
+</p>
+
+<ul>
+	<li><#RTdoubleSymbols#/></li>
+
+	<li><#doubleCountsAs2#/></li>
+
+	<li><#RTdoubleSymsOn23and4#/></li>
+
+	<li><#RTtotalSymsBetlineWins#/></li>
+
+	<li><#RTdoubleSymBetline3to10#/></li>
+
+</ul>
+
+
+
+<p class="smallHeader">
+	<#RTfreeSpinswithStackWildHead#/>
+</p>
+    
+<ul>
+	<li><#RTfreeSpinIsScatter#/></li>
+	<li><#doubleScatters#/></li>
+	<li><#RTfreeSpinSymActivates#/> <#RTbetAnmountByMultiplier#/> <#RTfreeSpinMultiplierTable#/></li>
+</ul>
+
+<table border="" cellpadding="3" style="margin-left:55px;" >
+	<tr bgcolor="rgb(118, 173, 28)">
+		<th align="left"><font color="white"><#RTcolHeadFSpinSyms#/></font></th>
+		<th align="left"><font color="white"><#colHeadBetMulti#/></font></th>
+		<th align="left"><font color="white"><#colHeadFSpinWon#/></font></th>
+	</tr>
+
+	<tr>
+		<td width="33%">8</td>
+		<td width="33%">10</td>
+		<td width="34%">30</td>
+	</tr>
+
+	<tr>
+		<td>7</td>
+		<td>4</td>
+		<td>25</td>
+	</tr>
+
+	<tr>
+		<td>6</td>
+		<td>2</td>
+		<td>20</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>2</td>
+		<td>15</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>2</td>
+		<td>10</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>2</td>
+		<td>-</td>
+	</tr>
+
+</table>
+
+<div clear="both"></div>
+<br />
+<p>*<#doubleCountsAs2#/></p>
+<ul>
+	<li><#RTfreeSpinsWins3x#/></li>
+	<li><#RTnoMultiRetrig#/></li>
+	<li><#RTfreeSpins4retrigger#/></li>
+	<li><#freeSpinsAtActivatingRound#/></li>
+	<li><#stackedWildinFS#/></li>
+	<li><#RTfreeSpinWinsAdded#/></li>
+	<li><#RTtripleWinsExceptFS#/></li>    
+</ul>
+
+<h2><#RTgameFunctionsHeading#/></h2>
+
+<ul>
+	<li><#RTtableDescribes#/></li>
+</ul>
+
+<table border="" cellpadding="3" style="margin-left:55px;" >
+    <tr bgcolor="rgb(118, 173, 28)">
+        <th align="left"><font color="white"><#RTbuttonTableHead#/></font></th>
+        <th align="left"><font color="white"><#RTfunctionTableHead#/></font></th>
+    </tr>
+
+   <tr>
+       <td width="100" align="center">
+           <img src="../gamerules/images/spin_button.png" />
+       </td>
+       <td width="400">
+           <#RTstartGameRound#/>
+       </td>
+   </tr>
+
+	<tr>
+		<td align="center"><img src="../gamerules/images/spanner_button.png" /></td>
+		<td><#RTopenSettingsMenu#/></td>
+	</tr>
+
+	<tr>
+		<td align="center"><img src="../gamerules/images/speaker_button.png" /></td>
+		<td><#RTmuteSoundSliderRev#/></td>
+	</tr>
+
+	<tr>
+		<td align="center"><img src="../gamerules/images/questionmark_button.png" /></td>
+		<td><#RTopenGameRules#/></td>
+	</tr>
+
+	<tr>
+		<td align="center"><img src="../gamerules/images/auto_button.png" /></td>
+		<td><#RTopenAutoplayMenu#/> <#RTautoplaySelectSpins#/></td>
+	</tr>
+	
+	<tr>
+		<td align="center"><img src="../gamerules/images/paytable_buttons.png" /></td>
+		<td><#RTpaytableButtonsDescRev#/></td>
+	</tr>
+	
+	<tr>
+		<td align="center"><img src="../gamerules/images/information_button.png" /></td>
+		<td><#RTinformationIconButtonDesc#/></td>
+		<!-- Click to view the PAYTABLE.  -->
+	</tr>
+	
+		
+</table>
+
+<h2><#gameSettingOptionsHeading#/></h2>
+
+<ul>
+	<li><#gameSettingIntro#/></li>
+	<!-- To access game settings, click the spanner icon in the game panel. -->
+	<li><b><#RTsettingListQuickSpin#/></b>. <#RTquickSpinDescRev#/> <#RTquickSpinDisclaimer#/></li>
+    <!-- Quick spin. Turns the quick spin option on or off. (Not available in all casinos.) -->
+	<li><b><#RTsettingListIntroScreenREV#/></b>. <#RTintroOffRev#/></li>
+    <!-- Intro screen. Turns the intro screen on or off. -->
+	<li><b><#spaceSpin#/></b>. <#RTspacebarspin#/></li>
+    <!-- Spacebar to spin. Turns the spacebar function on or off.-->
+	<li><b><#gameHistory#/></b>. <#RTgameHistoryDesc#/> <#RTGameHistNoPlayForFun#/></li>
+    <!-- Game history. Click to view your latest game history. (Not available when PLAYING FOR FUN.) -->
+	
+</ul>
+
+<h2><#advancedAutoplayOptionsHeading#/></h2>
+
+    <!-- Advanced Autoplay Options -->
+<ul>
+	<li><#RTadvancedAutoplayButton#/></li>
+    <!-- To set advanced autoplay options click AUTOPLAY, and then click Advanced settings. -->
+	<li><b><#onAnyWin#/></b>. <#anyWinDesc#/></li>
+    <!-- On any win. Stop Autoplay when you win in a round. -->
+	<li><b><#OCTifFreeSpinsIsStarted#/></b>. <#RTfreeSpinsWonDescRev#/></li>
+    <!-- If Free Spins is won. Stops Autoplay when Free Spins is won. -->
+	<li><b><#OCTifWinExeeds#/></b>. <#singleWinDesc#/></li>
+    <!-- If single win exceeds. Stops Autoplay when the amount you win exceeds or equals the amount you specify. -->
+	<li><b><#OCTifCashIncreasesBy#/></b>. <#RTcashIncreasesDescRev#/></li>
+    <!-- If cash increases by. Stops Autoplay if cash increases by the amount you specify. -->
+	<li><b><#OCTifCashDecreasesBy#/></b>. <#RTcashDecreasesDescRev#/></li>
+    <!-- If cash decreases by. Stops Autoplay if cash decreases by the amount you specify. -->
+	<li><#RTclickResetToClear#/></li>
+	<!-- Click Reset to clear all selected Stop Autoplay options. -->
+</ul>
+
+<ul>
+	<li><#RTautoplayDuringGameRev#/></li> 
+	<!-- Note: When changing Autoplay settings during a game round, all settings will take effect once the game round or feature is completed. -->	
+</ul>
+<ul>
+	<li><#RTAutoplayDisconnect#/></li>
+	<!-- Note: If you are disconnected while playing, all Autoplay settings will return to default when you reload the game. -->
+</ul>
+<ul>
+	<li><#RTautoplayNote#/></li>
+	<!-- Note: Some autoplay options are mandatory for some jurisdictions. -->
+</ul>
+
+
+<h2><#RTadditionalInformation#/></h2>
+    <!-- Additional information -->	
+<ul>
+	<li><#RTreferWebSite#/>
+    <!-- The following game features and settings may be subject to the terms and conditions of the gaming site. For more information on the following, refer to the gaming website: -->	
+		<ul>
+			<li><#RTunfinishedGameSession2#/></li>
+			<!-- The procedures used to manage unfinished game rounds. -->
+			<li><#RTgameSessions2#/></li>
+			<!-- The time after which inactive game sessions automatically end. -->
+		</ul>
+    </li>
+	<li><#RTmalfunction#/></li>
+    <!-- In the event of malfunction of the gaming hardware/software, all affected game bets and payouts are rendered void and all affected bets refunded. -->
+</ul>
+	
+<p class="smallHeader"><#RTreturnToPlayer#/></p>
+<ul>
+	<li><#RTtheoreticalReturn#/> 96.3% </li>
+	<!-- The theoretical return to player for this game is 96.7% -->	
+</ul>
+	
+
+<p class="smallHeader">
+	<#RTtransGameTerms#/>
+</p>
+<p><#RTtablePlayLangThnEng#/></p>
+<!-- Note: The following table is only applicable if you are playing in a language other than English.  -->
+<table class="gamerulestable">
+	<tbody>
+		<tr>
+			<th>
+				<#termEnglish#/>
+			</th>
+			<th> 
+				<#termTranslatedTerm#/>
+			</th>
+		</tr>
+    
+  		<tr>
+			<td>Double</td>
+			<td><#termDouble#/></td>
+		</tr>
+	
+		<tr>
+			<td>Double Free Spins</td>
+			<td><#termDoubleFreeSpins#/></td>
+		</tr>
+	
+		<tr>
+			<td>Free Spins</td>
+			<td><#termFreeSpins#/></td>
+		</tr>
+		
+		<tr>
+			<td>Multiplier</td>
+			<td><#termMultiplier#/></td>
+		</tr>
+	
+		<tr>
+			<td>Scatter</td>
+			<td><#termScatter#/></td>
+		</tr>
+      
+		<tr>
+			<td>Wild</td>
+			<td><#termWild#/></td>
+		</tr>
+	
+		<tr>
+			<td>Stacked Wild</td>
+			<td><#termStackedWild#/></td>
+		</tr>
+	</tbody>
+ </table>
+<p></p><p><b><#RTrulesGenerated#/></b></p>

@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+	
+/* background images */
+#loading													{ background-image: url('../../picts/rest/oldfisherman/1280/loading_screen_l32.jpg'); }
+.container.l169 #loading									{ background-image: url('../../picts/rest/oldfisherman/1280/loading_screen_l169.jpg'); }
+
+.loaded .gameContainer, .offline .gameContainer				{ background-image: url('../../picts/rest/oldfisherman/1280/bg_middle.jpg'); }
+.loaded .headlineContainer, .offline .headlineContainer 	{ background-image: url('../../picts/rest/oldfisherman/1280/bg_top.jpg'); }
+.loaded .mainControlBoxBG, .offline .mainControlBoxBG		{ background-image: url('../../picts/rest/oldfisherman/1280/bg_bottom.jpg'); }
+.freegame .gameContainer									{ background-image: url('../../picts/rest/oldfisherman/1280/bg_middle-fg.jpg'); }
+.freegame .headlineContainer								{ background-image: url('../../picts/rest/oldfisherman/1280/bg_top-fg.jpg'); }
+.freegame .headlineContainer.plain							{ background-image: url('../../picts/rest/oldfisherman/1280/bg_top-fg2.jpg'); }
+.freegame .mainControlBoxBG									{ background-image: url('../../picts/rest/oldfisherman/1280/bg_bottom-fg.jpg'); }
+.freegame .mainControlBoxBG.plain							{ background-image: url('../../picts/rest/oldfisherman/1280/bg_bottom-fg2.jpg'); }
+.mainControlBox .webConsole									{ background-image: url('../../picts/rest/oldfisherman/1280/console_web_bg.png'); }
+.mainControlBox .mobileConsole								{ background-image: url('../../picts/rest/oldfisherman/1280/console_mobile_bg.png'); }
+.mainControlBox .portraitConsole							{ background-image: url('../../picts/rest/oldfisherman/1280/console_portrait_bg.png'); }
+.freegame .mainControlBox .portraitConsole					{ background-image: url('../../picts/rest/oldfisherman/1280/console_portrait_bg-fg.png'); }
+.container.portrait.loaded .portraitHeadlineContainer 						{ background-image: url('../../picts/rest/oldfisherman/1280/portrait_top.jpg'); }
+.container.portrait.freegame.loaded .portraitHeadlineContainer 				{ background-image: url('../../picts/rest/oldfisherman/1280/portrait_top-fg.jpg'); }
+.container.portrait.smallHeader.loaded .portraitHeadlineContainer 			{ background-image: url('../../picts/rest/oldfisherman/1280/portrait_top_small.jpg'); }
+.container.portrait.freegame.smallHeader.loaded .portraitHeadlineContainer 	{ background-image: url('../../picts/rest/oldfisherman/1280/portrait_top_small-fg.jpg'); }
+.container.portrait.loaded .portraitBottomContainer 						{ background-image: url('../../picts/rest/oldfisherman/1280/portrait_bottom_l32.jpg'); }
+.container.portrait.freegame.loaded .portraitBottomContainer 				{ background-image: url('../../picts/rest/oldfisherman/1280/portrait_bottom_l32-fg.jpg'); }
+.container.l169.portrait.loaded .portraitBottomContainer 					{ background-image: url('../../picts/rest/oldfisherman/1280/portrait_bottom_l169.jpg'); }
+.container.l169.portrait.freegame.loaded .portraitBottomContainer 			{ background-image: url('../../picts/rest/oldfisherman/1280/portrait_bottom_l169-fg.jpg'); }
+ 
+.linemarker.large											{ background-image: url('../../picts/rest/oldfisherman/1280/linemarker-inactive.png'); }
+.linemarker.large.activeLines								{ background-image: url('../../picts/rest/oldfisherman/1280/linemarker-active.png'); }
+ 
+.infoPopup.webInfo											{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/web/background.png'); } 
+.infoPopup.webInfo.info2 .settingsBox .settingCheckbox				{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/web/checkbox-off.png');	}
+.infoPopup.webInfo.info2 .settingsBox .settingCheckbox.active		{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/web/checkbox-on.png');  	}
+
+.webConsole .closeInfoButton	 									{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/web/button-close.png'); 	}
+ 
+.loaded #animFadeoutLayer											{ background-image: url('../../picts/rest/oldfisherman/1280/fadeout.png'); }
+.freegame #animFadeoutLayer											{ background-image: url('../../picts/rest/oldfisherman/1280/fadeout-fg.png'); }
+
+/* freegame blending */
+#freegame_container.intro,
+#freegame_container.outro		{ background-image: url('../../picts/rest/oldfisherman/1280/freegame/fgsign-1.jpg'); }
+#freegame_container.retrigger	{ background-image: url('../../picts/rest/oldfisherman/1280/freegame/fgsign-2.png'); }
+
+
+
+/*  multilingual text effects */
+.multilingualTextEffect {
+	font-family: "Noto Serif", "Times New Roman" , serif; 
+	font-weight: bold;
+	color: #feb63e;
+	text-shadow: 2px 2px 4px black, 2px -2px 4px black, -2px 2px 4px black, -2px -2px 4px black,
+		0px 2px 4px black, 0px -2px 4px black, 2px 0px 4px black, -2px 0px 4px black;
+}
+#freegame_container .multilingualTextEffect {
+	text-shadow: 2px 2px 4px black, 2px -2px 4px black, -2px 2px 4px black, -2px -2px 4px black,
+		0px 4px 8px black, 0px -4px 8px black, 4px 0px 8px black, -4px 0px 8px black,
+		0px 0px 10px black;
+}
+
+
+/* common instructions for info pages */
+.infoPopup.webInfo.info1							{ background-image: none; }
+.infoPopup.info1 .paylines							{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/lines.png'); }
+.infoPopup.info1 .symbolImg-12						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/king-salmon.png'); }
+.infoPopup.info1 .wildSymbolBox						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/fisherman.png'); }
+.infoPopup.info1 .symbolImg-10						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/boat.png'); }
+.infoPopup.info1 .symbolImg-9						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/barrels.png'); }
+.infoPopup.info1 .symbolImg-8						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/pipe.png'); }
+.infoPopup.info1 .symbolImg-7						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/compass.png'); }
+.infoPopup.info1 .symbolImg-6						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/a.png'); }
+.infoPopup.info1 .symbolImg-5						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/k.png'); }
+.infoPopup.info1 .symbolImg-4						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/q.png'); }
+.infoPopup.info1 .symbolImg-3						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/j.png'); }
+.infoPopup.info1 .symbolImg-2						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/10.png'); }
+.infoPopup.info1 .symbolImg-1						{ background-image: url('../../picts/rest/oldfisherman/1280/infoSites/9.png'); }
+
+
+.infoContainer .infoPopup .headline {
+	background-color: #dc913c;
+}
+.infoContainer .infoPopup .winValueBox .winValue .multiplicator {
+	color: #dc913c;
+}
+
+.infoContainer .infoPopup .paylines {
+	height: 438px;
+}
+
+.infoContainer .infoPopup .wildSymbolBox {
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 314px;
+	margin: 0 auto;
+}
+
+		
+/* common */
+/*div.scatter { height: 248px !important; margin-top: -38px !important; z-index: 100 2px mportant; }*/
+
+/* freegame popups */
+#freegame_container #fgRenderBox {
+	position: absolute;
+	top: 64px;
+	left: 206px;
+	width: 860px;
+	height: 470px;
+	text-align: center;
+	font-family: "Noto Serif", "Times New Roman" , serif; 
+}
+
+#freegame_container #fgRenderBox .textblock 		{ position: absolute;}
+
+#freegame_container #fgRenderBox #intro				{ top: 102px; width: 860px; font-size: 88px; }
+#freegame_container #fgRenderBox #intro-1			{ position: relative; top: -18px; }
+
+#freegame_container #fgRenderBox #retrigger			{ top: 70px; left: 96px; width: 678px; font-size: 88px; }
+#freegame_container #fgRenderBox #retrigger-1		{ position: relative; top: -18px; }
+#freegame_container #fgRenderBox #retrigger-2		{ position: relative; top: -36px; }
+
+#freegame_container #fgRenderBox #outro				{ top: 104px; width: 860px; font-size: 88px; }
+
+#freegamePoints { position:absolute; top:300px; width:1280px; text-align:center; font-size:70px; color:white; font-weight: bold; font-family: 'Noto Serif', Times, Serif; }
+#freegamePoints .currLeft	{ padding-right: 18px; }
+#freegamePoints .currRight	{ padding-left: 18px; }
+
+/* preload fonts */
+#loading div.preloadFont .font3 { font-family: 'Noto Serif', Times, Serif; font-weight: bold; }

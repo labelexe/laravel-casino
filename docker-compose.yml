@@ -1,0 +1,93 @@
+version: "3"
+
+networks:
+      - izicash-network
+
+services:
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    command: postgres -c config_file=/etc/postgresql.conf
+    environment:
+        - POSTGRES_HOST_AUTH_METHOD=trust
+        - POSTGRES_DB=${DB_DATABASE}
+        - POSTGRES_USER=${DB_USERNAME}
+        - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+        - "${DB_PORT:-5442}:5442"
+    volumes:
+        - ./data/db:/var/lib/postgresql/data
+        - .docker/postgres/postgresql.conf:/etc/postgresql.conf
+    networks:
+      - izicash-network
+  redis:
+    image: "redis:alpine"
+    hostname: redis
+    ports:
+      - "6389:6389"
+    restart: unless-stopped
+    environment:
+        - REDIS_PASSWORD=${REDIS_PASSWORD}
+        - ALLOW_EMPTY_PASSWORD=no
+    command: redis-server --include /usr/local/etc/redis/redis.conf
+    volumes:
+        - ./data/redis:/data
+        - .docker/redis/redis.conf:/usr/local/etc/redis/redis.conf
+  apache:
+    image: httpd:2.4
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor
+      - .docker/apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    depends_on:
+      - php
+    networks:
+      - izicash-network
+    ports:
+      - 8383:8383
+
+  php:
+    container_name: back.izicash.bet
+    image: myapp
+    build:
+      context: .
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor
+    restart: unless-stopped
+    networks:
+      - izicash-network
+    depends_on:
+      - db
+    links:
+      - db
+    mem_limit: 2048m
+    mem_reservation: 128M
+    cpus: 2
+
+  migrationsandfixtures:
+    image: myapp
+    depends_on:
+      - db
+    links:
+      - db
+    entrypoint: sh -c "sleep 30 && php artisan migrate --seed && php artisan db:seed --class=FileServiceSeeder && php artisan db:seed --class=RoleSeeder && php artisan db:seed --class=ShopSeeder && php artisan db:seed --class=UserSeeder && php artisan db:seed --class=GameSeeder && php artisan db:seed --class=GameBankSeeder && php artisan db:seed --class=JpgSeeder && php artisan db:seed --class=GameWinSeeder && php artisan db:seed --class=TransactionSeeder"
+    networks:
+      - izicash-network
+
+  node_sockets:
+    build:
+        context: .docker/node
+        dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+    - 8555:8555
+    #command: sh -c "node Game2.js"
+    restart: unless-stopped
+    networks:
+      - izicash-network
+
+networks:
+  izicash-network:
+    driver: bridge

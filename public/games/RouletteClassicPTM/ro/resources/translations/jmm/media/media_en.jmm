@@ -1,0 +1,67 @@
+{
+	"resources": {
+
+		"audio": {
+			"pools": {
+				"sfx":      {"url": {"audio/mpeg": "../../translations/media/ro_en.mp3", "audio/ogg": "../../translations/media/ro_en.ogg"}, "polyphony": 5, "preload": "main-scene"},
+				"ambient":  {"url": {"audio/mpeg": "../../translations/media/ro_en.mp3", "audio/ogg": "../../translations/media/ro_en.ogg"}, "polyphony": 1, "preload": "main-scene"},
+				"ball":     {"url": {"audio/mpeg": "../../translations/media/ro_en.mp3", "audio/ogg": "../../translations/media/ro_en.ogg"}, "polyphony": 2, "preload": "main-scene"}
+			},
+
+			"sounds": {
+				"chip_on_table":          {"frame": [  2650,   266], "mono": "skip"},
+				"chip_on_chip":           {"frame": [  3150,   268], "mono": "skip"},
+				"Spin_button":            {"frame": [  3750,   361], "mono": "skip"},
+				"select_chip":            {"frame": [  4500,   235], "mono": "skip"},
+				"autoplay_slide_in":      {"frame": [  5000,   533], "mono": "skip"},
+				"autoplay_slide_out":     {"frame": [  6000,   533], "mono": "skip"},
+				"autoplay_start":         {"frame": [  7000,   757], "mono": "skip"},
+				"autoplay_stop":          {"frame": [  8250,   757], "mono": "skip"},
+				"ball_circle":            {"frame": [  9640,  3733], "mono": "skip", "pool": "ball", "type": "fade-soundtrack", "fade_out": 900, "fade_in": 0},
+				"ball_stop":              {"frame": [ 13230,  1939], "mono": "skip", "pool": "ball"},
+				"max_bet":                {"frame": [ 15627,   500], "mono": "force"},
+				"button_click":           {"frame": [ 16920,   123], "mono": "skip"},
+				"num_0":                  {"frame": [ 19250,  1044], "mono": "force"},
+				"num_1":                  {"frame": [ 20750,  1306], "mono": "force"},
+				"num_2":                  {"frame": [ 22500,  1410], "mono": "force"},
+				"num_3":                  {"frame": [ 24250,  1410], "mono": "force"},
+				"num_4":                  {"frame": [ 26000,  1619], "mono": "force"},
+				"num_5":                  {"frame": [ 28000,  1619], "mono": "force"},
+				"num_6":                  {"frame": [ 30000,  1671], "mono": "force"},
+				"num_7":                  {"frame": [ 32000,  1567], "mono": "force"},
+				"num_8":                  {"frame": [ 34000,  1410], "mono": "force"},
+				"num_9":                  {"frame": [ 35750,  1410], "mono": "force"},
+				"num_10":                 {"frame": [ 37500,  1515], "mono": "force"},
+				"num_11":                 {"frame": [ 39500,  1515], "mono": "force"},
+				"num_12":                 {"frame": [ 41500,  1515], "mono": "force"},
+				"num_13":                 {"frame": [ 43500,  1671], "mono": "force"},
+				"num_14":                 {"frame": [ 45500,  1880], "mono": "force"},
+				"num_15":                 {"frame": [ 47750,  1776], "mono": "force"},
+				"num_16":                 {"frame": [ 50000,  1985], "mono": "force"},
+				"num_17":                 {"frame": [ 52250,  1776], "mono": "force"},
+				"num_18":                 {"frame": [ 54500,  2037], "mono": "force"},
+				"num_19":                 {"frame": [ 57000,  1828], "mono": "force"},
+				"num_20":                 {"frame": [ 59250,  1828], "mono": "force"},
+				"num_21":                 {"frame": [ 61500,  2037], "mono": "force"},
+				"num_22":                 {"frame": [ 64000,  2037], "mono": "force"},
+				"num_23":                 {"frame": [ 66500,  2037], "mono": "force"},
+				"num_24":                 {"frame": [ 69000,  1933], "mono": "force"},
+				"num_25":                 {"frame": [ 71250,  1985], "mono": "force"},
+				"num_26":                 {"frame": [ 73500,  2194], "mono": "force"},
+				"num_27":                 {"frame": [ 76000,  2246], "mono": "force"},
+				"num_28":                 {"frame": [ 78500,  2246], "mono": "force"},
+				"num_29":                 {"frame": [ 81000,  2037], "mono": "force"},
+				"num_30":                 {"frame": [ 83500,  2037], "mono": "force"},
+				"num_31":                 {"frame": [ 86000,  2037], "mono": "force"},
+				"num_32":                 {"frame": [ 88500,  2560], "mono": "force"},
+				"num_33":                 {"frame": [ 91500,  2037], "mono": "force"},
+				"num_34":                 {"frame": [ 94000,  2298], "mono": "force"},
+				"num_35":                 {"frame": [ 96750,  2351], "mono": "force"},
+				"num_36":                 {"frame": [ 99500,  2298], "mono": "force"},
+				"place_your_bets_please": {"frame": [102250,  1358], "mono": "force"},
+				"you_win":                {"frame": [104000,  1002], "mono": "force"},
+				"ambient":                {"frame": [105200, 40376], "mono": "ignore", "pool": "ambient"}
+			}
+		}
+	}
+}

@@ -1,0 +1,83 @@
+{
+    "ui": {
+        "bottom_panel": {"id": "bottom_panel", "type": "bottom-panel", "layout": {"type": "stack"}, "props": {"anchor.fit": 0}, "state": "regular", "content": {
+            "#base": {"id": "_content", "type": "anchor", "layout": {"relative": true}, "background": {"fill": "bp.bg", "insets": "0 -1000"}, "content": [
+                {"id": "_balance", "type": "anchor", "layout": {"relative": true}, "@O": {
+                    "landscape": {"props": {"anchor.fit": "0 79.2 0 0"}},
+                    "portrait":  {"props": {"anchor.fit": "0 66.87 0 0"}}}, "content": [
+                    {"id": "balance_title", "@P": "ui/bp.title", "props": {"anchor.fit": "20 0 50 3.4"}, "text": "balance.demo"},
+                    {"id": "balance_value", "@P": "ui/bp.value", "props": {"anchor.fit": "44.5 0 16 3.4"}}
+                ]},
+                {"id": "_total_bet", "type": "anchor", "layout": {"relative": true}, "@O": {
+                    "landscape": {"props": {"anchor.fit": "0 0 0 79.2"}},
+                    "portrait":  {"props": {"anchor.fit": "0 0 0 66.87"}}}, "content": [
+                    {"id": "total_bet_title", "@P": "ui/bp.title", "props": {"anchor.fit": "20 3.4 50 0"}, "text": "total_bet"},
+                    {"id": "total_bet_value", "@P": "ui/bp.value", "props": {"anchor.fit": "44.5 3.4 16 0"}}
+                ]},
+                {"id": "_game_name", "type": "anchor", "layout": {"relative": true}, "@O": {
+                    "landscape": {"props": {"anchor.fit": "70 34.1 10 34.1"}},
+                    "portrait":  {"props": {"anchor.fit": "70 25 10 25"}}
+                }, "content": [
+                    {"id": "game_title", "type": "label", "format": "game_name_format", "props": {"anchor.fit": "0"}, "text-fit": [true, true], "alignment": "center", "opacity": 0.5}
+                ]}
+            ]},
+            "regular": {},
+            "autoplay": {"id": "_content", "background": {"fill": "bp.bg.autoplay"}, "content": [
+                {"id": "_balance", "content": [{"id": "balance_title", "format": "bp.title.autoplay"}]},
+                {"id": "_total_bet", "content": [{"id": "total_bet_title", "format": "bp.title.autoplay"}]}
+            ]}
+        }},
+
+        "message_panel": {"id": "message_panel", "type": "message-panel", "layout": {"type": "anchor", "relative": true}, "state": "regular",
+        "@O": {
+            "landscape": {"props": {"anchor.fit": "0 34.1 0 34.1"}},
+            "portrait":  {"props": {"anchor.fit": "0 32 0 32"}}
+        }, "content": {
+            "#base": {"panels": {
+                "place_your_bets":               {"@P": "ui/bp.msg", "text": "place_your_bets"},
+                "touch_to_stop":                 {"@P": "ui/bp.msg", "text": "touch_to_stop"},
+                "good_luck":                     {"@P": "ui/bp.msg", "text": "good_luck"},
+                "playing_for_fun":               {"@P": "ui/bp.msg", "text": "playing_for_fun"},
+                "autoplay_stopped":              {"@P": "ui/bp.msg", "text": "autoplay_stopped"},
+                "autoplay_completed":            {"@P": "ui/bp.msg", "text": "autoplay_completed"},
+                "auto_spins_left":               {"@P": "ui/bp.msg", "text": "auto_spins_left"},
+                "auto_spins_until_feature":      {"@P": "ui/bp.msg", "text": "auto_spins_until_feature"},
+                "completing_last_spin":          {"@P": "ui/bp.msg", "text": "completing_last_spin"}
+            }},
+            "regular": {}
+        }},
+
+        "win_panel": {"id": "win_panel", "type": "win-panel", "layout": {"type": "stack"}, "win_panel.show_anim": "win_panel.show", "win_panel.hide_anim": "win_panel.hide", "@O": {
+            "landscape": {"props": {"anchor.fit": "-10 34.1 0 34.1"}},
+            "portrait": {"props": {"anchor.fit": "-10 32 0 32"}}
+        }, "background": "bp.win.big", "state": "win", "visible": false, "content": {
+            "win": {"type": "anchor", "layout": {"relative": true}, "content": [
+                {"type": "stack", "props": {"anchor.fit": "6 0 65 0"}, "content": [
+                    {"@P": "ui/label.def", "format": "win_panel.label", "text": "win_panel.you_win"}
+                ]},
+                {"type": "stack", "@O": {
+                    "landscape": {"props": {"anchor.fit": "20 0 0 0"}},
+                    "portrait": {"props": {"anchor.fit": "30 5 0 5"}}
+                }, "content": [
+                    {"id": "win_value", "@P": "ui/label.def", "format": "win_panel.label", "background": "bp.win.glow"}
+                ]}
+            ]},
+            "push": {"type": "anchor", "layout": {"relative": true}, "content": [
+                {"id": "push", "@P": "ui/label.def", "format": "win_panel.value", "text": "win_panel.push", "props": {"anchor.fit": "20 0"}}
+            ]}
+        }},
+
+        "bottom-panel": {"id": "bottom_container", "type": "stack", "layout": {"alignment": "bottom-center"}, "@O": {
+            "landscape": {"clipped": false, "props": {"anchor.relative": true, "anchor.fit": "88.75 0 0 0"}},
+            "portrait":  {"clipped": true,  "props": {"anchor.relative": true, "anchor.fit": "90 0 0 0"}}},
+            "content": [
+
+            {"id": "_middle_container", "type": "anchor", "layout": {"relative": true},
+                "@O": {"landscape": {"ratio": 15.75}, "portrait":  {"ratio": 8}}, "content": [
+                {"@P": "ui/bottom_panel", "id": "bottom_panel"},
+                {"@P": "ui/message_panel", "id": "message_panel"},
+                {"@P": "ui/win_panel", "id": "win_panel"}
+            ]}
+        ]}
+    }
+}

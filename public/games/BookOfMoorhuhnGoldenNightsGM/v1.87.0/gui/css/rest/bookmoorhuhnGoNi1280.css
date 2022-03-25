@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+	
+/* background images */
+html[lang="de"] #loading									{ background-image: url('../../picts/rest/bookmoorhuhnGoNi/1280/loading_screen_l32.jpg'); }
+html[lang="de"] .container.l169 #loading					{ background-image: url('../../picts/rest/bookmoorhuhnGoNi/1280/loading_screen_l169.jpg'); }
+#loading													{ background-image: url('../../picts/rest/bookmoorhuhnGoNi/1280/loading_screen_l32-en.jpg'); }
+.container.l169 #loading									{ background-image: url('../../picts/rest/bookmoorhuhnGoNi/1280/loading_screen_l169-en.jpg'); }
+
+.jackpotContainer .bgControlBox												{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_bottom.jpg'); }
+.freegame .jackpotContainer .bgControlBox									{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_bottom-fg.jpg'); }
+.container.landscape.inJackpotMode.chance .jackpotContainer .bgControlBox	{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/console_mobile_bg.png'); }
+.container.portrait .jackpotContainer .bgControlBox							{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/console_portrait_bg.png'); }
+
+.container .headlineContainer .jackpotLogo {
+	top: 22px;
+	right: 240px;
+}
+.container .portraitHeadlineContainer .jackpotLogo {
+	bottom: 16px;
+	right: 228px;
+}
+.container.freegame .headlineContainer .jackpotLogo {
+	display: none;
+}

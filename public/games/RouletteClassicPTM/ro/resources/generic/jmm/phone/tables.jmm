@@ -1,0 +1,852 @@
+{
+    "ui" : {
+        "neighbors_controls": {"id": "neighbors_controls", "type": "vport", "layout": {"relative": true}, "@O": {
+            "landscape": {"size": [700, 80], "layout": {"base": [700, 80]}},
+            "portrait": {"size": [80, 700], "layout": {"base": [80, 700]}}},
+            "content": [
+                {"id": "neighbors_label", "type": "image", "slice": "neighbors_txt", "size": [130, 27], "@O": {
+                    "landscape": {"pos": [30, 26],  "xform": {"rotate": 0}},
+                    "portrait":  {"pos": [53, 60], "xform": {"rotate": 90}}
+                }},
+                {"id": "btn_1", "@P": "ui/neighbors_btn", "size": [80, 80], "text": 1, "@O": {
+                    "landscape": {"pos": [200, 0]},
+                    "portrait":  {"pos": [0, 230]}
+                }},
+                {"id": "btn_2", "@P": "ui/neighbors_btn", "size": [80, 80], "text": 2, "@O": {
+                    "landscape": {"pos": [295, 0]},
+                    "portrait":  {"pos": [0, 325]}
+                }},
+                {"id": "btn_3", "@P": "ui/neighbors_btn", "size": [80, 80], "text": 3, "@O": {
+                    "landscape": {"pos": [390, 0]},
+                    "portrait":  {"pos": [0, 420]}
+                }},
+                {"id": "btn_4", "@P": "ui/neighbors_btn", "size": [80, 80], "text": 4, "@O": {
+                    "landscape": {"pos": [485, 0]},
+                    "portrait":  {"pos": [0, 515]}
+                }},
+                {"id": "btn_5", "@P": "ui/neighbors_btn", "size": [80, 80], "text": 5, "@O": {
+                    "landscape": {"pos": [580, 0]},
+                    "portrait":  {"pos": [0, 610]}
+                }}
+            ]
+        },
+
+        "button_big_gc": {"@P": "ui/action_button", "id": "button_big", "mask": {"slice": "b.big_btn_mask", "hitcolor": "#000", "invert": true},  "size": [124, 124], "@H": {"left": {"pos": [470, 6]}, "right": {"pos": [ 6,  6]}}},
+
+        "spin_autoplay_button_gc": {"@P": "ui/button_big_gc", "id": "spin_autoplay_btn", "action": "spin_autoplay", "slice": "b.spin", "regulations": {"no_autoplay": "b.spin.no_autoplay"}},
+
+        "button_1_gc": {"@P": "ui/action_button", "id": "button_1", "size": [136, 136], "@H": {"left": {"pos": [458, 0]}, "right": {"pos": [ 0,  0]}}},
+        "button_2_gc": {"@P": "ui/action_button", "id": "button_2", "size": [136, 136], "@H": {"left": {"pos": [344, 0]}, "right": {"pos": [114, 0]}}},
+        "button_3_gc": {"@P": "ui/action_button", "id": "button_3", "size": [136, 136], "@H": {"left": {"pos": [228, 0]}, "right": {"pos": [228, 0]}}},
+        "button_4_gc": {"@P": "ui/action_button", "id": "button_4", "size": [136, 136], "@H": {"left": {"pos": [114, 0]}, "right": {"pos": [344, 0]}}},
+        "button_5_gc": {"@P": "ui/action_button", "id": "button_5", "size": [136, 136], "@H": {"left": {"pos": [ 0,  0]}, "right": {"pos": [458, 0]}}},
+
+        "button_big": {"size": [186, 186], "@O": {
+            "landscape": {"@H": {"right": {"pos": [485, 0]}, "left": {"pos": [-84, 0]}}},
+            "portrait":  {"@H": {"right": {"pos": [-84, 0]}, "left": {"pos": [485, 0]}}}
+        }},
+        "autoplay.spins_left": {"@O": {
+            "landscape": {"@H": {"right": {"pos": [555, 70]}, "left": {"pos": [-13.5, 70]}}},
+            "portrait":  {"@H": {"right": {"pos": [-13.5, 70]}, "left": {"pos": [555, 70]}}}
+        }},
+        "button_2": {"size": [208, 208], "@O": {
+            "landscape": {"@H": {"right": {"pos": [285, -11]}, "left": {"pos": [95, -11]}}},
+            "portrait":  {"@H": {"right": {"pos": [95, -11]}, "left": {"pos": [285, -11]}}}
+        }},
+        "button_3": {"size": [208, 208], "@O": {
+            "landscape": {"@H": {"right": {"pos": [95, -11]}, "left": {"pos": [285, -11]}}},
+            "portrait":  {"@H": {"right": {"pos": [285, -11]}, "left": {"pos": [95, -11]}}}
+        }},
+        "button_4": {"size": [208, 208], "@O": {
+            "landscape": {"@H": {"right": {"pos": [-95, -11]}, "left": {"pos": [475, -11]}}},
+            "portrait":  {"@H": {"right": {"pos": [475, -11]}, "left": {"pos": [-95, -11]}}}
+        }},
+
+        "wheel": {"id": "wheel_widget", "type": "cr-wheel", "ratio": 1, "rotation_time": 5000, "layout": {"type": "anchor", "relative": true},
+            "@O": {
+                "landscape": {"background": "wheel_bg_l", "props": {"anchor.fit": "0 62 26 0", "anchor.alignment": "center-left"}, "ratio": 0.957},
+                "portrait":  {"background": "wheel_bg_p", "props": {"anchor.fit": "-3 0 67 0", "anchor.alignment": "top-center"}, "ratio": 0.985}
+            }, "content": [
+                {"id": "_center_container", "props": {"anchor.fit": 0}, "type": "vport", "layout": {"base": [431, 450]}, "content": [
+                    {"id": "_ro_wheel_movable", "type": "vport", "group": "animated",
+                        "layout": {"base": [268, 268], "relative": true}, "background": "wheel_main",
+                        "@O": {
+                            "landscape": {"pos": [75, 90], "size": [268, 268]},
+                            "portrait":  {"pos": [93, 111.5], "size": [255, 255]}
+                        }
+                    },
+                    {"id": "wheel_shadow", "type": "image", "slice": "wheel_shadow_2d",
+                        "@O": {
+                            "landscape": {"pos": [94, 117], "size": [226, 227]},
+                            "portrait":  {"pos": [111, 137], "size": [215, 216]}
+                        }
+                    },
+                    {"id": "_laying_ball_container", "type": "vport", "layout": {"base": [268, 268], "relative": true}, "group": "animated",
+                        "@O": {
+                            "landscape": {"pos": [75, 90], "size": [268, 268]},
+                            "portrait":  {"pos": [93, 111.5], "size": [255, 255]}
+                        }, "content": [
+                        {"id": "ball_2d", "group": "animated", "type": "image", "slice": "ball", "visible": false,
+                            "@O": {
+                                "landscape": {"size": [19, 19], "pos": [220.5, 133]},
+                                "portrait":  {"size": [19, 19], "pos": [220.5, 133]}
+                            }
+                        }
+                    ]},
+                    {"id":"spin_on_wheel", "@P":"ui/action_button", "group": "controls", "action":"spin", "slice": "b.spin.small", "@O": {
+                        "landscape": {"size":[150, 150], "pos":[134.5, 148.5]},
+                        "portrait":  {"size":[146, 146], "pos":[148, 166]}
+                    }, "opacity": 1},
+                    {"id": "result_widget", "@P": "ui/result_widget_new", "opacity": 0, "group": "animated",
+                        "@O": {
+                            "landscape": {"pos": [146, 162],   "size": [126, 126], "layout":{"base": [124, 124]}},
+                            "portrait":  {"pos": [158.5, 179], "size": [124, 124], "layout":{"base": [124, 124]}}
+                        }
+                    }
+            ]}
+        ]},
+
+        "pocket_place": {"type": "pocket-place", "layout": {"relative": true, "alignment": "center"},
+            "visible": false, "group": "pocket_places", "@O": {
+                "landscape": {"size": [56, 72]},
+                "portrait":  {"size": [72, 56]}
+            }, "content": [
+                {"id": "highlight", "type": "panel", "background": "pocket_highlight", "visible": false}
+            ]
+        },
+
+        "turret": {"id": "turret_image", "type": "image", "visible": false, "@O": {
+            "landscape": {"slice": "turret", "size": [59, 69.4]},
+            "portrait":  {"slice": "turret", "size": [59, 69.4]}
+        }},
+
+        "bet_place": {"type": "bet-place", "size": [40, 40], "visible": false, "group": "bet_places", "alignment": "center", "@O": {
+            "landscape": {"layout": {"base": [40, 40]}},
+            "portrait":  {"layout": {"base": [40, 40]}}
+        }, "content": [
+            {"id": "chip_stack", "type": "chip-stack", "props": {"anchor.alignment": "center", "anchor.fit": -1}, "size": [40,40], "pos": [0, 0],
+                "chips.round_delay": "${chip_stack_round_delay}", "visible": false
+            }
+        ]},
+
+        "msg_place": {"type": "msg-place", "size": [40, 40], "visible": false, "group": "msg_places", "alignment": "center", "@O": {
+            "landscape": {"layout": {"base": [40, 40]}},
+            "portrait":  {"layout": {"base": [40, 40]}}
+        }, "content": [
+            {"id": "bet_label", "type": "label", "background": "box_round", "opacity": 0,
+                "format": "tooltip", "alignment": "center", "text-fit": [true, true], "visible": false, "@O": {
+                "landscape": {"pos": [-6, -29], "size": [50, 30]},
+                "portrait":  {"pos": [-6, 5], "size": [50, 30]}
+            }}
+        ]},
+
+        "chips_panel": {"id": "chips_panel",
+            "chips.selected_chip_scale": 1,
+            "chips.visible_offset": 1,
+            "@O": {
+                "landscape": {"chips.orientation": "landscape", "chips.bg": "chips.tray.bg", "chips.clip_mask": "chips.mask"},
+                "portrait":  {"chips.orientation": "landscape", "chips.bg": "chips.tray.bg", "chips.clip_mask": "chips.mask"}
+            }
+        },
+
+        "table_message_panel": {
+            "id": "table_message_panel",
+            "type": "table-message-panel",
+            "layout": {"type" : "anchor", "relative" : true, "alignment": "center"},
+            "props": {"anchor.fit" : 0},
+            "content": [
+                {"type": "anchor", "props": {"anchor.fit": 0, "anchor.relative": true}, "@O": {"landscape": {"ratio": 2.2072829}, "portrait": {"ratio": 0.4518987}}, "content": [
+                    {"id" : "msg_places","type" : "vport", "props" : {"anchor.fit" : 1, "anchor.alignment" : "center"}, "@O": {
+                        "landscape": {"layout": {"base": [788, 357]}},
+                        "portrait":  {"layout": {"base": [357, 788]}}
+                    }, "content": [
+                        {"@P" : "ui/msg_place",  "id": "1",    "@O": {"landscape": {"pos": [5,   125.5]}, "portrait":  {"pos": [227,   1.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "7",    "@O": {"landscape": {"pos": [24,   51.5]}, "portrait":  {"pos": [300,    24]}}},
+                        {"@P" : "ui/msg_place",  "id": "123",  "@O": {"landscape": {"pos": [53,   51.5]}, "portrait":  {"pos": [300,  52.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "124",  "@O": {"landscape": {"pos": [82,   51.5]}, "portrait":  {"pos": [300,    81]}}},
+                        {"@P" : "ui/msg_place",  "id": "125",  "@O": {"landscape": {"pos": [111,  51.5]}, "portrait":  {"pos": [300, 109.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "126",  "@O": {"landscape": {"pos": [140,  51.5]}, "portrait":  {"pos": [300,   138]}}},
+                        {"@P" : "ui/msg_place",  "id": "127",  "@O": {"landscape": {"pos": [169,  51.5]}, "portrait":  {"pos": [300, 166.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "128",  "@O": {"landscape": {"pos": [196,  51.5]}, "portrait":  {"pos": [300,   195]}}},
+                        {"@P" : "ui/msg_place",  "id": "129",  "@O": {"landscape": {"pos": [225,  51.5]}, "portrait":  {"pos": [300, 223.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "130",  "@O": {"landscape": {"pos": [254,  51.5]}, "portrait":  {"pos": [300,   252]}}},
+                        {"@P" : "ui/msg_place",  "id": "131",  "@O": {"landscape": {"pos": [283,  51.5]}, "portrait":  {"pos": [300, 280.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "132",  "@O": {"landscape": {"pos": [311,  51.5]}, "portrait":  {"pos": [300,   309]}}},
+                        {"@P" : "ui/msg_place",  "id": "133",  "@O": {"landscape": {"pos": [340,  51.5]}, "portrait":  {"pos": [300, 338.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "134",  "@O": {"landscape": {"pos": [369,  51.5]}, "portrait":  {"pos": [300,   367]}}},
+                        {"@P" : "ui/msg_place",  "id": "135",  "@O": {"landscape": {"pos": [397,  51.5]}, "portrait":  {"pos": [300, 395.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "136",  "@O": {"landscape": {"pos": [426,  51.5]}, "portrait":  {"pos": [300,   424]}}},
+                        {"@P" : "ui/msg_place",  "id": "137",  "@O": {"landscape": {"pos": [455,  51.5]}, "portrait":  {"pos": [300, 452.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "138",  "@O": {"landscape": {"pos": [483,  51.5]}, "portrait":  {"pos": [300,   481]}}},
+                        {"@P" : "ui/msg_place",  "id": "139",  "@O": {"landscape": {"pos": [512,  51.5]}, "portrait":  {"pos": [300, 509.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "140",  "@O": {"landscape": {"pos": [540,  51.5]}, "portrait":  {"pos": [300,   538]}}},
+                        {"@P" : "ui/msg_place",  "id": "141",  "@O": {"landscape": {"pos": [568,  51.5]}, "portrait":  {"pos": [300, 567.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "142",  "@O": {"landscape": {"pos": [597,  51.5]}, "portrait":  {"pos": [300,   596]}}},
+                        {"@P" : "ui/msg_place",  "id": "143",  "@O": {"landscape": {"pos": [626,  51.5]}, "portrait":  {"pos": [300, 625.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "144",  "@O": {"landscape": {"pos": [654,  51.5]}, "portrait":  {"pos": [300,   654]}}},
+                        {"@P" : "ui/msg_place",  "id": "145",  "@O": {"landscape": {"pos": [683,  51.5]}, "portrait":  {"pos": [300, 683.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "148",  "@O": {"landscape": {"pos": [741,  51.5]}, "portrait":  {"pos": [300,  740]}}},
+                        {"@P" : "ui/msg_place",  "id": "6",    "@O": {"landscape": {"pos": [24,   89.5]}, "portrait":  {"pos": [263.5,    24]}}},
+                        {"@P" : "ui/msg_place",  "id": "100",  "@O": {"landscape": {"pos": [53,   89.5]}, "portrait":  {"pos": [263.5,  52.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "101",  "@O": {"landscape": {"pos": [82,   89.5]}, "portrait":  {"pos": [263.5,    81]}}},
+                        {"@P" : "ui/msg_place",  "id": "102",  "@O": {"landscape": {"pos": [111,  89.5]}, "portrait":  {"pos": [263.5, 109.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "103",  "@O": {"landscape": {"pos": [140,  89.5]}, "portrait":  {"pos": [263.5,   138]}}},
+                        {"@P" : "ui/msg_place",  "id": "104",  "@O": {"landscape": {"pos": [169,  89.5]}, "portrait":  {"pos": [263.5, 166.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "105",  "@O": {"landscape": {"pos": [196,  89.5]}, "portrait":  {"pos": [263.5,   195]}}},
+                        {"@P" : "ui/msg_place",  "id": "106",  "@O": {"landscape": {"pos": [225,  89.5]}, "portrait":  {"pos": [263.5, 223.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "107",  "@O": {"landscape": {"pos": [254,  89.5]}, "portrait":  {"pos": [263.5,   252]}}},
+                        {"@P" : "ui/msg_place",  "id": "108",  "@O": {"landscape": {"pos": [283,  89.5]}, "portrait":  {"pos": [263.5, 280.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "109",  "@O": {"landscape": {"pos": [311,  89.5]}, "portrait":  {"pos": [263.5,   309]}}},
+                        {"@P" : "ui/msg_place",  "id": "110",  "@O": {"landscape": {"pos": [340,  89.5]}, "portrait":  {"pos": [263.5, 338.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "111",  "@O": {"landscape": {"pos": [369,  89.5]}, "portrait":  {"pos": [263.5,   367]}}},
+                        {"@P" : "ui/msg_place",  "id": "112",  "@O": {"landscape": {"pos": [397,  89.5]}, "portrait":  {"pos": [263.5, 395.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "113",  "@O": {"landscape": {"pos": [426,  89.5]}, "portrait":  {"pos": [263.5,   424]}}},
+                        {"@P" : "ui/msg_place",  "id": "114",  "@O": {"landscape": {"pos": [455,  89.5]}, "portrait":  {"pos": [263.5, 452.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "115",  "@O": {"landscape": {"pos": [483,  89.5]}, "portrait":  {"pos": [263.5,   481]}}},
+                        {"@P" : "ui/msg_place",  "id": "116",  "@O": {"landscape": {"pos": [512,  89.5]}, "portrait":  {"pos": [263.5, 509.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "117",  "@O": {"landscape": {"pos": [540,  89.5]}, "portrait":  {"pos": [263.5,   538]}}},
+                        {"@P" : "ui/msg_place",  "id": "118",  "@O": {"landscape": {"pos": [568,  89.5]}, "portrait":  {"pos": [263.5, 567.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "119",  "@O": {"landscape": {"pos": [597,  89.5]}, "portrait":  {"pos": [263.5,   596]}}},
+                        {"@P" : "ui/msg_place",  "id": "120",  "@O": {"landscape": {"pos": [626,  89.5]}, "portrait":  {"pos": [263.5, 625.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "121",  "@O": {"landscape": {"pos": [654,  89.5]}, "portrait":  {"pos": [263.5,   654]}}},
+                        {"@P" : "ui/msg_place",  "id": "122",  "@O": {"landscape": {"pos": [683,  89.5]}, "portrait":  {"pos": [263.5, 683.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "5",    "@O": {"landscape": {"pos": [24,  125.5]}, "portrait":  {"pos": [227,    24]}}},
+                        {"@P" : "ui/msg_place",  "id": "77",   "@O": {"landscape": {"pos": [53,  125.5]}, "portrait":  {"pos": [227,  52.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "78",   "@O": {"landscape": {"pos": [82,  125.5]}, "portrait":  {"pos": [227,    81]}}},
+                        {"@P" : "ui/msg_place",  "id": "79",   "@O": {"landscape": {"pos": [111, 125.5]}, "portrait":  {"pos": [227, 109.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "80",   "@O": {"landscape": {"pos": [140, 125.5]}, "portrait":  {"pos": [227,   138]}}},
+                        {"@P" : "ui/msg_place",  "id": "81",   "@O": {"landscape": {"pos": [169, 125.5]}, "portrait":  {"pos": [227, 166.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "82",   "@O": {"landscape": {"pos": [196, 125.5]}, "portrait":  {"pos": [227,   195]}}},
+                        {"@P" : "ui/msg_place",  "id": "83",   "@O": {"landscape": {"pos": [225, 125.5]}, "portrait":  {"pos": [227, 223.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "84",   "@O": {"landscape": {"pos": [254, 125.5]}, "portrait":  {"pos": [227,   252]}}},
+                        {"@P" : "ui/msg_place",  "id": "85",   "@O": {"landscape": {"pos": [283, 125.5]}, "portrait":  {"pos": [227, 280.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "86",   "@O": {"landscape": {"pos": [311, 125.5]}, "portrait":  {"pos": [227,   309]}}},
+                        {"@P" : "ui/msg_place",  "id": "87",   "@O": {"landscape": {"pos": [340, 125.5]}, "portrait":  {"pos": [227, 338.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "88",   "@O": {"landscape": {"pos": [369, 125.5]}, "portrait":  {"pos": [227,   367]}}},
+                        {"@P" : "ui/msg_place",  "id": "89",   "@O": {"landscape": {"pos": [397, 125.5]}, "portrait":  {"pos": [227, 395.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "90",   "@O": {"landscape": {"pos": [426, 125.5]}, "portrait":  {"pos": [227,   424]}}},
+                        {"@P" : "ui/msg_place",  "id": "91",   "@O": {"landscape": {"pos": [455, 125.5]}, "portrait":  {"pos": [227, 452.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "92",   "@O": {"landscape": {"pos": [483, 125.5]}, "portrait":  {"pos": [227,   481]}}},
+                        {"@P" : "ui/msg_place",  "id": "93",   "@O": {"landscape": {"pos": [512, 125.5]}, "portrait":  {"pos": [227, 509.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "94",   "@O": {"landscape": {"pos": [540, 125.5]}, "portrait":  {"pos": [227,   538]}}},
+                        {"@P" : "ui/msg_place",  "id": "95",   "@O": {"landscape": {"pos": [568, 125.5]}, "portrait":  {"pos": [227, 567.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "96",   "@O": {"landscape": {"pos": [597, 125.5]}, "portrait":  {"pos": [227,   596]}}},
+                        {"@P" : "ui/msg_place",  "id": "97",   "@O": {"landscape": {"pos": [626, 125.5]}, "portrait":  {"pos": [227, 625.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "98",   "@O": {"landscape": {"pos": [654, 125.5]}, "portrait":  {"pos": [227,   654]}}},
+                        {"@P" : "ui/msg_place",  "id": "99",   "@O": {"landscape": {"pos": [683, 125.5]}, "portrait":  {"pos": [227, 683.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "147",  "@O": {"landscape": {"pos": [741, 125.5]}, "portrait":  {"pos": [227,  740]}}},
+                        {"@P" : "ui/msg_place",  "id": "4",    "@O": {"landscape": {"pos": [24,  162.5]}, "portrait":  {"pos": [190.5,     24]}}},
+                        {"@P" : "ui/msg_place",  "id": "54",   "@O": {"landscape": {"pos": [53,  162.5]}, "portrait":  {"pos": [190.5,   52.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "55",   "@O": {"landscape": {"pos": [82,  162.5]}, "portrait":  {"pos": [190.5,     81]}}},
+                        {"@P" : "ui/msg_place",  "id": "56",   "@O": {"landscape": {"pos": [111, 162.5]}, "portrait":  {"pos": [190.5,  109.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "57",   "@O": {"landscape": {"pos": [140, 162.5]}, "portrait":  {"pos": [190.5,    138]}}},
+                        {"@P" : "ui/msg_place",  "id": "58",   "@O": {"landscape": {"pos": [169, 162.5]}, "portrait":  {"pos": [190.5,  166.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "59",   "@O": {"landscape": {"pos": [196, 162.5]}, "portrait":  {"pos": [190.5,    195]}}},
+                        {"@P" : "ui/msg_place",  "id": "60",   "@O": {"landscape": {"pos": [225, 162.5]}, "portrait":  {"pos": [190.5,  223.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "61",   "@O": {"landscape": {"pos": [254, 162.5]}, "portrait":  {"pos": [190.5,    252]}}},
+                        {"@P" : "ui/msg_place",  "id": "62",   "@O": {"landscape": {"pos": [283, 162.5]}, "portrait":  {"pos": [190.5,  280.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "63",   "@O": {"landscape": {"pos": [311, 162.5]}, "portrait":  {"pos": [190.5,    309]}}},
+                        {"@P" : "ui/msg_place",  "id": "64",   "@O": {"landscape": {"pos": [340, 162.5]}, "portrait":  {"pos": [190.5,  338.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "65",   "@O": {"landscape": {"pos": [369, 162.5]}, "portrait":  {"pos": [190.5,    367]}}},
+                        {"@P" : "ui/msg_place",  "id": "66",   "@O": {"landscape": {"pos": [397, 162.5]}, "portrait":  {"pos": [190.5,  395.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "67",   "@O": {"landscape": {"pos": [426, 162.5]}, "portrait":  {"pos": [190.5,    424]}}},
+                        {"@P" : "ui/msg_place",  "id": "68",   "@O": {"landscape": {"pos": [455, 162.5]}, "portrait":  {"pos": [190.5,  452.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "69",   "@O": {"landscape": {"pos": [483, 162.5]}, "portrait":  {"pos": [190.5,    481]}}},
+                        {"@P" : "ui/msg_place",  "id": "70",   "@O": {"landscape": {"pos": [512, 162.5]}, "portrait":  {"pos": [190.5,  509.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "71",   "@O": {"landscape": {"pos": [540, 162.5]}, "portrait":  {"pos": [190.5,    538]}}},
+                        {"@P" : "ui/msg_place",  "id": "72",   "@O": {"landscape": {"pos": [568, 162.5]}, "portrait":  {"pos": [190.5,  567.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "73",   "@O": {"landscape": {"pos": [597, 162.5]}, "portrait":  {"pos": [190.5,    596]}}},
+                        {"@P" : "ui/msg_place",  "id": "74",   "@O": {"landscape": {"pos": [626, 162.5]}, "portrait":  {"pos": [190.5,  625.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "75",   "@O": {"landscape": {"pos": [654, 162.5]}, "portrait":  {"pos": [190.5,    654]}}},
+                        {"@P" : "ui/msg_place",  "id": "76",   "@O": {"landscape": {"pos": [683, 162.5]}, "portrait":  {"pos": [190.5,  683.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "3",    "@O": {"landscape": {"pos": [24,  198.5]}, "portrait":  {"pos": [154,     24]}}},
+                        {"@P" : "ui/msg_place",  "id": "31",   "@O": {"landscape": {"pos": [53,  198.5]}, "portrait":  {"pos": [154,   52.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "32",   "@O": {"landscape": {"pos": [82,  198.5]}, "portrait":  {"pos": [154,     81]}}},
+                        {"@P" : "ui/msg_place",  "id": "33",   "@O": {"landscape": {"pos": [111, 198.5]}, "portrait":  {"pos": [154,  109.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "34",   "@O": {"landscape": {"pos": [140, 198.5]}, "portrait":  {"pos": [154,    138]}}},
+                        {"@P" : "ui/msg_place",  "id": "35",   "@O": {"landscape": {"pos": [169, 198.5]}, "portrait":  {"pos": [154,  166.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "36",   "@O": {"landscape": {"pos": [196, 198.5]}, "portrait":  {"pos": [154,    195]}}},
+                        {"@P" : "ui/msg_place",  "id": "37",   "@O": {"landscape": {"pos": [225, 198.5]}, "portrait":  {"pos": [154,  223.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "38",   "@O": {"landscape": {"pos": [254, 198.5]}, "portrait":  {"pos": [154,    252]}}},
+                        {"@P" : "ui/msg_place",  "id": "39",   "@O": {"landscape": {"pos": [283, 198.5]}, "portrait":  {"pos": [154,  280.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "40",   "@O": {"landscape": {"pos": [311, 198.5]}, "portrait":  {"pos": [154,    309]}}},
+                        {"@P" : "ui/msg_place",  "id": "41",   "@O": {"landscape": {"pos": [340, 198.5]}, "portrait":  {"pos": [154,  338.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "42",   "@O": {"landscape": {"pos": [369, 198.5]}, "portrait":  {"pos": [154,    367]}}},
+                        {"@P" : "ui/msg_place",  "id": "43",   "@O": {"landscape": {"pos": [397, 198.5]}, "portrait":  {"pos": [154,  395.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "44",   "@O": {"landscape": {"pos": [426, 198.5]}, "portrait":  {"pos": [154,    424]}}},
+                        {"@P" : "ui/msg_place",  "id": "45",   "@O": {"landscape": {"pos": [455, 198.5]}, "portrait":  {"pos": [154,  452.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "46",   "@O": {"landscape": {"pos": [483, 198.5]}, "portrait":  {"pos": [154,    481]}}},
+                        {"@P" : "ui/msg_place",  "id": "47",   "@O": {"landscape": {"pos": [512, 198.5]}, "portrait":  {"pos": [154,  509.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "48",   "@O": {"landscape": {"pos": [540, 198.5]}, "portrait":  {"pos": [154,    538]}}},
+                        {"@P" : "ui/msg_place",  "id": "49",   "@O": {"landscape": {"pos": [568, 198.5]}, "portrait":  {"pos": [154,  567.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "50",   "@O": {"landscape": {"pos": [597, 198.5]}, "portrait":  {"pos": [154,    596]}}},
+                        {"@P" : "ui/msg_place",  "id": "51",   "@O": {"landscape": {"pos": [626, 198.5]}, "portrait":  {"pos": [154,  625.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "52",   "@O": {"landscape": {"pos": [654, 198.5]}, "portrait":  {"pos": [154,    654]}}},
+                        {"@P" : "ui/msg_place",  "id": "53",   "@O": {"landscape": {"pos": [683, 198.5]}, "portrait":  {"pos": [154,  683.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "146",  "@O": {"landscape": {"pos": [741, 198.5]}, "portrait":  {"pos": [154, 740]}}},
+                        {"@P" : "ui/msg_place",  "id": "2",    "@O": {"landscape": {"pos": [24,  234.5]}, "portrait":  {"pos": [117.5,     24]}}},
+                        {"@P" : "ui/msg_place",  "id": "8",    "@O": {"landscape": {"pos": [53,  234.5]}, "portrait":  {"pos": [117.5,   52.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "9",    "@O": {"landscape": {"pos": [82,  234.5]}, "portrait":  {"pos": [117.5,     81]}}},
+                        {"@P" : "ui/msg_place",  "id": "10",   "@O": {"landscape": {"pos": [111, 234.5]}, "portrait":  {"pos": [117.5,  109.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "11",   "@O": {"landscape": {"pos": [140, 234.5]}, "portrait":  {"pos": [117.5,    138]}}},
+                        {"@P" : "ui/msg_place",  "id": "12",   "@O": {"landscape": {"pos": [169, 234.5]}, "portrait":  {"pos": [117.5,  166.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "13",   "@O": {"landscape": {"pos": [196, 234.5]}, "portrait":  {"pos": [117.5,    195]}}},
+                        {"@P" : "ui/msg_place",  "id": "14",   "@O": {"landscape": {"pos": [225, 234.5]}, "portrait":  {"pos": [117.5,  223.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "15",   "@O": {"landscape": {"pos": [254, 234.5]}, "portrait":  {"pos": [117.5,    252]}}},
+                        {"@P" : "ui/msg_place",  "id": "16",   "@O": {"landscape": {"pos": [283, 234.5]}, "portrait":  {"pos": [117.5,  280.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "17",   "@O": {"landscape": {"pos": [311, 234.5]}, "portrait":  {"pos": [117.5,    309]}}},
+                        {"@P" : "ui/msg_place",  "id": "18",   "@O": {"landscape": {"pos": [340, 234.5]}, "portrait":  {"pos": [117.5,  338.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "19",   "@O": {"landscape": {"pos": [369, 234.5]}, "portrait":  {"pos": [117.5,    367]}}},
+                        {"@P" : "ui/msg_place",  "id": "20",   "@O": {"landscape": {"pos": [397, 234.5]}, "portrait":  {"pos": [117.5,  395.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "21",   "@O": {"landscape": {"pos": [426, 234.5]}, "portrait":  {"pos": [117.5,    424]}}},
+                        {"@P" : "ui/msg_place",  "id": "22",   "@O": {"landscape": {"pos": [455, 234.5]}, "portrait":  {"pos": [117.5,  452.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "23",   "@O": {"landscape": {"pos": [483, 234.5]}, "portrait":  {"pos": [117.5,    481]}}},
+                        {"@P" : "ui/msg_place",  "id": "24",   "@O": {"landscape": {"pos": [512, 234.5]}, "portrait":  {"pos": [117.5,  509.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "25",   "@O": {"landscape": {"pos": [540, 234.5]}, "portrait":  {"pos": [117.5,    538]}}},
+                        {"@P" : "ui/msg_place",  "id": "26",   "@O": {"landscape": {"pos": [568, 234.5]}, "portrait":  {"pos": [117.5,  567.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "27",   "@O": {"landscape": {"pos": [597, 234.5]}, "portrait":  {"pos": [117.5,    596]}}},
+                        {"@P" : "ui/msg_place",  "id": "28",   "@O": {"landscape": {"pos": [626, 234.5]}, "portrait":  {"pos": [117.5,  625.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "29",   "@O": {"landscape": {"pos": [654, 234.5]}, "portrait":  {"pos": [117.5,    654]}}},
+                        {"@P" : "ui/msg_place",  "id": "30",   "@O": {"landscape": {"pos": [683, 234.5]}, "portrait":  {"pos": [117.5,  683.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "149",  "@O": {"landscape": {"pos": [140, 268.5]}, "portrait":  {"pos": [83, 138]}}},
+                        {"@P" : "ui/msg_place",  "id": "150",  "@O": {"landscape": {"pos": [369, 268.5]}, "portrait":  {"pos": [83, 367]}}},
+                        {"@P" : "ui/msg_place",  "id": "151",  "@O": {"landscape": {"pos": [597, 268.5]}, "portrait":  {"pos": [83, 596]}}},
+                        {"@P" : "ui/msg_place",  "id": "153",  "@O": {"landscape": {"pos": [82,  333.5]}, "portrait":  {"pos": [15, 81]}}},
+                        {"@P" : "ui/msg_place",  "id": "152",  "@O": {"landscape": {"pos": [654, 333.5]}, "portrait":  {"pos": [15, 654]}}},
+                        {"@P" : "ui/msg_place",  "id": "156",  "@O": {"landscape": {"pos": [196, 333.5]}, "portrait":  {"pos": [15, 195]}}},
+                        {"@P" : "ui/msg_place",  "id": "157",  "@O": {"landscape": {"pos": [540, 333.5]}, "portrait":  {"pos": [15, 538]}}},
+                        {"@P" : "ui/msg_place",  "id": "155",  "@O": {"landscape": {"pos": [311, 333.5]}, "portrait":  {"pos": [15, 309.5]}}},
+                        {"@P" : "ui/msg_place",  "id": "154",  "@O": {"landscape": {"pos": [426, 333.5]}, "portrait":  {"pos": [15, 424.5]}}}
+                    ]}
+                ]}
+            ]
+        },
+
+        "table": {
+            "id": "table_widget",
+            "type": "euro-table", "size-min": [1, 1],
+            "layout": {"type" : "anchor", "relative" : true, "alignment": "center"},
+            "props": {"anchor.fit" : 0},
+            "content": [
+                {"id": "logo", "type": "image", "@O": {
+                    "landscape": {"slice": "logo", "props": {"anchor.fit": "65 89.6 10 3.9"}},
+                    "portrait": {"slice": "logo_p", "props": {"anchor.fit": "3 65 94.5 7.5"}}
+                }},
+                {"type": "anchor", "props": {"anchor.fit": 0, "anchor.relative": true}, "@O": {"landscape": {"ratio": 2.2072829}, "portrait": {"ratio": 0.4518987}}, "content": [
+                    {"id": "mask_image", "type": "mask-image", "size-min": [1, 1], "@O": {
+                        "landscape": {"slice": "euro_table_l", "ratio": 2.2072829, "mask.slice": "mask_euro_table_l", "props": {"anchor.fit" : 0, "anchor.alignment": "center"}},
+                        "portrait":  {"slice": "euro_table_p", "ratio": 0.4518987, "mask.slice": "mask_euro_table_p", "props": {"anchor.fit" : 0, "anchor.alignment": "center"}}
+                    }},
+
+                    {"id": "bet_places", "type": "vport", "props": {"anchor.fit": 1, "anchor.alignment": "center"}, "@O": {
+                        "landscape": {"layout": {"base": [788, 357]}},
+                        "portrait":  {"layout": {"base": [357, 788]}}
+                    }, "content":[
+                        {"@P" : "ui/bet_place", "id": "1",   "@O": {"landscape": {"pos": [5,    92]}, "portrait":  {"pos": [227,   1.5]}}},
+                        {"@P" : "ui/bet_place", "id": "7",   "@O": {"landscape": {"pos": [24,   18]}, "portrait":  {"pos": [300,    24]}}},
+                        {"@P" : "ui/bet_place", "id": "123", "@O": {"landscape": {"pos": [53,   18]}, "portrait":  {"pos": [300,  52.5]}}},
+                        {"@P" : "ui/bet_place", "id": "124", "@O": {"landscape": {"pos": [82,   18]}, "portrait":  {"pos": [300,    81]}}},
+                        {"@P" : "ui/bet_place", "id": "125", "@O": {"landscape": {"pos": [111,  18]}, "portrait":  {"pos": [300, 109.5]}}},
+                        {"@P" : "ui/bet_place", "id": "126", "@O": {"landscape": {"pos": [140,  18]}, "portrait":  {"pos": [300,   138]}}},
+                        {"@P" : "ui/bet_place", "id": "127", "@O": {"landscape": {"pos": [167,  18]}, "portrait":  {"pos": [300, 166.5]}}},
+                        {"@P" : "ui/bet_place", "id": "128", "@O": {"landscape": {"pos": [196,  18]}, "portrait":  {"pos": [300,   195]}}},
+                        {"@P" : "ui/bet_place", "id": "129", "@O": {"landscape": {"pos": [225,  18]}, "portrait":  {"pos": [300, 223.5]}}},
+                        {"@P" : "ui/bet_place", "id": "130", "@O": {"landscape": {"pos": [254,  18]}, "portrait":  {"pos": [300,   252]}}},
+                        {"@P" : "ui/bet_place", "id": "131", "@O": {"landscape": {"pos": [283,  18]}, "portrait":  {"pos": [300, 280.5]}}},
+                        {"@P" : "ui/bet_place", "id": "132", "@O": {"landscape": {"pos": [311,  18]}, "portrait":  {"pos": [300,   309]}}},
+                        {"@P" : "ui/bet_place", "id": "133", "@O": {"landscape": {"pos": [340,  18]}, "portrait":  {"pos": [300, 338.5]}}},
+                        {"@P" : "ui/bet_place", "id": "134", "@O": {"landscape": {"pos": [369,  18]}, "portrait":  {"pos": [300,   367]}}},
+                        {"@P" : "ui/bet_place", "id": "135", "@O": {"landscape": {"pos": [397,  18]}, "portrait":  {"pos": [300, 395.5]}}},
+                        {"@P" : "ui/bet_place", "id": "136", "@O": {"landscape": {"pos": [426,  18]}, "portrait":  {"pos": [300,   424]}}},
+                        {"@P" : "ui/bet_place", "id": "137", "@O": {"landscape": {"pos": [455,  18]}, "portrait":  {"pos": [300, 452.5]}}},
+                        {"@P" : "ui/bet_place", "id": "138", "@O": {"landscape": {"pos": [483,  18]}, "portrait":  {"pos": [300,   481]}}},
+                        {"@P" : "ui/bet_place", "id": "139", "@O": {"landscape": {"pos": [512,  18]}, "portrait":  {"pos": [300, 509.5]}}},
+                        {"@P" : "ui/bet_place", "id": "140", "@O": {"landscape": {"pos": [540,  18]}, "portrait":  {"pos": [300,   538]}}},
+                        {"@P" : "ui/bet_place", "id": "141", "@O": {"landscape": {"pos": [568,  18]}, "portrait":  {"pos": [300, 567.5]}}},
+                        {"@P" : "ui/bet_place", "id": "142", "@O": {"landscape": {"pos": [597,  18]}, "portrait":  {"pos": [300,   596]}}},
+                        {"@P" : "ui/bet_place", "id": "143", "@O": {"landscape": {"pos": [626,  18]}, "portrait":  {"pos": [300, 625.5]}}},
+                        {"@P" : "ui/bet_place", "id": "144", "@O": {"landscape": {"pos": [654,  18]}, "portrait":  {"pos": [300,   654]}}},
+                        {"@P" : "ui/bet_place", "id": "145", "@O": {"landscape": {"pos": [683,  18]}, "portrait":  {"pos": [300, 683.5]}}},
+                        {"@P" : "ui/bet_place", "id": "148", "@O": {"landscape": {"pos": [741,  18]}, "portrait":  {"pos": [300,  740]}}},
+                        {"@P" : "ui/bet_place", "id": "6",   "@O": {"landscape": {"pos": [24,   56]}, "portrait":  {"pos": [263.5,    24]}}},
+                        {"@P" : "ui/bet_place", "id": "100", "@O": {"landscape": {"pos": [53,   56]}, "portrait":  {"pos": [263.5,  52.5]}}},
+                        {"@P" : "ui/bet_place", "id": "101", "@O": {"landscape": {"pos": [82,   56]}, "portrait":  {"pos": [263.5,    81]}}},
+                        {"@P" : "ui/bet_place", "id": "102", "@O": {"landscape": {"pos": [111,  56]}, "portrait":  {"pos": [263.5, 109.5]}}},
+                        {"@P" : "ui/bet_place", "id": "103", "@O": {"landscape": {"pos": [140,  56]}, "portrait":  {"pos": [263.5,   138]}}},
+                        {"@P" : "ui/bet_place", "id": "104", "@O": {"landscape": {"pos": [169,  56]}, "portrait":  {"pos": [263.5, 166.5]}}},
+                        {"@P" : "ui/bet_place", "id": "105", "@O": {"landscape": {"pos": [196,  56]}, "portrait":  {"pos": [263.5,   195]}}},
+                        {"@P" : "ui/bet_place", "id": "106", "@O": {"landscape": {"pos": [225,  56]}, "portrait":  {"pos": [263.5, 223.5]}}},
+                        {"@P" : "ui/bet_place", "id": "107", "@O": {"landscape": {"pos": [254,  56]}, "portrait":  {"pos": [263.5,   252]}}},
+                        {"@P" : "ui/bet_place", "id": "108", "@O": {"landscape": {"pos": [283,  56]}, "portrait":  {"pos": [263.5, 280.5]}}},
+                        {"@P" : "ui/bet_place", "id": "109", "@O": {"landscape": {"pos": [311,  56]}, "portrait":  {"pos": [263.5,   309]}}},
+                        {"@P" : "ui/bet_place", "id": "110", "@O": {"landscape": {"pos": [340,  56]}, "portrait":  {"pos": [263.5, 338.5]}}},
+                        {"@P" : "ui/bet_place", "id": "111", "@O": {"landscape": {"pos": [369,  56]}, "portrait":  {"pos": [263.5,   367]}}},
+                        {"@P" : "ui/bet_place", "id": "112", "@O": {"landscape": {"pos": [397,  56]}, "portrait":  {"pos": [263.5, 395.5]}}},
+                        {"@P" : "ui/bet_place", "id": "113", "@O": {"landscape": {"pos": [426,  56]}, "portrait":  {"pos": [263.5,   424]}}},
+                        {"@P" : "ui/bet_place", "id": "114", "@O": {"landscape": {"pos": [455,  56]}, "portrait":  {"pos": [263.5, 452.5]}}},
+                        {"@P" : "ui/bet_place", "id": "115", "@O": {"landscape": {"pos": [483,  56]}, "portrait":  {"pos": [263.5,   481]}}},
+                        {"@P" : "ui/bet_place", "id": "116", "@O": {"landscape": {"pos": [512,  56]}, "portrait":  {"pos": [263.5, 509.5]}}},
+                        {"@P" : "ui/bet_place", "id": "117", "@O": {"landscape": {"pos": [540,  56]}, "portrait":  {"pos": [263.5,   538]}}},
+                        {"@P" : "ui/bet_place", "id": "118", "@O": {"landscape": {"pos": [568,  56]}, "portrait":  {"pos": [263.5, 567.5]}}},
+                        {"@P" : "ui/bet_place", "id": "119", "@O": {"landscape": {"pos": [597,  56]}, "portrait":  {"pos": [263.5,   596]}}},
+                        {"@P" : "ui/bet_place", "id": "120", "@O": {"landscape": {"pos": [626,  56]}, "portrait":  {"pos": [263.5, 625.5]}}},
+                        {"@P" : "ui/bet_place", "id": "121", "@O": {"landscape": {"pos": [654,  56]}, "portrait":  {"pos": [263.5,   654]}}},
+                        {"@P" : "ui/bet_place", "id": "122", "@O": {"landscape": {"pos": [683,  56]}, "portrait":  {"pos": [263.5, 683.5]}}},
+                        {"@P" : "ui/bet_place", "id": "5",   "@O": {"landscape": {"pos": [24,   92]}, "portrait":  {"pos": [227,    24]}}},
+                        {"@P" : "ui/bet_place", "id": "77",  "@O": {"landscape": {"pos": [53,   92]}, "portrait":  {"pos": [227,  52.5]}}},
+                        {"@P" : "ui/bet_place", "id": "78",  "@O": {"landscape": {"pos": [82,   92]}, "portrait":  {"pos": [227,    81]}}},
+                        {"@P" : "ui/bet_place", "id": "79",  "@O": {"landscape": {"pos": [111,  92]}, "portrait":  {"pos": [227, 109.5]}}},
+                        {"@P" : "ui/bet_place", "id": "80",  "@O": {"landscape": {"pos": [140,  92]}, "portrait":  {"pos": [227,   138]}}},
+                        {"@P" : "ui/bet_place", "id": "81",  "@O": {"landscape": {"pos": [169,  92]}, "portrait":  {"pos": [227, 166.5]}}},
+                        {"@P" : "ui/bet_place", "id": "82",  "@O": {"landscape": {"pos": [196,  92]}, "portrait":  {"pos": [227,   195]}}},
+                        {"@P" : "ui/bet_place", "id": "83",  "@O": {"landscape": {"pos": [225,  92]}, "portrait":  {"pos": [227, 223.5]}}},
+                        {"@P" : "ui/bet_place", "id": "84",  "@O": {"landscape": {"pos": [254,  92]}, "portrait":  {"pos": [227,   252]}}},
+                        {"@P" : "ui/bet_place", "id": "85",  "@O": {"landscape": {"pos": [283,  92]}, "portrait":  {"pos": [227, 280.5]}}},
+                        {"@P" : "ui/bet_place", "id": "86",  "@O": {"landscape": {"pos": [311,  92]}, "portrait":  {"pos": [227,   309]}}},
+                        {"@P" : "ui/bet_place", "id": "87",  "@O": {"landscape": {"pos": [340,  92]}, "portrait":  {"pos": [227, 338.5]}}},
+                        {"@P" : "ui/bet_place", "id": "88",  "@O": {"landscape": {"pos": [369,  92]}, "portrait":  {"pos": [227,   367]}}},
+                        {"@P" : "ui/bet_place", "id": "89",  "@O": {"landscape": {"pos": [397,  92]}, "portrait":  {"pos": [227, 395.5]}}},
+                        {"@P" : "ui/bet_place", "id": "90",  "@O": {"landscape": {"pos": [426,  92]}, "portrait":  {"pos": [227,   424]}}},
+                        {"@P" : "ui/bet_place", "id": "91",  "@O": {"landscape": {"pos": [455,  92]}, "portrait":  {"pos": [227, 452.5]}}},
+                        {"@P" : "ui/bet_place", "id": "92",  "@O": {"landscape": {"pos": [483,  92]}, "portrait":  {"pos": [227,   481]}}},
+                        {"@P" : "ui/bet_place", "id": "93",  "@O": {"landscape": {"pos": [512,  92]}, "portrait":  {"pos": [227, 509.5]}}},
+                        {"@P" : "ui/bet_place", "id": "94",  "@O": {"landscape": {"pos": [540,  92]}, "portrait":  {"pos": [227,   538]}}},
+                        {"@P" : "ui/bet_place", "id": "95",  "@O": {"landscape": {"pos": [568,  92]}, "portrait":  {"pos": [227, 567.5]}}},
+                        {"@P" : "ui/bet_place", "id": "96",  "@O": {"landscape": {"pos": [597,  92]}, "portrait":  {"pos": [227,   596]}}},
+                        {"@P" : "ui/bet_place", "id": "97",  "@O": {"landscape": {"pos": [626,  92]}, "portrait":  {"pos": [227, 625.5]}}},
+                        {"@P" : "ui/bet_place", "id": "98",  "@O": {"landscape": {"pos": [654,  92]}, "portrait":  {"pos": [227,   654]}}},
+                        {"@P" : "ui/bet_place", "id": "99",  "@O": {"landscape": {"pos": [683,  92]}, "portrait":  {"pos": [227, 683.5]}}},
+                        {"@P" : "ui/bet_place", "id": "147", "@O": {"landscape": {"pos": [741,  92]}, "portrait":  {"pos": [227,  740]}}},
+                        {"@P" : "ui/bet_place", "id": "4",   "@O": {"landscape": {"pos": [24,  129]}, "portrait":  {"pos": [190.5,     24]}}},
+                        {"@P" : "ui/bet_place", "id": "54",  "@O": {"landscape": {"pos": [53,  129]}, "portrait":  {"pos": [190.5,   52.5]}}},
+                        {"@P" : "ui/bet_place", "id": "55",  "@O": {"landscape": {"pos": [82,  129]}, "portrait":  {"pos": [190.5,     81]}}},
+                        {"@P" : "ui/bet_place", "id": "56",  "@O": {"landscape": {"pos": [111, 129]}, "portrait":  {"pos": [190.5,  109.5]}}},
+                        {"@P" : "ui/bet_place", "id": "57",  "@O": {"landscape": {"pos": [140, 129]}, "portrait":  {"pos": [190.5,    138]}}},
+                        {"@P" : "ui/bet_place", "id": "58",  "@O": {"landscape": {"pos": [169, 129]}, "portrait":  {"pos": [190.5,  166.5]}}},
+                        {"@P" : "ui/bet_place", "id": "59",  "@O": {"landscape": {"pos": [196, 129]}, "portrait":  {"pos": [190.5,    195]}}},
+                        {"@P" : "ui/bet_place", "id": "60",  "@O": {"landscape": {"pos": [225, 129]}, "portrait":  {"pos": [190.5,  223.5]}}},
+                        {"@P" : "ui/bet_place", "id": "61",  "@O": {"landscape": {"pos": [254, 129]}, "portrait":  {"pos": [190.5,    252]}}},
+                        {"@P" : "ui/bet_place", "id": "62",  "@O": {"landscape": {"pos": [283, 129]}, "portrait":  {"pos": [190.5,  280.5]}}},
+                        {"@P" : "ui/bet_place", "id": "63",  "@O": {"landscape": {"pos": [311, 129]}, "portrait":  {"pos": [190.5,    309]}}},
+                        {"@P" : "ui/bet_place", "id": "64",  "@O": {"landscape": {"pos": [340, 129]}, "portrait":  {"pos": [190.5,  338.5]}}},
+                        {"@P" : "ui/bet_place", "id": "65",  "@O": {"landscape": {"pos": [369, 129]}, "portrait":  {"pos": [190.5,    367]}}},
+                        {"@P" : "ui/bet_place", "id": "66",  "@O": {"landscape": {"pos": [397, 129]}, "portrait":  {"pos": [190.5,  395.5]}}},
+                        {"@P" : "ui/bet_place", "id": "67",  "@O": {"landscape": {"pos": [426, 129]}, "portrait":  {"pos": [190.5,    424]}}},
+                        {"@P" : "ui/bet_place", "id": "68",  "@O": {"landscape": {"pos": [455, 129]}, "portrait":  {"pos": [190.5,  452.5]}}},
+                        {"@P" : "ui/bet_place", "id": "69",  "@O": {"landscape": {"pos": [483, 129]}, "portrait":  {"pos": [190.5,    481]}}},
+                        {"@P" : "ui/bet_place", "id": "70",  "@O": {"landscape": {"pos": [512, 129]}, "portrait":  {"pos": [190.5,  509.5]}}},
+                        {"@P" : "ui/bet_place", "id": "71",  "@O": {"landscape": {"pos": [540, 129]}, "portrait":  {"pos": [190.5,    538]}}},
+                        {"@P" : "ui/bet_place", "id": "72",  "@O": {"landscape": {"pos": [568, 129]}, "portrait":  {"pos": [190.5,  567.5]}}},
+                        {"@P" : "ui/bet_place", "id": "73",  "@O": {"landscape": {"pos": [597, 129]}, "portrait":  {"pos": [190.5,    596]}}},
+                        {"@P" : "ui/bet_place", "id": "74",  "@O": {"landscape": {"pos": [626, 129]}, "portrait":  {"pos": [190.5,  625.5]}}},
+                        {"@P" : "ui/bet_place", "id": "75",  "@O": {"landscape": {"pos": [654, 129]}, "portrait":  {"pos": [190.5,    654]}}},
+                        {"@P" : "ui/bet_place", "id": "76",  "@O": {"landscape": {"pos": [683, 129]}, "portrait":  {"pos": [190.5,  683.5]}}},
+                        {"@P" : "ui/bet_place", "id": "3",   "@O": {"landscape": {"pos": [24,  165]}, "portrait":  {"pos": [154,     24]}}},
+                        {"@P" : "ui/bet_place", "id": "31",  "@O": {"landscape": {"pos": [53,  165]}, "portrait":  {"pos": [154,   52.5]}}},
+                        {"@P" : "ui/bet_place", "id": "32",  "@O": {"landscape": {"pos": [82,  165]}, "portrait":  {"pos": [154,     81]}}},
+                        {"@P" : "ui/bet_place", "id": "33",  "@O": {"landscape": {"pos": [111, 165]}, "portrait":  {"pos": [154,  109.5]}}},
+                        {"@P" : "ui/bet_place", "id": "34",  "@O": {"landscape": {"pos": [140, 165]}, "portrait":  {"pos": [154,    138]}}},
+                        {"@P" : "ui/bet_place", "id": "35",  "@O": {"landscape": {"pos": [169, 165]}, "portrait":  {"pos": [154,  166.5]}}},
+                        {"@P" : "ui/bet_place", "id": "36",  "@O": {"landscape": {"pos": [196, 165]}, "portrait":  {"pos": [154,    195]}}},
+                        {"@P" : "ui/bet_place", "id": "37",  "@O": {"landscape": {"pos": [225, 165]}, "portrait":  {"pos": [154,  223.5]}}},
+                        {"@P" : "ui/bet_place", "id": "38",  "@O": {"landscape": {"pos": [254, 165]}, "portrait":  {"pos": [154,    252]}}},
+                        {"@P" : "ui/bet_place", "id": "39",  "@O": {"landscape": {"pos": [283, 165]}, "portrait":  {"pos": [154,  280.5]}}},
+                        {"@P" : "ui/bet_place", "id": "40",  "@O": {"landscape": {"pos": [311, 165]}, "portrait":  {"pos": [154,    309]}}},
+                        {"@P" : "ui/bet_place", "id": "41",  "@O": {"landscape": {"pos": [340, 165]}, "portrait":  {"pos": [154,  338.5]}}},
+                        {"@P" : "ui/bet_place", "id": "42",  "@O": {"landscape": {"pos": [369, 165]}, "portrait":  {"pos": [154,    367]}}},
+                        {"@P" : "ui/bet_place", "id": "43",  "@O": {"landscape": {"pos": [397, 165]}, "portrait":  {"pos": [154,  395.5]}}},
+                        {"@P" : "ui/bet_place", "id": "44",  "@O": {"landscape": {"pos": [426, 165]}, "portrait":  {"pos": [154,    424]}}},
+                        {"@P" : "ui/bet_place", "id": "45",  "@O": {"landscape": {"pos": [455, 165]}, "portrait":  {"pos": [154,  452.5]}}},
+                        {"@P" : "ui/bet_place", "id": "46",  "@O": {"landscape": {"pos": [483, 165]}, "portrait":  {"pos": [154,    481]}}},
+                        {"@P" : "ui/bet_place", "id": "47",  "@O": {"landscape": {"pos": [512, 165]}, "portrait":  {"pos": [154,  509.5]}}},
+                        {"@P" : "ui/bet_place", "id": "48",  "@O": {"landscape": {"pos": [540, 165]}, "portrait":  {"pos": [154,    538]}}},
+                        {"@P" : "ui/bet_place", "id": "49",  "@O": {"landscape": {"pos": [568, 165]}, "portrait":  {"pos": [154,  567.5]}}},
+                        {"@P" : "ui/bet_place", "id": "50",  "@O": {"landscape": {"pos": [597, 165]}, "portrait":  {"pos": [154,    596]}}},
+                        {"@P" : "ui/bet_place", "id": "51",  "@O": {"landscape": {"pos": [626, 165]}, "portrait":  {"pos": [154,  625.5]}}},
+                        {"@P" : "ui/bet_place", "id": "52",  "@O": {"landscape": {"pos": [654, 165]}, "portrait":  {"pos": [154,    654]}}},
+                        {"@P" : "ui/bet_place", "id": "53",  "@O": {"landscape": {"pos": [683, 165]}, "portrait":  {"pos": [154,  683.5]}}},
+                        {"@P" : "ui/bet_place", "id": "146", "@O": {"landscape": {"pos": [741, 165]}, "portrait":  {"pos": [154, 740]}}},
+                        {"@P" : "ui/bet_place", "id": "2",   "@O": {"landscape": {"pos": [24,  201]}, "portrait":  {"pos": [117.5,     24]}}},
+                        {"@P" : "ui/bet_place", "id": "8",   "@O": {"landscape": {"pos": [53,  201]}, "portrait":  {"pos": [117.5,   52.5]}}},
+                        {"@P" : "ui/bet_place", "id": "9",   "@O": {"landscape": {"pos": [82,  201]}, "portrait":  {"pos": [117.5,     81]}}},
+                        {"@P" : "ui/bet_place", "id": "10",  "@O": {"landscape": {"pos": [111, 201]}, "portrait":  {"pos": [117.5,  109.5]}}},
+                        {"@P" : "ui/bet_place", "id": "11",  "@O": {"landscape": {"pos": [140, 201]}, "portrait":  {"pos": [117.5,    138]}}},
+                        {"@P" : "ui/bet_place", "id": "12",  "@O": {"landscape": {"pos": [169, 201]}, "portrait":  {"pos": [117.5,  166.5]}}},
+                        {"@P" : "ui/bet_place", "id": "13",  "@O": {"landscape": {"pos": [196, 201]}, "portrait":  {"pos": [117.5,    195]}}},
+                        {"@P" : "ui/bet_place", "id": "14",  "@O": {"landscape": {"pos": [225, 201]}, "portrait":  {"pos": [117.5,  223.5]}}},
+                        {"@P" : "ui/bet_place", "id": "15",  "@O": {"landscape": {"pos": [254, 201]}, "portrait":  {"pos": [117.5,    252]}}},
+                        {"@P" : "ui/bet_place", "id": "16",  "@O": {"landscape": {"pos": [283, 201]}, "portrait":  {"pos": [117.5,  280.5]}}},
+                        {"@P" : "ui/bet_place", "id": "17",  "@O": {"landscape": {"pos": [311, 201]}, "portrait":  {"pos": [117.5,    309]}}},
+                        {"@P" : "ui/bet_place", "id": "18",  "@O": {"landscape": {"pos": [340, 201]}, "portrait":  {"pos": [117.5,  338.5]}}},
+                        {"@P" : "ui/bet_place", "id": "19",  "@O": {"landscape": {"pos": [369, 201]}, "portrait":  {"pos": [117.5,    367]}}},
+                        {"@P" : "ui/bet_place", "id": "20",  "@O": {"landscape": {"pos": [397, 201]}, "portrait":  {"pos": [117.5,  395.5]}}},
+                        {"@P" : "ui/bet_place", "id": "21",  "@O": {"landscape": {"pos": [426, 201]}, "portrait":  {"pos": [117.5,    424]}}},
+                        {"@P" : "ui/bet_place", "id": "22",  "@O": {"landscape": {"pos": [455, 201]}, "portrait":  {"pos": [117.5,  452.5]}}},
+                        {"@P" : "ui/bet_place", "id": "23",  "@O": {"landscape": {"pos": [483, 201]}, "portrait":  {"pos": [117.5,    481]}}},
+                        {"@P" : "ui/bet_place", "id": "24",  "@O": {"landscape": {"pos": [512, 201]}, "portrait":  {"pos": [117.5,  509.5]}}},
+                        {"@P" : "ui/bet_place", "id": "25",  "@O": {"landscape": {"pos": [540, 201]}, "portrait":  {"pos": [117.5,    538]}}},
+                        {"@P" : "ui/bet_place", "id": "26",  "@O": {"landscape": {"pos": [568, 201]}, "portrait":  {"pos": [117.5,  567.5]}}},
+                        {"@P" : "ui/bet_place", "id": "27",  "@O": {"landscape": {"pos": [597, 201]}, "portrait":  {"pos": [117.5,    596]}}},
+                        {"@P" : "ui/bet_place", "id": "28",  "@O": {"landscape": {"pos": [626, 201]}, "portrait":  {"pos": [117.5,  625.5]}}},
+                        {"@P" : "ui/bet_place", "id": "29",  "@O": {"landscape": {"pos": [654, 201]}, "portrait":  {"pos": [117.5,    654]}}},
+                        {"@P" : "ui/bet_place", "id": "30",  "@O": {"landscape": {"pos": [683, 201]}, "portrait":  {"pos": [117.5,  683.5]}}},
+                        {"@P" : "ui/bet_place", "id": "149", "@O": {"landscape": {"pos": [140, 235]}, "portrait":  {"pos": [83, 138]}}},
+                        {"@P" : "ui/bet_place", "id": "150", "@O": {"landscape": {"pos": [369, 235]}, "portrait":  {"pos": [83, 367]}}},
+                        {"@P" : "ui/bet_place", "id": "151", "@O": {"landscape": {"pos": [597, 235]}, "portrait":  {"pos": [83, 596]}}},
+                        {"@P" : "ui/bet_place", "id": "153", "@O": {"landscape": {"pos": [82,  300]}, "portrait":  {"pos": [15, 81]}}},
+                        {"@P" : "ui/bet_place", "id": "152", "@O": {"landscape": {"pos": [654, 300]}, "portrait":  {"pos": [15, 654]}}},
+                        {"@P" : "ui/bet_place", "id": "156", "@O": {"landscape": {"pos": [196, 300]}, "portrait":  {"pos": [15, 195]}}},
+                        {"@P" : "ui/bet_place", "id": "157", "@O": {"landscape": {"pos": [540, 300]}, "portrait":  {"pos": [15, 538]}}},
+                        {"@P" : "ui/bet_place", "id": "155", "@O": {"landscape": {"pos": [311, 300]}, "portrait":  {"pos": [15, 309.5]}}},
+                        {"@P" : "ui/bet_place", "id": "154", "@O": {"landscape": {"pos": [426, 300]}, "portrait":  {"pos": [15, 424.5]}}}
+                    ]}
+                ]},
+
+                {"id": "anim_places", "type": "vport", "props": {"anchor.fit" : 0, "anchor.alignment" : "center"}, "@O": {
+                    "landscape": {"layout": {"base": [788, 357]}},
+                    "portrait":  {"layout": {"base": [357, 788]}}
+                }, "content":[
+                    {"@P": "ui/pocket_place", "id": 0, "@O": {
+                        "landscape": {"pos": [2, 2], "size": [44, 217]},
+                        "portrait":  {"pos": [138, 2], "size": [217, 44]}
+                    }, "content": [
+                        {"id": "highlight", "@O": {
+                            "landscape": {"background": "zero_highlight"},
+                            "portrait":  {"background": "zero_highlight_p"}
+                        }}
+                    ]},
+                    {"@P": "ui/pocket_place", "id": "1",  "@O": {"landscape": {"pos": [47,  148]}, "portrait": {"pos": [138,  46]}}},
+                    {"@P": "ui/pocket_place", "id": "2",  "@O": {"landscape": {"pos": [47,   75]}, "portrait": {"pos": [211,  46]}}},
+                    {"@P": "ui/pocket_place", "id": "3",  "@O": {"landscape": {"pos": [47,    3]}, "portrait": {"pos": [283,  46]}}},
+                    {"@P": "ui/pocket_place", "id": "4",  "@O": {"landscape": {"pos": [104, 148]}, "portrait": {"pos": [138, 104]}}},
+                    {"@P": "ui/pocket_place", "id": "5",  "@O": {"landscape": {"pos": [104,  75]}, "portrait": {"pos": [211, 104]}}},
+                    {"@P": "ui/pocket_place", "id": "6",  "@O": {"landscape": {"pos": [104,   3]}, "portrait": {"pos": [283, 104]}}},
+                    {"@P": "ui/pocket_place", "id": "7",  "@O": {"landscape": {"pos": [160, 148]}, "portrait": {"pos": [138, 160]}}},
+                    {"@P": "ui/pocket_place", "id": "8",  "@O": {"landscape": {"pos": [160,  75]}, "portrait": {"pos": [211, 160]}}},
+                    {"@P": "ui/pocket_place", "id": "9",  "@O": {"landscape": {"pos": [160,   3]}, "portrait": {"pos": [283, 160]}}},
+                    {"@P": "ui/pocket_place", "id": "10", "@O": {"landscape": {"pos": [217, 148]}, "portrait": {"pos": [138, 217]}}},
+                    {"@P": "ui/pocket_place", "id": "11", "@O": {"landscape": {"pos": [217,  75]}, "portrait": {"pos": [211, 217]}}},
+                    {"@P": "ui/pocket_place", "id": "12", "@O": {"landscape": {"pos": [217,   3]}, "portrait": {"pos": [283, 217]}}},
+                    {"@P": "ui/pocket_place", "id": "13", "@O": {"landscape": {"pos": [275, 148]}, "portrait": {"pos": [138, 274]}}},
+                    {"@P": "ui/pocket_place", "id": "14", "@O": {"landscape": {"pos": [275,  75]}, "portrait": {"pos": [211, 274]}}},
+                    {"@P": "ui/pocket_place", "id": "15", "@O": {"landscape": {"pos": [275,   3]}, "portrait": {"pos": [283, 274]}}},
+                    {"@P": "ui/pocket_place", "id": "16", "@O": {"landscape": {"pos": [332, 148]}, "portrait": {"pos": [138, 331]}}},
+                    {"@P": "ui/pocket_place", "id": "17", "@O": {"landscape": {"pos": [332,  75]}, "portrait": {"pos": [211, 331]}}},
+                    {"@P": "ui/pocket_place", "id": "18", "@O": {"landscape": {"pos": [332,   3]}, "portrait": {"pos": [283, 331]}}},
+                    {"@P": "ui/pocket_place", "id": "19", "@O": {"landscape": {"pos": [389, 148]}, "portrait": {"pos": [138, 388]}}},
+                    {"@P": "ui/pocket_place", "id": "20", "@O": {"landscape": {"pos": [389,  75]}, "portrait": {"pos": [211, 388]}}},
+                    {"@P": "ui/pocket_place", "id": "21", "@O": {"landscape": {"pos": [389,   3]}, "portrait": {"pos": [283, 388]}}},
+                    {"@P": "ui/pocket_place", "id": "22", "@O": {"landscape": {"pos": [445, 148]}, "portrait": {"pos": [138, 446]}}},
+                    {"@P": "ui/pocket_place", "id": "23", "@O": {"landscape": {"pos": [445,  75]}, "portrait": {"pos": [211, 446]}}},
+                    {"@P": "ui/pocket_place", "id": "24", "@O": {"landscape": {"pos": [445,   3]}, "portrait": {"pos": [283, 446]}}},
+                    {"@P": "ui/pocket_place", "id": "25", "@O": {"landscape": {"pos": [503, 148]}, "portrait": {"pos": [138, 503]}}},
+                    {"@P": "ui/pocket_place", "id": "26", "@O": {"landscape": {"pos": [503,  75]}, "portrait": {"pos": [211, 503]}}},
+                    {"@P": "ui/pocket_place", "id": "27", "@O": {"landscape": {"pos": [503,   3]}, "portrait": {"pos": [283, 503]}}},
+                    {"@P": "ui/pocket_place", "id": "28", "@O": {"landscape": {"pos": [559, 148]}, "portrait": {"pos": [138, 560]}}},
+                    {"@P": "ui/pocket_place", "id": "29", "@O": {"landscape": {"pos": [559,  75]}, "portrait": {"pos": [211, 560]}}},
+                    {"@P": "ui/pocket_place", "id": "30", "@O": {"landscape": {"pos": [559,   3]}, "portrait": {"pos": [283, 560]}}},
+                    {"@P": "ui/pocket_place", "id": "31", "@O": {"landscape": {"pos": [616, 148]}, "portrait": {"pos": [138, 617]}}},
+                    {"@P": "ui/pocket_place", "id": "32", "@O": {"landscape": {"pos": [616,  75]}, "portrait": {"pos": [211, 617]}}},
+                    {"@P": "ui/pocket_place", "id": "33", "@O": {"landscape": {"pos": [616,   3]}, "portrait": {"pos": [283, 617]}}},
+                    {"@P": "ui/pocket_place", "id": "34", "@O": {"landscape": {"pos": [673, 148]}, "portrait": {"pos": [138, 673]}}},
+                    {"@P": "ui/pocket_place", "id": "35", "@O": {"landscape": {"pos": [673,  75]}, "portrait": {"pos": [211, 673]}}},
+                    {"@P": "ui/pocket_place", "id": "36", "@O": {"landscape": {"pos": [673,   3]}, "portrait": {"pos": [283, 673]}}},
+
+                    {"@P": "ui/turret"}
+                ]}
+            ]
+        },
+
+        "neighbor_place": {"type": "neighbor-place", "layout": {"relative": true}, "group": "neighbor_bet_places", "@O": {
+            "landscape": {"size": [43, 65]},
+            "portrait": {"size": [68, 42]}
+        }, "content": [
+            {"id": "highlight", "type": "panel", "background": "neighbor_light", "visible": false, "props" : {"anchor.fit": 0}},
+
+            {"id": "chip_stack", "type": "chip-stack", "props": {"anchor.fit": 11}, "chips.round_delay": "${chip_stack_round_delay}", "visible": false},
+
+            {"id": "bet_label", "type": "label", "background": "box_round", "visible": false, "format": "tooltip", "alignment": "center", "text-fit": [true, true], "@O": {
+                "landscape": {"props": {"anchor.fit": "35 3 35 3"}},
+                "portrait":  {"props": {"anchor.fit": "25 20 25 20"}}
+            }}
+        ]},
+
+        "spec_neighbor_place": {"@P" : "ui/neighbor_place", "@O": {"landscape": {"size": [52, 75.5]}, "portrait": {"size": [52, 75.5]}}, "content": [
+            {"id": "bet_label", "alignment": "center", "@O": {
+                "landscape": {"props": {"anchor.fit": "35 0 35 0"}},
+                "portrait":  {"props": {"anchor.fit": "35 0 35 0"}}
+            }}
+        ]},
+
+        "complex_neighbor_place": {"@P" : "ui/neighbor_place", "@O": {"landscape": {"size": [183, 54]}, "portrait": {"size": [183, 54]}}, "content":[
+            {"id": "bet_label", "alignment": "center", "@O": {
+                "landscape": {"props": {"anchor.fit": "35 0 35 0"}},
+                "portrait":  {"props": {"anchor.fit": "35 0 35 0"}}
+            }}
+        ]},
+
+        "neighbors_btn": {"type": "itoggle", "alignment": "center", "format": "button_text", "text-fit": [true, false], "ratio": 1, "group": "neighbors_buttons", "@O": {
+            "landscape": {"slice": "neighbors_btn_normal", "slice.selected": "neighbors_btn_active"},
+            "portrait":  {"slice": "neighbors_btn_normal", "slice.selected": "neighbors_btn_active"}
+        }},
+
+        "neighbors_table": {"id": "neighbors_widget", "type": "neighbors", "size-min": [1, 1], "layout": {"type" : "anchor", "relative": true}, "content": [
+            {"id": "mask_image", "type": "mask-image", "props": {"anchor.fit": 0, "anchor.alignment" : "center"}, "size-min": [1, 1], "@O": {
+                "landscape": {"slice": "neighbors_l", "mask.slice": "mask_neighbors_l", "ratio": 4.259},
+                "portrait":  {"slice": "neighbors_p", "mask.slice": "mask_neighbors_p", "ratio": 0.239}
+            }},
+
+            {"id": "anim_places","type": "vport", "props": {"anchor.fit": 0, "anchor.alignment": "center"}, "@O": {
+                "landscape": {"layout" : {"base" : [788, 185]}},
+                "portrait":  {"layout" : {"base" : [185, 788]}}
+            }, "content":[
+                {"@P" : "ui/spec_neighbor_place", "id": 1, "@O": {"landscape": {"pos": [717, 105], "size": [64.0, 76.5]}, "portrait": {"pos": [5, 717], "size": [76.5, 65.0]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "neighbor_light_0"},
+                        "portrait":  {"background": "neighbor_light_0_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit" : "11 22 19 22"}},
+                        "portrait":  {"props": {"anchor.fit" : "11 24 19 33"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit" : "31 18 39 18"}},
+                        "portrait":  {"props": {"anchor.fit" : "31 18 39 29"}}
+                    }}
+                ]},
+                {"@P" : "ui/spec_neighbor_place", "id": 97, "@O": {"landscape": {"pos": [687.5, 119], "size": [52.0, 65.5]}, "portrait": {"pos": [0, 687.5], "size": [65.5, 52]}}, "content":[
+                    {"id": "highlight", "opacity": 1, "props": {"anchor.fit": 0}, "@O": {
+                        "landscape": {"background": "neighbor_light_32"},
+                        "portrait":  {"background": "neighbor_light_32_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit" : "15 29 15 5"}},
+                        "portrait":  {"props": {"anchor.fit" : "7 20 30 20"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit" : "35 20 35 0"}},
+                        "portrait":  {"props": {"anchor.fit" : "19 20 42 20"}}
+                    }}
+                ]},
+
+                {"@P" : "ui/neighbor_place", "id": 47,  "@O": {"landscape": {"pos": [440, 119]}, "portrait":  {"pos": [-2, 441]}}},
+                {"@P" : "ui/neighbor_place", "id": 77,  "@O": {"landscape": {"pos": [481, 119]}, "portrait":  {"pos": [-2, 482]}}},
+                {"@P" : "ui/neighbor_place", "id": 135, "@O": {"landscape": {"pos": [523, 119]}, "portrait":  {"pos": [-2, 523]}}},
+                {"@P" : "ui/neighbor_place", "id": 33,  "@O": {"landscape": {"pos": [564, 119]}, "portrait":  {"pos": [-2, 564]}}},
+                {"@P" : "ui/neighbor_place", "id": 43,  "@O": {"landscape": {"pos": [605, 119]}, "portrait":  {"pos": [-2, 605]}}},
+                {"@P" : "ui/neighbor_place", "id": 131, "@O": {"landscape": {"pos": [646, 119]}, "portrait":  {"pos": [-2, 646]}}},
+
+                {"@P" : "ui/neighbor_place", "id": 87, "@O": {"landscape": {"pos": [372, 119], "size": [72, 65]}, "portrait": {"pos": [-2, 372], "size": [68, 72]}}, "content":[
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "17 27 17 27"}},
+                        "portrait":  {"props": {"anchor.fit": "17 27 17 27"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "35 22 35 22"}},
+                        "portrait":  {"props": {"anchor.fit": "35 22 35 22"}}
+                    }}
+                ]},
+                {"@P": "ui/neighbor_place", "id": 53, "@O": {"landscape": {"pos": [303, 119], "size": [72, 65]},"portrait": {"pos": [-2, 303], "size": [68, 72]}}, "content":[
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "17 27 17 27"}},
+                        "portrait":  {"props": {"anchor.fit": "17 27 17 27"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "35 22 35 22"}},
+                        "portrait":  {"props": {"anchor.fit": "35 22 35 22"}}
+                    }}
+                ]},
+                {"@P": "ui/neighbor_place", "id": 125, "@O": {"landscape": {"pos": [235, 119], "size": [72, 65]}, "portrait": {"pos": [-2, 235], "size": [68, 72]}}, "content":[
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "17 27 17 27"}},
+                        "portrait":  {"props": {"anchor.fit": "17 27 17 27"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "35 22 35 22"}},
+                        "portrait":  {"props": {"anchor.fit": "35 22 35 22"}}
+                    }}
+                ]},
+
+                {"@P": "ui/neighbor_place", "id": 139, "@O": {"landscape": {"pos": [195,   119]}, "portrait": {"pos": [-2, 195]}}},
+                {"@P": "ui/neighbor_place", "id": 39,  "@O": {"landscape": {"pos": [153.5, 119]}, "portrait": {"pos": [-2, 154]}}},
+                {"@P": "ui/neighbor_place", "id": 145, "@O": {"landscape": {"pos": [112,   119]}, "portrait": {"pos": [-2, 113]}}},
+                {"@P": "ui/neighbor_place", "id": 83,  "@O": {"landscape": {"pos": [71,    119]}, "portrait": {"pos": [-2,  72]}}},
+
+                {"@P":"ui/spec_neighbor_place", "id": 141, "@O": {"landscape": {"pos": [19.5, 108], "size": [53, 76]}, "portrait": {"pos": [0, 19.5], "size": [77, 53]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "neighbor_light_30"},
+                        "portrait":  {"background": "neighbor_light_30_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "0 5 0 30"}},
+                        "portrait":  {"props": {"anchor.fit": "25 28 0 28"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "35 0 36 25"}},
+                        "portrait":  {"props": {"anchor.fit": "42 23 19 23"}}
+                    }}
+                ]},
+                {"@P": "ui/spec_neighbor_place", "id": 81, "@O": {"landscape": {"pos": [1, 91], "size": [59, 65.5]}, "portrait": {"pos": [27, 0], "size": [66.5, 59]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "neighbor_light_8"},
+                        "portrait":  {"background": "neighbor_light_8_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "0 24 34 18"}},
+                        "portrait":  {"props": {"anchor.fit": "21 0 21 40"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "16 16 51 12"}},
+                        "portrait":  {"props": {"anchor.fit": "33 0 32 38"}}
+                    }}
+                ]},
+                {"@P": "ui/spec_neighbor_place", "id": 91, "@O": {"landscape": {"pos": [1, 26], "size": [59.5, 65.5]}, "portrait": {"pos": [93, 1], "size": [67.5, 58.5]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "neighbor_light_23"},
+                        "portrait":  {"background": "neighbor_light_23_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "34 24 0 18"}},
+                        "portrait":  {"props": {"anchor.fit": "21 40 21 0"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "50 16 17 12"}},
+                        "portrait":  {"props": {"anchor.fit": "33 38 32 0"}}
+                    }}
+                ]},
+                {"@P": "ui/spec_neighbor_place", "id": 37, "@O": {"landscape": {"pos": [21.5, 1]}, "portrait": {"pos": [110.5, 20], "size": [75.5, 53]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "neighbor_light_10"},
+                        "portrait":  {"background": "neighbor_light_10_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "0 5 0 30"}},
+                        "portrait":  {"props": {"anchor.fit": "25 28 0 28"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "35 0 36 25"}},
+                        "portrait":  {"props": {"anchor.fit": "42 23 19 23"}}
+                    }}
+                ]},
+
+                {"@P" : "ui/neighbor_place", "id": 79,  "@O": {"landscape": {"pos": [72,    1]}, "portrait": {"pos": [118, 72]}}},
+                {"@P" : "ui/neighbor_place", "id": 137, "@O": {"landscape": {"pos": [112.5, 1]}, "portrait": {"pos": [118, 113]}}},
+                {"@P" : "ui/neighbor_place", "id": 41,  "@O": {"landscape": {"pos": [153.5, 1]}, "portrait": {"pos": [118, 154]}}},
+                {"@P" : "ui/neighbor_place", "id": 143, "@O": {"landscape": {"pos": [195,   1]}, "portrait": {"pos": [118, 195]}}},
+                {"@P" : "ui/neighbor_place", "id": 31,  "@O": {"landscape": {"pos": [236.5, 1]}, "portrait": {"pos": [118, 236]}}},
+                {"@P" : "ui/neighbor_place", "id": 89,  "@O": {"landscape": {"pos": [277.5, 1]}, "portrait": {"pos": [118, 277]}}},
+                {"@P" : "ui/neighbor_place", "id": 85,  "@O": {"landscape": {"pos": [318.5, 1]}, "portrait": {"pos": [118, 318]}}},
+                {"@P" : "ui/neighbor_place", "id": 51,  "@O": {"landscape": {"pos": [359, 1]}, "portrait": {"pos": [118, 359]}}},
+                {"@P" : "ui/neighbor_place", "id": 127, "@O": {"landscape": {"pos": [400, 1]}, "portrait": {"pos": [118, 400]}}},
+                {"@P" : "ui/neighbor_place", "id": 45,  "@O": {"landscape": {"pos": [441, 1]}, "portrait": {"pos": [118, 441]}}},
+                {"@P" : "ui/neighbor_place", "id": 133, "@O": {"landscape": {"pos": [482, 1]}, "portrait": {"pos": [118, 482]}}},
+                {"@P" : "ui/neighbor_place", "id": 95,  "@O": {"landscape": {"pos": [523, 1]}, "portrait": {"pos": [118, 523]}}},
+                {"@P" : "ui/neighbor_place", "id": 35,  "@O": {"landscape": {"pos": [564, 1]}, "portrait": {"pos": [118, 564]}}},
+                {"@P" : "ui/neighbor_place", "id": 49,  "@O": {"landscape": {"pos": [605, 1]}, "portrait": {"pos": [118, 605]}}},
+                {"@P" : "ui/neighbor_place", "id": 129, "@O": {"landscape": {"pos": [646, 1]}, "portrait": {"pos": [118, 646]}}},
+
+                {"@P" : "ui/spec_neighbor_place", "id": 99, "@O": {"landscape": {"pos": [687.5, 1], "size": [52, 65.5]}, "portrait": {"pos": [121, 687.5], "size": [65.5, 52]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "neighbor_light_35"},
+                        "portrait":  {"background": "neighbor_light_35_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "15 29 15 5"}},
+                        "portrait":  {"props": {"anchor.fit": "7 20 30 20"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "35 20 35 0"}},
+                        "portrait":  {"props": {"anchor.fit": "19 20 42 20"}}
+                    }}
+                ]},
+                {"@P": "ui/spec_neighbor_place", "id": 123,  "@O": {"landscape": {"pos": [717, 4], "size": [64.0, 76.5]}, "portrait": {"pos": [106, 717], "size": [76.5, 65]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "neighbor_light_3"},
+                        "portrait":  {"background": "neighbor_light_3_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "19 22 11 22"}},
+                        "portrait":  {"props": {"anchor.fit": "11 33 19 24"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "39 18 31 18"}},
+                        "portrait":  {"props": {"anchor.fit": "31 29 39 18"}}
+                    }}
+                ]},
+                {"@P": "ui/spec_neighbor_place", "id": 93,  "@O": {"landscape": {"pos": [733, 54], "size": [54.0, 75.5]}, "portrait": {"pos": [55, 733], "size": [77, 54]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "neighbor_light_26"},
+                        "portrait":  {"background": "neighbor_light_26_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "27 0 27 5"}},
+                        "portrait":  {"props": {"anchor.fit": "22 0 18 0"}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "34 10 34 15"}},
+                        "portrait":  {"props": {"anchor.fit": "33 23 30 23"}}
+                    }}
+                ]},
+
+                {"@P": "ui/complex_neighbor_place", "id": -1, "@O": {"landscape": {"pos": [55, 66]}, "portrait": {"pos": [66, 54], "size": [54, 183]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "tier"},
+                        "portrait":  {"background": "tier_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "18 40 18 40"}},
+                        "portrait":  {"props": {"anchor.fit": 18}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "30 37 30 37"}},
+                        "portrait":  {"props": {"anchor.fit": "44 15 44 15"}}
+                    }}
+                ]},
+                {"@P": "ui/complex_neighbor_place", "id": -2, "@O": {"landscape": {"pos": [238, 66], "size": [204, 54]}, "portrait": {"pos": [66, 238], "size": [54, 204]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "orphelins"},
+                        "portrait":  {"background": "orphelins_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit" : "18 40 18 40"}},
+                        "portrait":  {"props": {"anchor.fit" : 18}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit" : "30 38.5 30 38.5"}},
+                        "portrait":  {"props": {"anchor.fit" : "45 15 44.5 15"}}
+                    }}
+                ]},
+                {"@P": "ui/complex_neighbor_place", "id": -3, "@O": {"landscape": {"pos": [441, 66], "size": [295, 54]}, "portrait": {"pos": [66, 441], "size": [54, 295]}}, "content": [
+                    {"id": "highlight", "@O": {
+                        "landscape": {"background": "voisins"},
+                        "portrait":  {"background": "voisins_p"}
+                    }},
+                    {"id": "chip_stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "18 40 18 40"}},
+                        "portrait":  {"props": {"anchor.fit": 18}}
+                    }},
+                    {"id": "bet_label", "@O": {
+                        "landscape": {"props": {"anchor.fit": "32 42 30 42"}},
+                        "portrait":  {"props": {"anchor.fit": "46.5 15 46.5 15"}}
+                    }}
+                ]}
+            ]}
+        ]},
+
+        "cr_phone_history_widget": {"@P": "ui/phone_history_widget_new",
+            "result_widget_start_opacity" : 1,
+            "@O": {
+                "landscape": {"is_vertical_orientation": true, "layout":{"base": [40, 348]}},
+                "portrait":  {"is_vertical_orientation": false,  "layout":{"base": [348, 40]}}
+            }, "content": [
+                {"id": "items_container_bg", "@O": {
+                    "landscape":  {"size": [30, 338], "pos": [5, 10], "layout":{"base": [30, 338]}}},
+                    "portrait": {"size": [338, 30], "pos": [0,  5], "layout":{"base": [338, 30]}}
+                },
+                {"id": "items_container", "@O": {
+                    "landscape":  {"size": [40, 348], "pos": [0, 0], "layout":{"base": [40, 348]}},
+                    "portrait": {"size": [348, 40], "pos": [0, 0], "layout":{"base": [348, 40]}}
+                }}
+            ]}
+    }
+}

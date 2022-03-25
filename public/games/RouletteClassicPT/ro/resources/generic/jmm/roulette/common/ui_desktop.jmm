@@ -1,0 +1,166 @@
+{
+    "resources": {
+        "images": {
+             "bet_info_bg" : {"url": "roulette/common/betInfoBg.png",    "preload": "main-scene"}
+        }, 
+
+        "slices": {
+            "bet_info_bg": {"image": "bet_info_bg", "size": [73, 65]},
+            "bet_thumb":   {"image": "graphics", "size": [86, 40], "pos": [922, 577]},
+            "gc_info_v2":  {"image": "desktop_gc_info_v2", "size": [817, 464], "insets": "-3 -4"}
+        },
+
+        "formats": {
+            "desktop.bet": {"font": "asap", "color" : "#ffffff"}
+        }
+    },
+
+    "ui": {
+       "hover_highlight": {"group": "hover_highlights", "type": "anchor", "visible": false, "background": "#fff", "opacity": 0.4, "size": [63, 70]},
+       "bet_info_label": {"@P": "ui/label.def", "text-group": "info.autosize","alignment": "center-left", "format": "popup.text"},
+       "bet_info": {"type": "bet-info", "background": "bet_info_bg", "visible": false, "size": [110, 88],
+           "layout": {"type" : "anchor", "relative": true, "alignment": "center"}, "content": [
+            {"type": "vbox", "id": "info_container", "layout": {"spacing": 2, "alignment": "center"}, "props": {"anchor.fit": "7 7 7 7"}, "content":[
+                {"@P": "ui/bet_info_label", "id":"bet_value"},
+                {"@P": "ui/bet_info_label", "id":"bet_type"},
+                {"@P": "ui/bet_info_label", "id":"bet_pays"},
+                {"@P": "ui/bet_info_label", "id":"bet_min"},
+                {"@P": "ui/bet_info_label", "id":"bet_max"}
+            ]}
+        ]},
+
+        "desktop_bottom_panel": {"id": "bottom_panel", "type": "desktop-bottom-panel", "background": "bet_thumb",
+            "ratio": 2.15, "content": [
+                {"id": "bet_label", "@P": "ui/label.def", "format": "desktop.bet", "text": "total_bet"}
+            ]
+        },
+
+        "message_panel": {"id": "message_panel", "type": "message-panel", "layout": {"type": "anchor", "relative": true},
+            "state": "regular", "@O": {
+                "landscape": {"props": {"anchor.fit": "0 34.1 0 34.1"}},
+                "portrait":  {"props": {"anchor.fit": "0 32 0 32"}}
+            }, "content": {
+                "#base": {"panels": {
+                    "place_your_bets":          {"@P": "ui/bp.msg", "text": "place_your_bets"},
+                    "touch_to_stop":            {"@P": "ui/bp.msg", "text": "touch_to_stop"},
+                    "good_luck":                {"@P": "ui/bp.msg", "text": "good_luck"},
+                    "playing_for_fun":          {"@P": "ui/bp.msg", "text": "playing_for_fun"},
+                    "autoplay_stopped":         {"@P": "ui/bp.msg", "text": "autoplay_stopped"},
+                    "autoplay_completed":       {"@P": "ui/bp.msg", "text": "autoplay_completed"},
+                    "auto_spins_left":          {"@P": "ui/bp.msg", "text": "auto_spins_left"},
+                    "auto_spins_until_feature": {"@P": "ui/bp.msg", "text": "auto_spins_until_feature"},
+                    "completing_last_spin":     {"@P": "ui/bp.msg", "text": "completing_last_spin"}
+                }},
+                "regular": {}
+            }
+        },
+
+        "win_panel": {"id": "win_panel", "type": "win-panel", "layout": {"type": "stack"}, "win_panel.show_anim": "win_panel.show",
+            "win_panel.hide_anim": "win_panel.hide", "background": "bp.win.big", "state": "win", "content": {
+                "win": {"type": "anchor", "layout": {"relative": true}, "content": [
+                    {"type": "stack", "props": {"anchor.fit": "6 0 65 0"}, "content": [
+                        {"@P": "ui/label.def", "format": "win_panel.label", "text": "win_panel.you_win"}
+                    ]},
+                    {"type": "stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "20 0 0 0"}},
+                        "portrait":  {"props": {"anchor.fit": "30 5 0 5"}}
+                    }, "content": [
+                        {"id": "win_value", "@P": "ui/label.def", "format": "win_panel.label", "background": "bp.win.glow"}
+                    ]}
+                ]},
+                "push": {"type": "anchor", "layout": {"relative": true}, "content": [
+                    {"id": "push", "@P": "ui/label.def", "format": "win_panel.value", "text": "win_panel.push", "props": {"anchor.fit": "20 0"}}
+                ]}
+            }
+        },
+
+
+        "bottom-panel": {"id": "bottom_container", "type": "stack", "layout": {"alignment": "bottom-center"}, "@O": {
+            "landscape": {"clipped": false, "props": {"anchor.relative": true, "anchor.fit": "88.75 0 0 0"}},
+            "portrait":  {"clipped": true,  "props": {"anchor.relative": true, "anchor.fit": "90 0 0 0"}}},
+            "content": [
+
+                {"id": "_middle_container", "type": "anchor", "layout": {"relative": true},
+                    "@O": {"landscape": {"ratio": 15.75}, "portrait":  {"ratio": 8}}, "content": [
+                    {"@P": "ui/bottom_panel", "id": "bottom_panel"},
+                    {"@P": "ui/message_panel", "id": "message_panel"},
+                    {"@P": "ui/win_panel", "id": "win_panel", "ratio": 5, "props": {"anchor.fit": "0", "anchor.alignment": "center"}, "visible": false}
+                ]}
+            ]
+        },
+        "bottom_panel": {"id": "bottom_panel", "type": "bottom-panel", "layout": {"type": "stack"}, "props": {"anchor.fit": 0}, "state": "regular", "content": {
+            "#base": {"id": "_content", "type": "anchor", "layout": {"relative": true}, "background": {"fill": "bp.bg", "insets": "0 -1000"}, "content": [
+                {"id": "_balance", "type": "anchor", "layout": {"relative": true}, "@O": {
+                    "landscape": {"props": {"anchor.fit": "0 79.2 0 0"}},
+                    "portrait":  {"props": {"anchor.fit": "0 66.87 0 0"}}}, "content": [
+                    {"id": "balance_title", "@P": "ui/bp.title", "props": {"anchor.fit": "20 0 50 3.4"}, "text": "balance.demo"},
+                    {"id": "balance_value", "@P": "ui/bp.value", "props": {"anchor.fit": "44.5 0 16 3.4"}}
+                ]},
+                {"id": "_total_bet", "type": "anchor", "layout": {"relative": true}, "@O": {
+                    "landscape": {"props": {"anchor.fit": "0 0 0 79.2"}},
+                    "portrait":  {"props": {"anchor.fit": "0 0 0 66.87"}}}, "content": [
+                    {"id": "total_bet_title", "@P": "ui/bp.title", "props": {"anchor.fit": "20 3.4 50 0"}, "text": "total_bet"},
+                    {"id": "total_bet_value", "@P": "ui/bp.value", "props": {"anchor.fit": "44.5 3.4 16 0"}}
+                ]},
+                {"id": "_game_name", "type": "anchor", "layout": {"relative": true}, "@O": {
+                    "landscape": {"props": {"anchor.fit": "70 34.1 10 34.1"}},
+                    "portrait":  {"props": {"anchor.fit": "70 25 10 25"}}
+                }, "content": [
+                    {"id": "game_title", "type": "label", "format": "game_name_format", "props": {"anchor.fit": "0"}, "text-fit": [true, true], "alignment": "center", "opacity": 0.5}
+                ]}
+            ]},
+            "regular": {},
+            "autoplay": {"id": "_content", "background": {"fill": "bp.bg.autoplay"}, "content": [
+                {"id": "_balance", "content": [{"id": "balance_title", "format": "bp.title.autoplay"}]},
+                {"id": "_total_bet", "content": [{"id": "total_bet_title", "format": "bp.title.autoplay"}]}
+            ]}
+        }},
+
+        "select_limits_popup": {"id": "limits_popup", "content": [
+            {"id": "_container", "ratio": 1.7, "@O": {
+                "landscape": {"props" : {"anchor.fit": "14 15 21 15", "anchor.alignment": "center"}},
+                "portrait":  {"props" : {"anchor.fit": "14 15 21 15", "anchor.alignment": "center"}}
+            }}
+        ]},
+        "select_limits.title": {"text": "choose_limit"},
+
+        "select_limits.content_bg": {"id": "_content_bg", "@O": {
+            "landscape": {"props": {"anchor.fit": "12 0 14 0"}},
+            "portrait":  {"props": {"anchor.fit": "12 0 14 0"}}
+        }},
+        "select_limits.join_button": {"id": "join_button", "@O": {
+            "landscape": {"props": {"anchor.fit": "88 0 0 0"}},
+            "portrait":  {"props": {"anchor.fit": "88 0 0 0"}}
+        }},
+        "select_limits.join_label": {"id": "join_label", "@O": {
+            "landscape": {"props": {"anchor.fit": "92 0 2 0"}},
+            "portrait":  {"props": {"anchor.fit": "92 0 2 0"}}
+        }},
+
+        "select_limits_content": {"id": "limits_container", "@O": {
+            "landscape": {"props": {"anchor.fit": "12 0 17 0"}},
+            "portrait":  {"props": {"anchor.fit": "12 0 17 0"}}
+        }, "content": [
+            {"id": "limits_content", "supported_orientation": "landscape"}
+        ]},
+        "select_limits_content.landscape": {"bias": "ver", "layout": {"type": "chbox", "alignment": "left-center"}},
+        "select_limits_content.portrait":  {"bias": "ver", "layout": {"type": "chbox", "alignment": "left-center"}},
+        "select_limits_item": {"id": "limits_item", "@O": {
+            "landscape": {"ratio": 0.7},
+            "portrait":  {"ratio": 0.7}
+        }, "content": [
+            {"id": "straight_limit.title", "props": {"anchor.fit": "10 10 80 10"}, "format": "limits.value", "alignment": "bottom-center", "text": "mb_limits_straight_up"},
+            {"id": "straight_limit.value", "props": {"anchor.fit": "20 10 70 10"}, "alignment": "top-center"},
+            {"id": "fifty_fifty_limit.title", "props": {"anchor.fit": "30 10 60 10"}, "format": "limits.value", "alignment": "bottom-center", "text": "mb_limits_money_bets"},
+            {"id": "fifty_fifty_limit.value", "props": {"anchor.fit": "40 10 50 10"}, "alignment": "top-center"},
+            {"id": "column_and_dozen_limit.title", "props": {"anchor.fit": "50 10 40 10"}, "format": "limits.value", "alignment": "bottom-center", "text": "mb_limits_dozen_bets"},
+            {"id": "column_and_dozen_limit.value", "props": {"anchor.fit": "60 10 30 10"}, "alignment": "top-center"},
+            {"id": "table_limit.title", "props": {"anchor.fit": "70 10 20 10"}, "format": "limits.value", "alignment": "bottom-center", "text-group": "limits_autosize"},
+            {"id": "table_limit.value", "props": {"anchor.fit": "80 10 10 10"}, "alignment": "top-center", "text-group": "limits_autosize"}
+        ]},
+        "select_limits_scroll_container": {"id": "limits_scroll_container", "@O": {
+            "landscape": {"props": {"anchor.fit": "83 0 14 0"}},
+            "portrait":  {"props": {"anchor.fit": "83 0 14 0"}}
+        }}
+    }
+}

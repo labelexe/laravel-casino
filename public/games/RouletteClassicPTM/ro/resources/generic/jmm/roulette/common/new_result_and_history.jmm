@@ -1,0 +1,92 @@
+{
+    "resources": {
+        "images": {
+            "new_result_and_history" :     {"url": "roulette/common/new_result_and_history.png",    "preload": "main-scene"}
+        },
+        "slices": {
+
+            "result_new_bg_black":          {"image": "new_result_and_history",     "pos": [3,   163],  "size": [166, 174], "insets": "0 0 8 0"},
+            "result_new_bg_green":          {"image": "new_result_and_history",     "pos": [173, 163],  "size": [166, 174], "insets": "0 0 8 0"},
+            "result_new_bg_red":            {"image": "new_result_and_history",     "pos": [343, 163],  "size": [166, 174], "insets": "0 0 8 0"},
+
+            "phone_history_widget_new_bg":  {"image": "new_result_and_history",     "pos": [3,     3],  "size": [16, 16], "border":"6"},
+
+            "phone_history_item_bg_black":  {"image": "new_result_and_history",     "pos": [23,    3],  "size": [38, 38]},
+            "phone_history_item_bg_green":  {"image": "new_result_and_history",     "pos": [65,    3],  "size": [38, 38]},
+            "phone_history_item_bg_red":    {"image": "new_result_and_history",     "pos": [107,   3],  "size": [38, 38]},
+
+            "phone_history_number_0":       {"image": "new_result_and_history",     "pos": [3,    45],  "size": [38, 38]},
+            "phone_history_number_1":       {"image": "new_result_and_history",     "pos": [3,    83],  "size": [38, 38]},
+            "phone_history_number_2":       {"image": "new_result_and_history",     "pos": [3,   121],  "size": [38, 38]},
+            "phone_history_number_3":       {"image": "new_result_and_history",     "pos": [41,   45],  "size": [38, 38]},
+            "phone_history_number_4":       {"image": "new_result_and_history",     "pos": [41,   83],  "size": [38, 38]},
+            "phone_history_number_5":       {"image": "new_result_and_history",     "pos": [41,  121],  "size": [38, 38]},
+            "phone_history_number_6":       {"image": "new_result_and_history",     "pos": [79,   45],  "size": [38, 38]},
+            "phone_history_number_7":       {"image": "new_result_and_history",     "pos": [79,   83],  "size": [38, 38]},
+            "phone_history_number_8":       {"image": "new_result_and_history",     "pos": [79,  121],  "size": [38, 38]},
+            "phone_history_number_9":       {"image": "new_result_and_history",     "pos": [117,  45],  "size": [38, 38]},
+            "phone_history_number_10":      {"image": "new_result_and_history",     "pos": [117,  83],  "size": [38, 38]},
+            "phone_history_number_11":      {"image": "new_result_and_history",     "pos": [117, 121],  "size": [38, 38]},
+            "phone_history_number_12":      {"image": "new_result_and_history",     "pos": [155,  45],  "size": [38, 38]},
+            "phone_history_number_13":      {"image": "new_result_and_history",     "pos": [155,  83],  "size": [38, 38]},
+            "phone_history_number_14":      {"image": "new_result_and_history",     "pos": [155, 121],  "size": [38, 38]},
+            "phone_history_number_15":      {"image": "new_result_and_history",     "pos": [193,  45],  "size": [38, 38]},
+            "phone_history_number_16":      {"image": "new_result_and_history",     "pos": [193,  83],  "size": [38, 38]},
+            "phone_history_number_17":      {"image": "new_result_and_history",     "pos": [193, 121],  "size": [38, 38]},
+            "phone_history_number_18":      {"image": "new_result_and_history",     "pos": [231,  45],  "size": [38, 38]},
+            "phone_history_number_19":      {"image": "new_result_and_history",     "pos": [231,  83],  "size": [38, 38]},
+            "phone_history_number_20":      {"image": "new_result_and_history",     "pos": [231, 121],  "size": [38, 38]},
+            "phone_history_number_21":      {"image": "new_result_and_history",     "pos": [269,  45],  "size": [38, 38]},
+            "phone_history_number_22":      {"image": "new_result_and_history",     "pos": [269,  83],  "size": [38, 38]},
+            "phone_history_number_23":      {"image": "new_result_and_history",     "pos": [269, 121],  "size": [38, 38]},
+            "phone_history_number_24":      {"image": "new_result_and_history",     "pos": [307,  45],  "size": [38, 38]},
+            "phone_history_number_25":      {"image": "new_result_and_history",     "pos": [307,  83],  "size": [38, 38]},
+            "phone_history_number_26":      {"image": "new_result_and_history",     "pos": [307, 121],  "size": [38, 38]},
+            "phone_history_number_27":      {"image": "new_result_and_history",     "pos": [345,  45],  "size": [38, 38]},
+            "phone_history_number_28":      {"image": "new_result_and_history",     "pos": [345,  83],  "size": [38, 38]},
+            "phone_history_number_29":      {"image": "new_result_and_history",     "pos": [345, 121],  "size": [38, 38]},
+            "phone_history_number_30":      {"image": "new_result_and_history",     "pos": [383,  45],  "size": [38, 38]},
+            "phone_history_number_31":      {"image": "new_result_and_history",     "pos": [383,  83],  "size": [38, 38]},
+            "phone_history_number_32":      {"image": "new_result_and_history",     "pos": [383, 121],  "size": [38, 38]},
+            "phone_history_number_33":      {"image": "new_result_and_history",     "pos": [421,  45],  "size": [38, 38]},
+            "phone_history_number_34":      {"image": "new_result_and_history",     "pos": [421,  83],  "size": [38, 38]},
+            "phone_history_number_35":      {"image": "new_result_and_history",     "pos": [421, 121],  "size": [38, 38]},
+            "phone_history_number_36":      {"image": "new_result_and_history",     "pos": [459,  45],  "size": [38, 38]}
+        }
+    },
+
+    "ui": {
+        "result_widget_new":{"type": "winning-result-new", "winning.slice_prefix": "result_new_bg_", "layout":{ "base": [ 124, 124]}, "content": [
+            {"type": "label", "id": "result_number_label", "@P": "ui/label.def", "pos": [17, 21], "size": [95, 85], "format": "result_widget_format"}
+        ]},
+
+        "phone_history_widget_new_item":{"type": "vport", "size": [38, 38], "layout":{"base": [38, 38]}, "content": [
+            {"id": "number_image", "type": "anchor", "size": [38, 38], "pos": [0, 0]}
+        ]},
+
+        "phone_history_widget_new": { "type": "phone-history-new",
+            "is_vertical_orientation": false,
+            "is_inverse_direction": false,
+            "max_visible_items": 12,
+            "item_scale_multiplier": 0.74,
+            "animation_duration": 700,
+            "@O": {
+                "landscape": {"layout":{"base": [348, 40]}},
+                "portrait":  {"layout":{"base": [348, 40]}}},
+            "content":[
+                {"type": "vport", "id": "items_container_bg", "background": "phone_history_widget_new_bg",
+                    "@O": {
+                        "landscape": { "size": [338, 30], "pos": [0, 5], "layout":{"base": [338, 30]}},
+                        "portrait":  { "size": [338, 30], "pos": [0, 5], "layout":{"base": [338, 30]}}
+                    }
+                },
+                {"type": "vport", "id": "items_container", "clipped": true, "@O": {
+                    "landscape": { "size": [348, 40], "pos": [0, 0], "layout":{"base": [348, 40]}},
+                    "portrait":  { "size": [348, 40], "pos": [0, 0], "layout":{"base": [348, 40]}}
+                }},
+                {"type": "vport", "id": "result_land_place", "size": [38, 38], "pos": [0, 0], "layout":{"base": [38, 38]}, "content": [
+                    {"@P": "ui/result_widget_new", "id": "fly_result_widget", "opacity": 0,  "pos": [0, 0], "size": [38, 38]}
+                ]}
+            ]}
+    }
+}

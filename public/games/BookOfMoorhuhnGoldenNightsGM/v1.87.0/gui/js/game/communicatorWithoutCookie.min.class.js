@@ -1,0 +1,78 @@
+/**
+ * class for handling the client-server-communication (via the AJAX)
+ * @copyright LoCoNET GmbH 2015-03-09
+ */
+function Communicator(e) {
+    function s(e) {
+        var r = t.decode(e);
+        r && (!i && r.initData && r.initData.sessionID && (i = r.initData.sessionID), n(r))
+    }
+
+var self_=this;
+
+    function o(e, t, n) {
+        if (!r) return console.log("Communicator cannot send requests: slotmachine name is missing"), !1;
+        var i = getAjaxResponder(r, e);
+        var token = 'Bearer ' + getCookie("token");
+        //TODO: запрос на сервер
+        return $.ajax({
+            type: "POST",
+            url: '/api' +i+'&sessionId='+sessionStorage.getItem('sessionId'),
+            headers: {
+                "Authorization":token,
+            },
+            data: t,
+            success: function(e) {
+                ajaxResponseHandler({
+                    msg: e,
+                    url: '/api' +i+'&sessionId='+sessionStorage.getItem('sessionId'),
+                    onSuccess: function(e, t) {
+                        s(t)
+                    }
+                })
+            },
+            error: function(e, t) {
+                n && n()
+            }
+        })
+    }
+    var t = null,
+        n = null,
+        r = "",
+        i = !1;
+    this.sendRequest = function(e, r, s) {
+            typeof r == "undefined" && (r = {}), obj_restHandler.addRequestParams(r, e), i && (r.sessionID = i), typeof s != "function" && (s = !1);
+            var u = t.encode(e, r, s);
+
+
+ if( (r.request=="linebetplus" || r.request=="linebetminus")  && r.infoActive){
+
+self_.tmpReq={
+m: "1en00001",
+section1: 1,
+section: "paytable",
+sessionID: "lp9l636h38m48elv9eg45ehkq0"
+};
+
+setTimeout(function(){
+
+ self_.sendRequest ('showInfoSite', self_.tmpReq, false);
+
+},300);
+
+		  }
+
+            for (var a in u) u[a].type == "request" ? o(u[a].action, u[a].data, s) : u[a].type == "response" && n(u[a].data)
+        },
+        function(e) {
+            r = e.slotmachine, n = e.responseHandler, t = new Translator, typeof jv_sessionID != "undefined" && jv_sessionID && (i = jv_sessionID)
+        }(e)
+};
+
+//TODO: выпилить повторяющийся код
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}

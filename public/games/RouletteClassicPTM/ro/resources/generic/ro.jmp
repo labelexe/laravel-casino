@@ -1,0 +1,47 @@
+{
+    "modules": {
+        "default": {
+            "window":{
+                "pos": "center",
+                "size": [1136, 640]
+            },
+
+            "jmms": [
+                "roulette/common/config.jmm",
+                "roulette/common/controls.jmm",
+                "roulette/common/scroll_paytable.jmm",
+                "roulette/common/new_result_and_history.jmm",
+                "roulette/common/ui_mobile.jmm",
+                "coins.jmm",
+                "config.jmm",
+                "resources.jmm",
+                "widgets.jmm",
+                "brand.jmm"
+            ],
+
+            "phone": [
+                "phone/scene.jmm",
+                "phone/tables.jmm"
+            ],
+
+            "tablet": [
+                "roulette/common/ui_tab.jmm",
+                "tablet/scene.jmm",
+                "tablet/tables.jmm"
+            ],
+
+            "unknown": [
+                "tablet/scene.jmm",
+                "tablet/tables.jmm"
+            ],
+
+            "localizedBrandedJmms": [
+                "../../translations/jmm/roulette/common/controls_en.jmm",
+                "../../translations/jmm/roulette/common/texts/texts_en.jmm",
+                "../../translations/jmm/images/images_en.jmm",
+                "../../translations/jmm/texts/texts_en.jmm",
+                "../../translations/jmm/media/media_en.jmm"
+            ]
+        }
+    }
+}

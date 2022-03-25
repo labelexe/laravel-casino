@@ -1,0 +1,204 @@
+
+@CHARSET "UTF-8";
+
+/* background images */
+html[lang="de"] #loading									{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/loading_screen_l32.jpg'); }
+html[lang="de"] .container.l169 #loading					{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/loading_screen_l169.jpg'); }
+#loading													{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/loading_screen_l32-en.jpg'); }
+.container.l169 #loading									{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/loading_screen_l169-en.jpg'); }
+
+.loaded .gameContainer, .offline .gameContainer				{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_middle.jpg'); }
+.loaded .headlineContainer, .offline .headlineContainer 	{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_top-en.jpg'); }
+html[lang="de"] .loaded .headlineContainer, .offline .headlineContainer 	{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_top.jpg'); }
+.loaded .mainControlBoxBG, .offline .mainControlBoxBG		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_bottom.jpg'); }
+.freegame .gameContainer									{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_middle-fg.jpg'); }
+.freegame .gameContainer.glow								{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_middle-fg2.jpg'); }
+.portrait.freegame .gameContainer							{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_middle-fg.jpg'); }
+.freegame .headlineContainer								{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_top-fg-en.jpg'); }
+html[lang="de"] .freegame .headlineContainer				{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_top-fg.jpg'); }
+.freegame .headlineContainer.plain							{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_top-fg2.jpg'); }
+.freegame .mainControlBoxBG									{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_bottom-fg.jpg'); }
+.mainControlBox .webConsole									{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/console_web_bg.png'); }
+.freegame .mainControlBox .webConsole						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/console_web_bg-fg.png'); }
+.mainControlBox .mobileConsole								{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/console_mobile_bg.png'); }
+.mainControlBox .portraitConsole							{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/console_portrait_bg.png'); }
+.container.portrait.loaded .portraitHeadlineContainer 						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/portrait_top-en.jpg'); }
+.container.portrait.freegame.loaded .portraitHeadlineContainer 				{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/portrait_top-fg-en.jpg'); }
+html[lang="de"] .container.portrait.loaded .portraitHeadlineContainer 						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/portrait_top.jpg'); }
+html[lang="de"] .container.portrait.freegame.loaded .portraitHeadlineContainer 				{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/portrait_top-fg.jpg'); }
+.container.portrait.smallHeader.loaded .portraitHeadlineContainer 			{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/portrait_top_small-en.jpg'); }
+.container.portrait.freegame.smallHeader.loaded .portraitHeadlineContainer 	{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/portrait_top_small-fg-en.jpg'); }
+html[lang="de"] .container.portrait.smallHeader.loaded .portraitHeadlineContainer 			{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/portrait_top_small.jpg'); }
+html[lang="de"] .container.portrait.freegame.smallHeader.loaded .portraitHeadlineContainer 	{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/portrait_top_small-fg.jpg'); }
+.container.portrait.loaded .portraitBottomContainer 						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/portrait_bottom_l32.jpg'); }
+.container.l169.portrait.loaded .portraitBottomContainer 					{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/portrait_bottom_l169.jpg'); }
+ 
+.infoPopup.webInfo														{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/web/background.png'); } 
+.infoPopup.webInfo.info2 .settingsBox .settingCheckbox					{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/web/checkbox-off.png');	}
+.infoPopup.webInfo.info2 .settingsBox .settingCheckbox.active			{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/web/checkbox-on.png');  }
+
+.webConsole .closeInfoButton 											{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/web/button-close.png'); 	}
+
+/* new info site layout */
+.infoPopup.webInfo.info1							{ background-image: none; }
+.infoPopup.webInfo.info2							{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/web/background.png'); }
+.infoPopup.info1 .paylines							{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/lines.png'); }
+.infoPopup.info1 .symbolImg-10						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/scatter.png'); }
+.infoPopup.info1 .symbolImg-9						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/top.png'); }
+.infoPopup.info1 .symbolImg-8						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/hv1.png'); }
+.infoPopup.info1 .symbolImg-7						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/hv2.png'); }
+.infoPopup.info1 .symbolImg-6						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/hv3.png'); }
+.infoPopup.info1 .symbolImg-5						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/hv4.png'); }
+.infoPopup.info1 .symbolImg-4						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/lv1.png'); }
+.infoPopup.info1 .symbolImg-3						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/lv2.png'); }
+.infoPopup.info1 .symbolImg-2						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/lv3.png'); }
+.infoPopup.info1 .symbolImg-1						{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/lv4.png'); }
+.infoPopup.info1 .bonusSymbolBox					{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/infoSites/book.png'); }
+.infoPopup.info1 .bonusSymbolBox .symbolImg.s9		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/symbols/symbol-s-explorer.jpg'); }
+.infoPopup.info1 .bonusSymbolBox .symbolImg.s8		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/symbols/symbol-s-mummy.jpg'); }
+.infoPopup.info1 .bonusSymbolBox .symbolImg.s7		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/symbols/symbol-s-staebe.jpg'); }
+.infoPopup.info1 .bonusSymbolBox .symbolImg.s6		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/symbols/symbol-s-vase.jpg'); }
+.infoPopup.info1 .bonusSymbolBox .symbolImg.s5		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/symbols/symbol-s-flower.jpg'); }
+.infoPopup.info1 .bonusSymbolBox .symbolImg.s4		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/symbols/symbol-s-a.jpg'); }
+.infoPopup.info1 .bonusSymbolBox .symbolImg.s3		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/symbols/symbol-s-k.jpg'); }
+.infoPopup.info1 .bonusSymbolBox .symbolImg.s2		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/symbols/symbol-s-q.jpg'); }
+.infoPopup.info1 .bonusSymbolBox .symbolImg.s1		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/symbols/symbol-s-j.jpg'); }
+.infoContainer .infoPopup .bonusSymbolBox {
+	position: relative;
+	width: 360px;
+	height: 232px;
+	background-size: 100%;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+.infoContainer .infoPopup .bonusSymbolBox .symbolImg {
+	position: absolute;
+	left: 30px;
+	top: 50px;
+	width: 142px;
+	height: 150px;
+	background-size: 100%;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+.infoContainer .infoPopup .headline {
+	background-color: #dfab35;
+}
+.infoContainer .infoPopup .winValueBox .winValue .multiplicator {
+	color: #dfab35;
+}
+.infoContainer .infoPopup .winValueBox.winValues-10 .symbolImg {
+	height: 260px;
+}
+.infoContainer .infoPopup .winValueBox.winValues-10 .values {
+	padding-top: 70px;
+}
+
+.infoContainer .infoPopup .paylines.lines-5 {
+	height: 114px;
+	margin-bottom: 20px;
+}
+
+
+.loaded #animFadeoutLayer				{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/fadeout.png'); }
+.freegame #animFadeoutLayer				{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/fadeout-fg.png'); }
+.freegame #animFadeoutLayer.glow		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/fadeout-fg2.png'); }
+.portrait.freegame #animFadeoutLayer	{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/fadeout-fg.png'); }
+
+
+/* for pixi animations (freegame signs) */
+#pixi_container, 
+#freegame_container.pixi			{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/freegame/fgsign.jpg'); }
+.headlineContainer .freegame_blending.pixi	{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_top-fg2.jpg'); }
+.mainControlBox .freegame_blending.pixi		{ background-image: url('../../picts/rest/bookmoorhuhnii/1280/bg_bottom-fg.jpg'); }
+
+
+/* freegame popups */
+#freegame_container { position:absolute; top:0px; left:0px; overflow:hidden; width:1280px; height:604px; z-index:14; }
+#freegamePoints { position:absolute; top:300px; width:1280px; text-align:center; font-size:70px; color:white; font-weight:bold; font-family: "Noto Serif", "Times New Roman" , serif; }
+#freegamePoints .currLeft	{ padding-right: 18px; }
+#freegamePoints .currRight	{ padding-left: 18px; }
+#bookAnimLayer { position:absolute; width:1280px; height:604px; } 
+#bookEndPict { position:absolute; top:85px; left:220px; width:840px; height:427px; }
+#bookSelectedSymbol { position:absolute; top:167px; left:338px; width:278px; height:254px; }
+
+#freegame_container .fgTxt {
+	width: 780px;
+	height: 236px;
+	padding:  184px 250px;
+	line-height: 73px;
+	text-align: center;
+	font-size: 73px;
+	color: #ffc000;
+	text-shadow: 0 -1px 0px #fbeba0, 0 1px 1px #311500;
+}
+
+
+/* mini paytable */
+.headlineContainer.plain .fgBonusSymbol, .headlineContainer.plain .fgPayTable { opacity: 0; }
+
+.headlineContainer .fgBonusSymbol		{ position:absolute; left:982px; top:36px;  }
+.headlineContainer .fgBonusSymbol > img	{ width:73px; height:67px; }
+
+.headlineContainer .fgPayTable { 
+	position: absolute;
+	left: 1070px;
+	top: 38px;
+	width: 78px;
+	height: 80px;
+}
+.headlineContainer .fgPayTable .multiplicatorTextEffect {
+	color: #ffdf63;
+	text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 
+	1px 0px 0px #000000, -1px 0px 0px #000000, 0px 1px 0px #000000, 0px -1px 0px #000000;
+	font-weight: bold;
+}
+.headlineContainer .fgPayTable.values4 	{ top: 28px; }
+.headlineContainer .fgPayTable .fgWinValue { 
+	top: 0px;
+	font-family: "Noto Serif", "Times New Roman", serif; 
+	color: white;
+	font-size: 16px;
+	height: 20px;
+}
+.headlineContainer .fgPayTable .fgWinValue .multiplicator{
+	position:	absolute;
+	left: 		0px;
+}
+.headlineContainer .fgPayTable .fgWinValue .winValueText { 
+	position: absolute;
+	right: 0px;
+	text-align: right;
+}
+
+/* optimal slot */
+#bookPictLayer {
+	position: absolute;
+	top: 10px;
+	left: 202px;
+	width: 870px;
+	height: 560px;	
+}
+#chosenBonusSymbol {
+	position: absolute;
+	top: 154px;
+	left: 80px;
+	width: 308px;
+	height: 282px;
+}
+
+#symbolTeaserContainer {
+	position: absolute; 
+	left: 4px; 
+	top: 0px; 
+	width: 1066px; 
+	height: 576px;
+}
+#symbolTeaserContainer .teaserSymbol {
+	position: absolute;
+	width: 210px; 
+}
+
+/* preload fonts */
+#loading div.preloadFont .font3 { font-family: "Noto Serif", "Times New Roman" , serif; }
+#loading div.preloadFont .font4 { font-family: "Noto Serif", "Times New Roman" , serif; font-weight: bold; }

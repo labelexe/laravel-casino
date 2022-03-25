@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Implementation-Title: Language Library
+Implementation-Version: 1.17.0
+Maven-ArtifactId: flowerschristmas-gamerules
+Archiver-Version: Plexus Archiver
+Built-By: jenkins-slave
+Jenkins-BuildNumber: 17
+Implementation-Vendor-Id: com.netent.casino-software.games.videoslots.
+ flowerschristmas
+Jenkins-BuildId: 17
+Git-Hash: f31d22cbe1fa187cdfc063e58ab759e777eaa5e2 (with local modific
+ ations)
+Implementation-Vendor: Net Entertainment
+Maven-Classifier: 
+Maven-GroupId: com.netent.casino-software.games.videoslots.flowerschri
+ stmas
+Jenkins-BuildUrl: https://gdp-kiv-01.netent.com/job/flowers-flowers-ch
+ ristmas-gamerules-master/17/
+Git-CommitTime: 2019-03-21T07:39:41.000Z
+Git-Url: https://git.netent.com/scm/flowers/flowers-christmas-gamerule
+ s.git
+Maven-Name: Language Library
+Maven-Version: 1.17.0
+Jenkins-JobName: flowers-flowers-christmas-gamerules-master
+Created-By: Apache Maven 3.0.4
+Build-Jdk: 1.8.0_151
+

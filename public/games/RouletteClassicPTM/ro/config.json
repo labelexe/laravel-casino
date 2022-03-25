@@ -1,0 +1,11 @@
+{
+    "tableGame": true,
+    "gcActive": true,
+	"gcVersion": 2,
+    "menuButtonsConfig": {
+        "paytableCaption": "Limits",
+        "showSettings": true
+    },
+    "title": "Classic Roulette",
+    "game_code": "ro"
+}

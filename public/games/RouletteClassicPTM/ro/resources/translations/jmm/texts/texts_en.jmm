@@ -1,0 +1,18 @@
+{
+    "resources" : {
+        "texts" : {
+            "paytable.title":   "PAYTABLE ",
+            "paytable.pays":    "PAYS ",
+            "limits.min":       "MIN ",
+            "limits.max":       "MAX ",
+            "straight_text":    "STRAIGHT UP ",
+            "split_text":       "SPLIT ",
+            "street_text":      "STREET ",
+            "corner_text":      "CORNER/FOUR ",
+            "line_text":        "LINE ",
+            "column_text":      "COLUMN/DOZEN ",
+            "red_text":         "1-18/19-36 : RED/BLACK : EVEN/ODD ",
+            "ok_paytable":      "OK"
+        }
+    }
+}

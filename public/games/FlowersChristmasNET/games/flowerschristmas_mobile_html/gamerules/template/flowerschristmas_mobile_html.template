@@ -1,0 +1,537 @@
+<link rel="stylesheet" href="../../../gamerules/styles/mobilestyle.css" type="text/css"/>
+<p class="largeHeader">
+	<#RTgameRulesHeadingFlowersTouchChristmas#/>
+</p>
+    <!-- Flowers Christmas Touch™ Game Rules -->
+
+<ul>
+	<li><#RTflowersChristmasTouchIntro#/></li>
+		<!-- Flowers Christmas Touch™ is a 5-reel, 3-row video slot featuring Double symbols, Wild substitutions and Free Spins with Stacked Wild symbols. -->
+	<li><#RTMG30LinesDiffLevels#/></li>
+		<!-- You can play 30 fixed bet lines at different bet levels and coin values. -->	
+	<li><#RTsetBetLevel#/></li>
+		<!-- The bet level is set using the Bet level selector. -->
+	<li><#RTMGcoinValueInstruction#/></li>
+		<!-- The coin value is set using the COIN VALUE selector. -->
+	<li><#RTMGwinCombinations#/></li>
+		<!-- Winning combinations and payouts are made according to the Paytable. -->
+	<li><#RTbetLevel#/></li>
+		<!-- Bet level is the number of coins bet per bet line. -->
+	<li><#RTwinCalculationBetLinesCoinsNoMultiplierTrans#/></li>
+		<!-- A bet line win in coins is equal to the value shown in the Paytable multiplied by the bet level. -->
+	<li><#RTMGwinCalculationBetLinesCurrency#/></li>
+		<!-- A bet line win in currency is equal to the win in coins multiplied by the coin value. -->
+	<li><#RTMGwildsubstitutesDouble#/></li>	
+		<!-- Wild symbol substitutes for all symbols except Free Spin and Double symbols. -->
+	<li><#RTMGwildSubDoublesymAsSingleSym#/></li>
+		<!-- Wild symbols substituting Double symbols pay the value of a single symbol when appearing on a winning line. -->
+	<li><#RTMGwildsubstitutesSingel#/></li>
+		<!-- Wild symbol can count as a single symbol only. -->
+	<li><#RTMGwinSelectedLineExceptFS#/></li>
+		<!-- All wins pay on selected bet lines only, except for wins with Free Spin symbols. -->	
+	<li><#RTMGpaytableHighest#/></li>
+		<!-- Only the highest win per active bet line is paid. -->
+	<li><#RTMGBetLineWinsLeftRight#/></li>
+		<!-- Bet lines win if the winning symbols are in succession from the leftmost reel to right. -->
+	<li><#RTMGsimultaneousWinsAdded#/></li>
+		<!-- Simultaneous wins on different bet lines are added. -->
+	<li><#RTMGfreeSpinsWinsAdded#/></li>
+		<!-- Free Spins wins are added to any bet line wins. -->
+</ul>
+
+<p class="smallHeader">
+	<#RTMGdoubleSymsHeader#/>
+</p>
+    <!-- Double symbols -->
+<ul>
+	<li><#RTMGdoubleSymbols#/></li>
+		<!-- Free Spin symbols and medium win symbols can be either single or Double symbols. -->
+	<li><#RTMGdoubleSymsOn23and4#/></li>
+		<!-- Double Free Spin symbols can appear on reels 2, 3 and 4. -->
+	<li><#RTMGtotalSymsBetlineWins#/></li>
+		<!-- Wins are determined by the total number of symbols appearing on a bet line. -->
+	<li><#RTMGdoubleSymBetline10#/></li>
+		<!-- With Double symbols, a winning bet line can have from 3 to 10 symbols in total. -->
+</ul>
+
+<p class="smallHeader">
+	<#RTMGfreeSpinswithStackWildHead#/>
+</p>
+    <!-- Free Spins with Stacked Wild -->
+<ul>
+	<li><#RTMGfreeSpinIsScatter#/></li>
+		<!-- The Free Spin symbol is a Scatter symbol. -->
+	<li><#RTMGdoubleScatters#/></li>
+		<!-- Free Spin symbols can appear as single or Double symbols. -->
+	<li><#RTMGfreeSpinSymActivates#/> <#RTbetAnmountByMultiplier#/> <#RTfreeSpinMultiplierTable#/></li>
+		<!-- 4 or more Free Spin symbols appearing anywhere on the reels activate Free Spins. The bet that activates Free Spins is multiplied according to the table based on the number of Free Spin symbols. This amount is added to any bet line wins on that spin. -->
+</ul>
+<p class="smallHeader"></p>
+<table class="gamerulestable">
+<tbody>
+<tr>
+<th><#RTcolHeadFSpinSyms#/></th>
+<th><#colHeadBetMulti#/></th>
+<th><#colHeadFSpinWon#/></th>
+</tr>
+
+<tr>
+<td>8</td>
+<td>10</td>
+<td>30</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>4</td>
+<td>25</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>2</td>
+<td>20</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>2</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>2</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+</tr>
+</tbody>	
+</table>
+
+
+<p>*<#RTMGdoubleCountsAs2#/></p>
+		<!-- Double symbols count as 2 single symbols. -->
+
+<ul>	
+<li><#RTMGnoMultiRetrig#/></li>
+		<!-- Additional Free Spins won are not multiplied by the Free Spins multiplier. -->
+<li><#MGfreeSpinWinsMultiplied3#/></li>
+		<!-- Free Spin coin wins are multiplied by 3. -->
+<li><#RTMGfreeSpinsActivatingRound#/></li>
+		<!-- Free Spins are played at the same bet as the round activating Free Spins. -->
+<li><#RTstackedWildFSNew#/></li>
+		<!-- Stacked Wild symbols can only appear in Free Spins and substitute for all symbols, except Free Spin and Double symbols.-->
+<li><#RTMGfreeSpin4retriggerRev#/></li>
+		<!-- In Free Spins, 4 or more Free Spin symbols anywhere on the reels activate additional Free Spins. -->
+<li><#RTMGextraFreeSpinWinsAdded#/></li>
+		<!-- Extra Free Spins won are automatically added to the current Free Spins. -->
+<li><#RTMGmultiplier3ExcludesScatterWins#/></li>
+		<!-- Bet line wins are tripled in Free Spins, excluding additional Free Spins won. -->
+
+	
+</ul>
+
+<table class="gamerulestable">
+    <tbody>
+        <tr>
+            <th colspan="2">
+                <#RTMGbuttonsMainGame#/>
+				    <!-- Main Game -->
+            </th>
+        </tr>
+        <tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/spinbutton.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p><strong><#RTMGspinButton#/></strong>
+					<!-- Spin Button -->
+                </p>
+                <p><#RTMGtapSpinButtonRev#/>
+					<!-- Tap to start playing at the current bet level and coin value. -->
+				 </p>	
+                <p><#RTMGtouchMainGameNew#/>
+					<!-- In landscape mode, touch the game area to hide the Spin button. -->
+                </p>
+                <strong><#RTMGquickStop#/></strong>: <#RTMGtapDuringSpin#/>
+					<!-- Quick Stop. Tap the game area during a spin to stop the reels. In portrait mode, tapping the Spin button also stops the reels.-->
+            </td>
+        </tr>
+        <tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/menu_btn.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p>
+					<strong><#RTMGmenu#/></strong>
+					<!-- Menu -->
+                </p>
+                <#RTMGgameSettingIntroDevNew#/>
+					<!-- Tap to access the game settings and game information. -->
+            </td>
+        </tr>
+		<tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/audio_on.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p>
+					<#RTsoundButton#/>
+					<!-- Sound -->
+                </p>
+                <#RTMGsoundSettingsUI#/>
+					<!-- Tap to turn Sound on or off without going to the settings menu. -->
+            </td>
+        </tr>
+		
+		<tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/quick_settings.png" style="width:60px;height:50px" />
+            </td>
+            <td>
+                <p>
+					<strong><#RTMGquickSettings#/></strong>
+					<!-- Quick Settings -->
+                </p>
+                <#RTMGquickSettingsMenu#/>
+					<!-- Tap the plus sign to access the Quick settings menu. -->
+            </td>
+        </tr>
+		
+		<tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/autoplay_UI.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p>
+					<#RTMGautoplayPanelLabel#/>
+					<!-- Autoplay -->
+                </p>
+                <#RTMGautoplayUI#/>
+					<!-- Tap to turn Autoplay on or off without going to the settings menu. Sets 50 rounds by default. -->
+            </td>
+        </tr>
+		
+		<tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/quickspin_UI.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p>
+				<strong><#RTMGquickSpin#/></strong>
+				<!-- Quick Spin -->
+                </p>
+                <#RTMGquickSpinUI#/>
+					<!-- Tap to turn Quick spin on or off without going to the settings menu. -->
+            </td>
+        </tr>
+		
+        <tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/casino_btn.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p><strong><#RTMGexit#/></strong>
+					<!-- Exit -->
+                </p>
+                <#RTMGleaveGame#/>
+					<!-- Tap to leave the game and return to the Casino. -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table class="gamerulestable">
+    <tbody>
+        <tr>
+            <th colspan="2">
+                <#RTMGgameSettings#/>
+				<!-- Game Settings and Game Information -->
+            </th>
+        </tr>
+		
+		<tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/sound_settings.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p class="smallHeader" >
+					<#RTMGsoundSettings#/>
+				</p>
+			   	<!-- Sound Settings -->
+                
+				<ul>
+					<li>
+						<strong><#RTMGsounds#/></strong>: <#RTMGsoundOnOffRev#/>
+						<!-- Game sounds. Tap to turn sounds on or off. -->
+					</li>
+					
+					
+				</ul>
+            </td>
+        </tr>
+		
+		<tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/spin_settings.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p class="smallHeader">
+					<#RTMGspinSettingsRev#/>
+				</p>
+			   	<!-- Spin Settings -->
+                
+			<ul>
+                <li><strong><#RTMGautoplayPanelLabel#/></strong>: <#RTMGautoOptions#/></li>
+				<!-- Autoplay. Drag or tap the slider to enable autoplay to set the autoplay options and the number of rounds. Autoplay plays the game for the selected number of spins. -->
+			</ul>
+            <ul>    
+			 <li><b><#OCTifWinExeeds#/></b>. <#singleWinDesc#/></li>
+				<!-- If single win exceeds. Stop Autoplay when the amount you win exceeds or equals the amount you specify. -->
+				<li><strong><#OCTifCashIncreasesBy#/></strong>: <#RTcashIncreasesDescRev#/></li>
+				<!-- If cash increases by. Stop Autoplay if cash increases by the amount you specify. -->
+				<li><strong><#OCTifCashDecreasesBy#/></strong>: <#RTcashDecreasesDescRev#/></li>
+				<!-- If cash decreases by. Stop Autoplay if cash decreases by the amount you specify. -->
+				<li><strong><#OCTstopIfFreeSpins#/></strong>: <#RTMGdisableAutoplay#/></li>
+                <!-- Stop if Free Spins is won. Tap to disable Autoplay, if Free Spins is won before the set number of autoplay rounds. -->
+			    <p><#RTMGautoplayDisconnect#/></p>
+                <!-- Note: If you are disconnected while playing, all Autoplay settings will return to default when you reload the game. -->
+				<p><#RTautoplayNote#/></p>
+				<!-- Note: Some autoplay options are mandatory for some jurisdictions. -->				
+				<li><strong><#RTMGquickSpinGameSetting#/></strong>: <#RTMGtapOnOffRev#/></li>
+				<!-- Quick spin. Tap to turn the Quick spin on or off. -->
+				<li><strong><#RTMGleftHandMode#/></strong>: <#RTMGspinButtonLeft#/></li>
+				<!-- Left Hand Mode. Shifts the Spin button to the left hand side and helps the left handed players to play comfortably. -->
+            </ul>
+            </td>
+        </tr>
+		
+        <tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/Bet_settings.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p class="smallHeader">
+					<#MGbetSettings#/>
+				</p>
+				<!-- Bet Settings -->
+              	<ul>
+					<li>
+						<strong><#RTMGbetInCash#/></strong>: <#RTMGshowsBetCurrency#/>
+					</li>
+					
+					<li>
+						<strong><#RTMGbetInCoins#/></strong>: <#RTMGshowsBetCoins#/>
+					</li>
+					
+					<li>
+						<strong><#RTMGbetlevel#/></strong>: <#RTMGselectBetLevelRevNew#/>
+						<!-- Bet level. Drag or tap the slider to select the number of coins to bet per bet line. -->				
+					</li>
+					
+					<li>
+						<strong><#RTMGcoinvalue#/></strong>: <#RTMGselectCoinValueRevNew#/>
+						<!-- Coin value. Drag or tap the slider to select the coin value -->
+					</li>
+				</ul>
+            </td>
+        </tr>
+        
+		<tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/Paytable.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p><strong><#RTMGpaytable#/></strong>
+			   	<!-- Paytable -->
+                </p>
+				<#RTMGwinComb#/>
+				<!-- Tap to view winning combinations and payouts. -->
+            </td>
+        </tr>
+		<tr>
+            <td class="imgcell"> 
+                <img src="../gamerules/images/game_rules.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p><strong><#RTMGgameRules#/></strong>
+				<!-- Game Rules -->
+                </p>
+				<#RTMGviewGamesRules#/>
+				<!-- Tap to view the game rules. -->
+            </td>
+        </tr>
+		<tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/history_btn.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p><strong><#RTMGgameHistoryHeading#/></strong>
+				<!-- Game History -->
+                </p>
+				<p><#RTMGgameHistoryDesc#/> 
+				<!-- Tap to view your latest game history. -->
+				</p>
+				<#RTMGhistoryNotAvailable#/> 
+				<!-- The Game history is available only when playing for money. -->
+            </td>
+		</tr>
+		<tr>
+			<td class="imgcell">
+                <img src="../gamerules/images/back_btn.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p><strong><#RTMGback#/></strong>
+				<!-- Back -->
+                </p>
+				<#RTMGbackMainGame#/> 
+				<!-- Tap to go back to the main game. -->
+				
+            </td>
+        </tr>
+		
+    </tbody>
+</table>
+<table class="gamerulestable">
+    <tbody>
+        <tr>
+            <th colspan="2">
+                <#RTMGautoplayQuickSpinHeading#/>
+				<!-- Autoplay and Quick Spin -->
+            </th>
+        </tr>
+        <tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/autoplay.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p><strong><#RTMGautoplayPanelLabel#/></strong>
+				<!-- Autoplay -->
+				</p>
+                <#RTMGstartAutoplay#/>
+				<!-- Tap to start Autoplay -->
+				<#RTMGAutoplaySpins#/>
+				<!-- The number of spins selected is displayed on the button.-->
+            </td>
+        </tr>
+        <tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/autoplay-stop.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p><strong><#RTMGstopAutoplayOnOff#/></strong>
+				<!-- Stop Autoplay -->
+				</p>
+				<#RTMGstopAutoplay#/>
+				<!-- Tap to stop Autoplay -->
+				
+				<#RTMGnoAutoplayLeft#/>
+				<!-- The number of spins remaining is displayed on the button. -->
+            </td>
+        </tr>
+        <tr>
+            <td class="imgcell">
+                <img src="../gamerules/images/quickspin.png" style="width:50px;height:50px" />
+            </td>
+            <td>
+                <p><strong><#RTMGquickSpin#/></strong>
+				<!-- Quick Spin -->
+				</p>
+				<#RTMGstartQuickSpin#/>
+				<!-- Tap to start quick spin. -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p><#RTMGsettingsDisclaimer#/></p>
+<!-- Note: Some casinos may operate without all of the listed game settings. -->
+
+
+<p class="smallHeader">
+	<#RTMGreturnToPlayer#/>
+</p>
+<ul>
+	<li><#RTMGtheoreticalReturn#/> 96.3%</li>
+</ul>
+
+<p class="smallHeader">
+	<#RTMGadditionalInformation#/>
+</p>
+<ul>
+	<li><#RTMGreferWebSite#/></li>
+		<ul>
+			<li><#RTMGunfinishedGameSession2#/></li>
+			<li><#RTMGgameSessions2#/></li>
+		</ul>
+	<li><#RTMGmalfunction#/></li>
+</ul>
+<p class="smallHeader">
+
+<#RTtransGameTerms#/>
+</p>
+
+<p>
+<#RTtablePlayLangThnEng#/>
+
+</p>
+<table class="gamerulestable">
+    <tbody>
+        <tr>
+            <th>
+            <#termEnglish#/>
+			</th>
+			<th>
+			<#termTranslatedTerm#/>
+			</th>
+        </tr>    
+  	
+	<tr>
+    	<td>Double</td>
+    	<td><#termDouble#/></td>
+    </tr>
+	
+	<tr>
+    	<td>Double Free Spins</td>
+    	<td><#termDoubleFreeSpins#/></td>
+    </tr>
+	
+	<tr>
+    	<td>Free Spins</td>
+    	<td><#termFreeSpins#/></td>
+    </tr>
+	
+	<tr>
+    	<td>Multiplier</td>
+    	<td><#termMultiplier#/></td>
+    </tr>
+	
+	<tr>
+    	<td>Scatter</td>
+    	<td><#termScatter#/></td>
+    </tr>
+      
+   
+	<tr>
+    	<td>Wild</td>
+    	<td><#termWild#/></td>
+    </tr>
+	
+	<tr>
+    	<td>Stacked Wild</td>
+    	<td><#termStackedWild#/></td>
+    </tr>
+	
+	<tr>
+    	<td>Single</td>
+    	<td><#termSingle#/></td>
+    </tr>
+	
+ </tbody>
+</table>
+
+<p></p><p><b><#RTrulesGenerated#/></b></p>

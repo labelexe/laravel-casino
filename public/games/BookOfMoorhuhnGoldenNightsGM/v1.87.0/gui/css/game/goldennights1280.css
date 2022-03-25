@@ -1,0 +1,1065 @@
+@CHARSET "UTF-8";
+
+/*.container.inJackpotMode.playout.portrait.loaded .portraitHeadlineContainer 				{ background-image: url('../../picts/game/1280/goldennights/portrait_top.jpg'); }*/
+/*.container.inJackpotMode.playout.portrait.smallHeader.loaded .portraitHeadlineContainer 	{ background-image: url('../../picts/game/1280/goldennights/portrait_top_small.jpg'); }*/
+.container.inJackpotMode.playout.portrait.loaded .portraitHeadlineContainer 				{ background-image: none; }
+.container.inJackpotMode.playout.portrait.smallHeader.loaded .portraitHeadlineContainer 	{ background-image: none; }
+.container.inJackpotMode.playout.portrait.loaded .portraitBottomContainer 					{ background-image: url('../../picts/game/1280/goldennights/portrait_bottom_l32.jpg'); }
+.container.inJackpotMode.playout.l169.portrait.loaded .portraitBottomContainer 				{ background-image: url('../../picts/game/1280/goldennights/portrait_bottom_l169.jpg'); }
+
+.container .headlineContainer .jackpotLogo,
+.container .portraitHeadlineContainer .jackpotLogo			{ background-image: url('../../picts/game/1280/goldennights/logo.png'); }
+
+.container.inJackpotMode .mainControlBox .mainControlBoxBG,
+.container.inJackpotInfoMode .mainControlBox .mainControlBoxBG		{ background-image: none; }
+.container.inJackpotMode.playout .webConsole						{ background-image: url('../../picts/game/1280/goldennights/console_web_bg.png'); }
+.container.inJackpotMode .mobileConsole								{ background-image: none; }
+.container.inJackpotMode.playout .landscapeConsole					{ background-image: url('../../picts/game/1280/goldennights/console_mobile_bg.jpg'); }
+.container.inJackpotMode.playout .portraitConsole					{ background-image: url('../../picts/game/1280/goldennights/console_portrait_bg.jpg'); }
+
+.jackpotContainer .bgAnim 							{ background-image: url('../../picts/game/1280/goldennights/goni-bg.jpg'); }
+.container.inJackpotMode.playout.portrait .jackpotContainer .bgAnim				{ background-image: url('../../picts/game/1280/goldennights/portrait_top.jpg'), url('../../picts/game/1280/goldennights/goni-bg.jpg'); }
+.container.inJackpotMode.playout.portrait.smallHeader .jackpotContainer .bgAnim	{ background-image: url('../../picts/game/1280/goldennights/portrait_top_small.jpg'), url('../../picts/game/1280/goldennights/goni-bg.jpg'); }
+.container.inJackpotMode.playout.portrait .jackpotContainer .bgAnim				{ background-position: center top, center bottom; background-repeat: no-repeat, no-repeat; }
+
+.jackpotContainer .bgHeadline 						{ background-image: url('../../picts/game/1280/goldennights/title.png'); }
+.container.l169 .jackpotContainer .bgHeadline,
+.container.portrait .jackpotContainer .bgHeadline	{ background-image: none; }
+
+.jackpotContainer .bgAnim .star						{ background-image: url('../../picts/game/1280/goldennights/anim/bg_star.png'); }
+.jackpotContainer .bgAnim .shootingStar				{ background-image: url('../../picts/game/1280/goldennights/anim/bg_shootingStar.png'); }
+.jackpotContainer .bgAnim #window-1					{ background-image: url('../../picts/game/1280/goldennights/anim/bg_light-1.png'), url('../../picts/game/1280/goldennights/anim/bg_light-1.png'); }
+.jackpotContainer .bgAnim #window-2					{ background-image: url('../../picts/game/1280/goldennights/anim/bg_light-2.png'); }
+.jackpotContainer .bgAnim #window-3					{ background-image: url('../../picts/game/1280/goldennights/anim/bg_light-3.png'); }
+.jackpotContainer .bgAnim #window-4					{ background-image: url('../../picts/game/1280/goldennights/anim/bg_light-4.png'); }
+.jackpotContainer .bgAnim #window-5					{ background-image: url('../../picts/game/1280/goldennights/anim/bg_light-4.png'); }
+.jackpotContainer .bgAnim #window-6					{ background-image: url('../../picts/game/1280/goldennights/anim/bg_light-5.png'); }
+.jackpotContainer .bgAnim .fog						{ background-image: url('../../picts/game/1280/goldennights/anim/bg_fog.png'); }
+.jackpotContainer .bgAnim .smoke					{ background-image: url('../../picts/game/1280/goldennights/anim/bg_smoke.png'); }
+
+.jackpotContainer .jpChance.showInfoDuringJackpotChance:after		{ content: url('../../picts/game/1280/goldennights/chance-info-en.png'); }
+html[lang='de'] .jackpotContainer .jpChance.showInfoDuringJackpotChance:after		{ content: url('../../picts/game/1280/goldennights/chance-info-de.png'); }
+.jackpotContainer .jpChance .chanceItem	 			{ background-image: url('../../picts/game/1280/goldennights/treasure-chest-closed.png'); }
+.jackpotContainer .jpChance .chanceItemBG	 		{ background-image: url('../../picts/game/1280/goldennights/treasure-chest-glow.png'); }
+.jackpotContainer .jpChance .win	 				{ background-image: url('../../picts/game/1280/goldennights/treasure-chest-full.png'); }
+.jackpotContainer .jpChance.showInfoDuringJackpotChance .chanceItemSuccessSign.win	{ background-image: url('../../picts/game/1280/goldennights/chance-win.png'); }
+.jackpotContainer .jpChance .lose					{ background-image: url('../../picts/game/1280/goldennights/treasure-chest-empty.png'); }
+.jackpotContainer .jpChance.showInfoDuringJackpotChance .chanceItemSuccessSign.lose	{ background-image: url('../../picts/game/1280/goldennights/chance-lose.png'); }
+.jackpotContainer .jpPlayout .bgPlayout				{ background-image: url('../../picts/game/1280/goldennights/goniPlayout-inactive.png'); }
+.jackpotContainer .jpPlayout.betLevel-4 .bgPlayout	{ background-image: url('../../picts/game/1280/goldennights/goniPlayout.png'); }
+
+.jackpotContainer .jpPlayout .symbol-1				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-1.png'); }
+.jackpotContainer .jpPlayout .symbol-2,
+#jackpotBonusFlySymbol.symbol-2						{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-2.png'); }
+.jackpotContainer .jpPlayout .symbol-3				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-3.png'); }
+.jackpotContainer .jpPlayout .symbol-4				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-4.png'); }
+.jackpotContainer .jpPlayout .symbol-5				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-5.png'); }
+#jackpotBonusFlySymbol.symbol-5						{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-5.png'); }
+.jackpotContainer .jpPlayout .symbol-6				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-6.png'); }
+.jackpotContainer .jpPlayout .symbol-7				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-7.png'); }
+.jackpotContainer .jpPlayout .symbol-8				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-8.png'); }
+.jackpotContainer .jpPlayout .symbol-9				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-9.png'); }
+.jackpotContainer .jpPlayout .symbol-10				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-10.png'); }
+.jackpotContainer .jpPlayout .symbol-11				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-11.png'); }
+.jackpotContainer .jpPlayout .symbol-12				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-12.png'); }
+.jackpotContainer .jpPlayout .symbol-13				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-13.png'); }
+.jackpotContainer .jpPlayout .symbol-14				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-14.png'); }
+.jackpotContainer .jpPlayout .symbol-15				{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-15.png'); }
+.jackpotContainer .jpPlayout .symbol-100			{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-question.jpg'); }
+
+.jackpotContainer .jpPlayout .reelSymbolAnim .teaserAnimPart-0		{ background-image: url('../../picts/game/1280/goldennights/optanim/featureSymbolTeaser_0.jpg'); }
+.jackpotContainer .jpPlayout .reelSymbolAnim .teaserAnimPart-1		{ background-image: url('../../picts/game/1280/goldennights/optanim/featureSymbolTeaser_1.jpg'); }
+.jackpotContainer .jpPlayout .reelSymbolAnim .teaserAnimPart-2		{ background-image: url('../../picts/game/1280/goldennights/symbols/symbol-question.jpg'); }
+.jackpotContainer .jpPlayout .endSymbol.optBG						{ background-image: url('../../picts/game/1280/goldennights/optanim/featureSymbolTransform_bg.jpg'); }
+
+.jackpotContainer .jpSign.outro						{ background-image: url('../../picts/game/1280/goldennights/goni-werbeschild-dim.png'); }
+.jackpotContainer #jpOutroSignWinLevel				{ background-image: url('../../picts/game/1280/goldennights/sign-plaque.png'); }
+.jackpotContainer #jpOutroSignWinLevel.level-6		{ background-image: url('../../picts/game/1280/goldennights/sign-plaque-superjewel.png'); }
+
+.jackpotContainer .jackpotInfoContainer .bgInfo				{ background-image: url('../../picts/game/1280/goldennights/goni-werbeschild-bg.png'); }
+.jackpotContainer .jackpotInfoContainer .jpIntro,
+.jackpotContainer .jackpotInfoContainer .jpBetInfo			{ background-image: url('../../picts/game/1280/goldennights/goniSign.png'); }
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4	{ background-image: url('../../picts/game/1280/goldennights/goniSignGold.png'); }
+
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-2 .jackpotBonus .thermometer { background-image: url('../../picts/game/1280/goldennights/thermometer_small_2.png'); }
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-3 .jackpotBonus .thermometer,
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4 .jackpotBonus .thermometer { background-image: url('../../picts/game/1280/goldennights/thermometer_small_5.png'); }
+
+.jackpotContainer .jackpotInfoContainer .closeButton 			{ background-image: url('../../picts/game/1280/console/mobile/button-close.png'); 	 }
+.jackpotContainer .jackpotInfoContainer .confirmButton			{ background-image: url('../../picts/game/1280/goldennights/intro/button-ok.png'); }
+.jackpotContainer .jackpotInfoContainer .confirmButton:active	{ background-image: url('../../picts/game/1280/goldennights/intro/button-ok-press.png'); }
+.jackpotContainer .jackpotInfoContainer .settingCheckbox		{ background-image: url('../../picts/game/1280/goldennights/intro/checkbox-off.png');}
+.jackpotContainer .jackpotInfoContainer .settingCheckbox.active { background-image: url('../../picts/game/1280/goldennights/intro/checkbox-on.png'); }
+
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotThermometer	{ background-image: url('../../picts/game/1280/goldennights/intro/thermometer.png'); }
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotButton-0		{ background-image: url('../../picts/game/1280/goldennights/intro/button-info-0.png'); }
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotButton-1		{ background-image: url('../../picts/game/1280/goldennights/intro/button-info-1.png'); }
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotButton-2		{ background-image: url('../../picts/game/1280/goldennights/intro/button-info-2.png'); }
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotButton-3		{ background-image: url('../../picts/game/1280/goldennights/intro/button-info-3.png'); }
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotButton-4		{ background-image: url('../../picts/game/1280/goldennights/intro/button-info-4.png'); }
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotButton-5		{ background-image: url('../../picts/game/1280/goldennights/intro/button-info-5.png'); }
+
+/* parts of the win anims */
+.jackpotContainer .winAnimContainer	.goldennightsHouse1			{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse1.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse2			{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse2.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse3			{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse3.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse4			{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse4.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse5			{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse5.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse6			{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse6.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse7			{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse7.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse8			{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse8.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse9			{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse9.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse10		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse10.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse11		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse11.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse12		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse12.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse13		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse13.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse14		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse14.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse15		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse15.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse16		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse16.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse17		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse17.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse18		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse18.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse19		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse19.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse20		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse20.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse21		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse21.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse22		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse22.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse23		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse23.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse24		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse24.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse25		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse25.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouse26		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouse26.png'); }
+.jackpotContainer .winAnimContainer	.goldennightsHouseGlow		{ background-image: url('../../picts/game/1280/goldennights/anim/goldennightsHouseGlow.png'); }
+
+
+/* info sites */
+.infoPopup.info1 .jackpot-phases								{ background-image: url('../../picts/game/1280/goldennights/infoSites/en/teaser.png'); }
+.infoPopup.info1 #jackpotWinValues .thermometer				{ background-image: url('../../picts/game/1280/goldennights/infoSites/en/thermometer-noSuperjewel.png'); }
+.infoPopup.info1 #jackpotWinValues.inactive .thermometer		{ background-image: url('../../picts/game/1280/goldennights/infoSites/en/thermometer-dimmed.png'); }
+.infoContainer[data-jackpotlevel="4"] .infoPopup.info1 #jackpotWinValues .thermometer		{ background-image: url('../../picts/game/1280/goldennights/infoSites/en/thermometer.png'); }
+.infoPopup.info1.de .jackpot-phases								{ background-image: url('../../picts/game/1280/goldennights/infoSites/de/teaser.png'); }
+.infoPopup.info1.de #jackpotWinValues .thermometer				{ background-image: url('../../picts/game/1280/goldennights/infoSites/de/thermometer-noSuperjewel.png'); }
+.infoPopup.info1.de #jackpotWinValues.inactive .thermometer	{ background-image: url('../../picts/game/1280/goldennights/infoSites/de/thermometer-dimmed.png'); }
+.infoContainer[data-jackpotlevel="4"] .infoPopup.info1.de #jackpotWinValues .thermometer	{ background-image: url('../../picts/game/1280/goldennights/infoSites/de/thermometer.png'); }
+
+
+.container.inJackpotMode.playout.portrait .portraitHeadlineContainer {
+	z-index: 3;
+}
+
+.container .headlineContainer .jackpotLogo,
+.container .portraitHeadlineContainer .jackpotLogo {
+	position: absolute;
+	width: 124px;
+	height: 100px;
+}
+.container.freegame .headlineContainer.plain .jackpotLogo,
+.container.freegame .portraitHeadlineContainer.plain .jackpotLogo,
+.container.inJackpotMode.playout.portrait.loaded .portraitHeadlineContainer .jackpotLogo,
+.container.inJackpotMode.playout.portrait.smallHeader.loaded .portraitHeadlineContainer .jackpotLogo {
+	display: none;
+}
+
+#jackpotBonusFlySymbol {
+	position: absolute; 
+	top: 728px;
+	left: 502px;
+	width: 152px;
+	height: 112px;
+	z-index: 5;
+	opacity: 0;
+	-webkit-transform: scale( 0.5);
+	transform: scale( 0.5);
+}
+.container.l169 #jackpotBonusFlySymbol { top: 596px; }
+@-webkit-keyframes flyBonusWeb {
+	0%   { -webkit-transform: translate( 0px, 0px ) scale(0.5); opacity: 0;	}
+	25%  { -webkit-transform: translate( 0px, 0px ) scale(0.5); opacity: 1;	}
+	56%  { -webkit-transform: translate( -150px, -172px ) scale(1.15); }
+	88%  { opacity: 1; }
+	100% { -webkit-transform: translate( -300px, -344px ) scale(0.7); opacity: 0; }
+}
+@keyframes flyBonusWeb {
+	0%   { transform: translate( 0px, 0px ) scale(0.5); opacity: 0;	}
+	25%  { transform: translate( 0px, 0px ) scale(0.5); opacity: 1;	}
+	56%  { transform: translate( -150px, -172px ) scale(1.15); }
+	88%  { opacity: 1; }
+	100% { transform: translate( -300px, -344px ) scale(0.7); opacity: 0; }
+}
+#jackpotBonusFlySymbol.animating { 
+	-webkit-animation: flyBonusWeb 800ms linear 1;
+	animation: flyBonusWeb 800ms linear 1;
+}
+
+#jackpotBonusFlySymbol.mobile { left: 554px; }
+.container.portrait #jackpotBonusFlySymbol 				{ top: 986px; left: 458px; }
+.container.portrait.smallHeader #jackpotBonusFlySymbol 	{ top: 820px; }
+@-webkit-keyframes flyBonusMobile {
+	0%   { -webkit-transform: translate( 0px, 0px ) scale(0.5); opacity: 0;	}
+	25%  { -webkit-transform: translate( 0px, 0px ) scale(0.5); opacity: 1;	}
+	56%  { -webkit-transform: translate( -176px, -172px ) scale(1.15); }
+	88%  { opacity: 1; }
+	100% { -webkit-transform: translate( -352px, -344px ) scale(0.7); opacity: 0; }
+}
+@keyframes flyBonusMobile {
+	0%   { transform: translate( 0px, 0px ) scale(0.5); opacity: 0;	}
+	25%  { transform: translate( 0px, 0px ) scale(0.5); opacity: 1;	}
+	56%  { transform: translate( -176px, -172px ) scale(1.15); }
+	88%  { opacity: 1; }
+	100% { transform: translate( -352px, -344px ) scale(0.7); opacity: 0; }
+}
+#jackpotBonusFlySymbol.mobile.animating { 
+	-webkit-animation: flyBonusMobile 800ms linear 1;
+	animation: flyBonusMobile 800ms linear 1;
+}
+
+
+.jackpotContainer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1280px;
+	height: 853px;
+	z-index: 2;
+}
+.container.l169 .jackpotContainer 					{ top: -133px; }
+.container.portrait .jackpotContainer 				{ top: 0px; height: 1950px; }
+.container.l23.portrait .jackpotContainer 			{ top: 0px; height: 1630px; }
+.container.portrait.smallHeader .jackpotContainer 	{ top: 0px; height: 1784px; }
+/* .container.l23 .jackpotContainer  					{ height:  853px; } */
+/* .container.l169 .jackpotContainer 					{ height:  720px; } */
+
+.jackpotContainer .fullSize {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.jackpotContainer .fadeInSlow {
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-duration: 700ms;
+	transition-duration: 700ms;
+	opacity: 1;
+}
+.jackpotContainer .fadeOutSlow {
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-duration: 700ms;
+	transition-duration: 700ms;
+	opacity: 0;
+}
+
+.jackpotContainer .bgAnim,
+.jackpotContainer .bgInfo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1280px;
+	height: 853px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+.jackpotContainer .bgInfo { z-index: 2; }
+.container.portrait .jackpotContainer .bgAnim,
+.container.portrait .jackpotContainer .bgInfo { height: 1110px; }
+.container.portrait.smallHeader .jackpotContainer .bgAnim,
+.container.portrait.smallHeader .jackpotContainer .bgInfo { height:  944px; }
+
+.container.portrait .jackpotContainer .winAnimContainer,
+.container.portrait .jackpotContainer .featureAnim	{
+	top: 257px;
+}
+.container.portrait.smallHeader .jackpotContainer .winAnimContainer,
+.container.portrait.smallHeader .jackpotContainer .featureAnim	{
+	top: 91px;
+}
+.jackpotContainer .winAnimContainer	{
+	z-index: 1;
+}
+.jackpotContainer .winAnimContainer	.layer-1	{ z-index: 1; }
+.jackpotContainer .winAnimContainer	.layer-3	{ z-index: 3; }
+.jackpotContainer .winAnimContainer	.layer-5	{ z-index: 5; }
+.jackpotContainer .winAnimContainer	.layer-7	{ z-index: 7; }
+.jackpotContainer .winAnimContainer	.layer-9	{ z-index: 9; }
+.jackpotContainer .winAnimContainer	.layer-11	{ z-index: 11; }
+.jackpotContainer .winAnimContainer	.layer-13	{ z-index: 13; }
+.jackpotContainer .winAnimContainer	.layer-15	{ z-index: 15; }
+.jackpotContainer .winAnimContainer	.layer-17	{ z-index: 17; }
+.jackpotContainer .winAnimContainer	.layer-19	{ z-index: 19; }
+.jackpotContainer .winAnimContainer	.layer-21	{ z-index: 21; }
+.jackpotContainer .winAnimContainer	.layer-23	{ z-index: 23; }
+.jackpotContainer .winAnimContainer	.layer-25	{ z-index: 25; }
+.jackpotContainer .winAnimContainer	.layer-27	{ z-index: 27; }
+.jackpotContainer .winAnimContainer	.layer-29	{ z-index: 29; }
+.jackpotContainer .winAnimContainer	.layer-31	{ z-index: 31; }
+.jackpotContainer .winAnimContainer	.layer-33	{ z-index: 33; }
+.jackpotContainer .winAnimContainer	.layer-35	{ z-index: 35; }
+.jackpotContainer .winAnimContainer	.layer-37	{ z-index: 37; }
+.jackpotContainer .winAnimContainer	.layer-39	{ z-index: 39; }
+.jackpotContainer .winAnimContainer	.layer-41	{ z-index: 41; }
+.jackpotContainer .winAnimContainer	.layer-43	{ z-index: 43; }
+.jackpotContainer .winAnimContainer	.featureAnimPic {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: left top;
+	opacity: 0;
+}
+.jackpotContainer .winAnimContainer	.featureAnimPic.visible {
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: 667ms;
+}
+.jackpotContainer .winAnimContainer	.goldennightsHouse1		{ width:   72px; height:  18px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse2		{ width: 1108px; height: 466px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse3		{ width:   62px; height:  94px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse4		{ width:  142px; height: 292px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse5		{ width:  602px; height: 252px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse6		{ width:  186px; height: 446px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse7		{ width:  260px; height: 120px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse8		{ width:  218px; height:  94px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse9		{ width:  362px; height: 686px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse10	{ width:   22px; height: 108px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse11	{ width:  242px; height: 110px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse12	{ width:  300px; height: 188px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse13	{ width:   44px; height:  44px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse14	{ width:  234px; height: 170px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse15	{ width:   72px; height: 116px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse16	{ width:  160px; height:  38px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse17	{ width:  142px; height:  76px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse18	{ width:  194px; height: 110px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse19	{ width:   46px; height: 118px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse20	{ width:  138px; height:  62px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse21	{ width:   50px; height:  50px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse22	{ width:  102px; height: 196px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse23	{ width:   62px; height:  52px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse24	{ width:  104px; height:  70px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse25	{ width: 1280px; height:  85px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouse26	{ width: 1280px; height: 140px; }
+.jackpotContainer .winAnimContainer	.goldennightsHouseGlow	{ width: 1280px; height: 178px; }
+
+.jackpotContainer .bgHeadline {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 1280px;
+	height: 133px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+.container.portrait .jackpotContainer .bgHeadline				{ height: 390px; }
+.container.portrait.smallHeader .jackpotContainer .bgHeadline	{ height: 224px; }
+
+
+.jackpotContainer .bgControlBox {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 1280px;
+	height: 116px;
+}
+.container.portrait .jackpotContainer .bgControlBox	{
+	height: 526px;
+	bottom: auto;
+	top: 994px;
+}
+.container.portrait.smallHeader .jackpotContainer .bgControlBox	{
+	top: 828px;
+}
+
+.jackpotContainer .bgDarkening {
+	background-color: black;
+	opacity: 0.73;
+}
+.container.portrait .jackpotContainer .bgDarkening 				{ height: 1520px; }
+.container.portrait.smallHeader .jackpotContainer.bgDarkening  	{ height: 1354px; }
+
+.jackpotContainer .content {
+	position: absolute;
+	top: 133px;
+	left: 0px;
+	width: 1280px;
+	height: 604px;
+	z-index: 2;
+}
+.container.portrait .jackpotContainer .content				{ top: 390px; }
+.container.portrait.smallHeader .jackpotContainer .content	{ top: 224px; }
+
+.jackpotContainer .jpChance.showInfoDuringJackpotChance:after {
+	position: absolute;
+	top: 386px;
+	left: 270px;
+}
+
+.jackpotContainer .content .jpChance .chanceItemBG {
+	position: absolute;
+	z-index: 1;
+	top: 186px;
+	width: 380px;
+	height: 330px;
+	background-size: 100%;
+}
+.jackpotContainer .content .jpChance.showInfoDuringJackpotChance .chanceItemBG {
+	top: 112px;
+}
+.jackpotContainer .content .jpChance #chanceItemBG-0		{ left: 128px; }
+.jackpotContainer .content .jpChance #chanceItemBG-1		{ left: 448px; }
+.jackpotContainer .content .jpChance #chanceItemBG-2		{ left: 766px; }
+
+.jackpotContainer .content .jpChance .chanceItem,
+.jackpotContainer .content .jpChance .chanceItemSuccessSign,
+.jackpotContainer .content .jpChance .chanceAnim .chanceItemAnim {
+	position: absolute;
+	z-index: 2;
+	top: 152px;
+	width: 300px;
+	height: 300px;
+}
+.jackpotContainer .content .jpChance .chanceItemSuccessSign {
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;
+}
+.jackpotContainer .content .jpChance.showInfoDuringJackpotChance .chanceItem,
+.jackpotContainer .content .jpChance .chanceItemSuccessSign,
+.jackpotContainer .content .jpChance.showInfoDuringJackpotChance .chanceAnim .chanceItemAnim {
+	top: 78px;
+}
+.jackpotContainer .content .jpChance [id^='chanceItem-0']		{ left: 170px; }
+.jackpotContainer .content .jpChance [id^='chanceItem-1']		{ left: 490px; }
+.jackpotContainer .content .jpChance [id^='chanceItem-2']		{ left: 808px; }
+
+.jackpotContainer .content .jpPlayout .bgPlayout {
+	z-index: 10;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.jackpotContainer .content .jpPlayout .thermometer {
+	position: absolute;
+	top: 22px;
+	left: 227px;
+	width: 120px;
+	height: 426px;
+	z-index: 1;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	background-color: black;
+	overflow: hidden;
+}
+.jackpotContainer .content .jpPlayout .thermometer .filling {
+	position: absolute;
+	top: 426px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background: #d41202;
+	background: -moz-linear-gradient(top, #d41202 0%, #fe8008 73%);
+	background: -webkit-linear-gradient(top, #d41202 0%,#fe8008 73%);
+	background: linear-gradient(to bottom, #d41202 0%,#fe8008 73%);
+}
+.jackpotContainer .content .jpPlayout #playoutTextBox {
+	position: absolute;
+	top: 0px;
+	left: 318px;
+	width: 860px;
+	height: 456px;
+	z-index: 15;
+}
+
+.jackpotContainer .content #jackpot_reel_container,
+.jackpotContainer .content .jpPlayout .reelSymbolAnim {
+	position: absolute; 
+	left: 231px; 
+	top: 468px;
+	z-index: 15;
+	overflow: hidden; 
+	width: 824px; 
+	height: 112px; 
+}
+
+.jackpotContainer .content #jackpot_reel_container > div { width: 152px; }
+.jackpotContainer .content .jpPlayout .reelSymbolAnim .teaserAnim {
+	position: relative;
+	width: 152px;
+	height: 100%;
+}
+.jackpotContainer .content .jpPlayout .reelSymbolAnim .teaserAnim > div {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+.jackpotContainer .content #teaserAnim-1, 
+.jackpotContainer .content #teaserAnim-2,
+.jackpotContainer .content #teaserAnim-3,
+.jackpotContainer .content #teaserAnim-4 { margin-left: 16px; }
+	
+
+/* flying symbols */
+.jackpotContainer .content .endSymbol {
+	position: absolute; 
+	top: 468px;
+	width: 152px;
+	height: 112px;
+	z-index: 50;
+	opacity: 1;
+}
+.jackpotContainer .content #endSymbol-0 { left: 231px; }
+.jackpotContainer .content #endSymbol-1 { left: 399px; }
+.jackpotContainer .content #endSymbol-2 { left: 567px; }
+.jackpotContainer .content #endSymbol-3 { left: 735px; }
+.jackpotContainer .content #endSymbol-4 { left: 903px; }
+
+.jackpotContainer .content .endSymbol > div { 
+	position: absolute; 
+	top: 0px;
+	left: 0px;
+	width: 152px;
+	height: 112px;
+}
+
+.jackpotContainer .content .endSymbol .transformedSymbol { 
+	opacity: 0; 
+}
+.jackpotContainer .content .endSymbol .transformedSymbol.fadeIn {
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-duration: 500ms;
+	transition-duration: 500ms;
+	opacity: 1;
+}
+
+@-webkit-keyframes fly0 {
+	0%   { -webkit-transform: translate( 0px, 0px ) scale(1); opacity: 1;	}
+	50%  { -webkit-transform: translate(  -16px, -106px ) scale(1.15); }
+	80%  { opacity: 1; }
+	100% { -webkit-transform: translate(  -32px, -212px ) scale(0.7); opacity: 0; }
+}
+@keyframes fly0 {
+	0%   { transform: translate( 0px, 0px ) scale(1); opacity: 1;	}
+	50%  { transform: translate(  -16px, -106px ) scale(1.15); }
+	80%  { opacity: 1; }
+	100% { transform: translate(  -32px, -212px ) scale(0.7); opacity: 0; }
+}
+.jackpotContainer .content #endSymbol-0 .flySymbol.animating {
+	-webkit-animation: fly0 500ms linear 1;
+	animation: fly0 500ms linear 1;
+}
+@-webkit-keyframes fly1 {
+	0%   { -webkit-transform: translate( 0px, 0px ) scale(1); opacity: 1;	}
+	50%  { -webkit-transform: translate( -100px, -106px ) scale(1.15); }
+	80%  { opacity: 1; }
+	100% { -webkit-transform: translate( -200px, -212px ) scale(0.7); opacity: 0; }
+}
+@keyframes fly1 {
+	0%   { transform: translate( 0px, 0px ) scale(1); opacity: 1;	}
+	50%  { transform: translate( -100px, -106px ) scale(1.15); }
+	80%  { opacity: 1; }
+	100% { transform: translate( -200px, -212px ) scale(0.7); opacity: 0; }
+}
+.jackpotContainer .content #endSymbol-1 .flySymbol.animating { 
+	-webkit-animation: fly1 500ms linear 1;
+	animation: fly1 500ms linear 1;
+}
+@-webkit-keyframes fly2 {
+	0%   { -webkit-transform: translate( 0px, 0px ) scale(1); opacity: 1;	}
+	50%  { -webkit-transform: translate( -182px, -106px ) scale(1.15); }
+	84%  { opacity: 1; }
+	100% { -webkit-transform: translate( -364px, -212px ) scale(0.7); opacity: 0; }
+}
+@keyframes fly2 {
+	0%   { transform: translate( 0px, 0px ) scale(1); opacity: 1;	}
+	50%  { transform: translate( -182px, -106px ) scale(1.15); }
+	84%  { opacity: 1; }
+	100% { transform: translate( -364px, -212px ) scale(0.7); opacity: 0; }
+}
+.jackpotContainer .content #endSymbol-2 .flySymbol.animating { 
+	-webkit-animation: fly2 630ms linear 1;
+	animation: fly2 630ms linear 1;
+}
+@-webkit-keyframes fly3 {
+	0%   { -webkit-transform: translate( 0px, 0px ) scale(1); opacity: 1;	}
+	50%  { -webkit-transform: translate( -264px, -106px ) scale(1.15); }
+	86%  { opacity: 1; }
+	100% { -webkit-transform: translate( -528px, -212px ) scale(0.7); opacity: 0; }
+}
+@keyframes fly3 {
+	0%   { transform: translate( 0px, 0px ) scale(1); opacity: 1;	}
+	50%  { transform: translate( -264px, -106px ) scale(1.15); }
+	86%  { opacity: 1; }
+	100% { transform: translate( -528px, -212px ) scale(0.7); opacity: 0; }
+}
+.jackpotContainer .content #endSymbol-3 .flySymbol.animating { 
+	-webkit-animation: fly3 700ms linear 1;
+	animation: fly3 700ms linear 1;
+}
+@-webkit-keyframes fly4 {
+	0%   { -webkit-transform: translate( 0px, 0px ) scale(1); opacity: 1;	}
+	50%  { -webkit-transform: translate( -348px, -106px ) scale(1.15); }
+	87%  { opacity: 1; }
+	100% { -webkit-transform: translate( -696px, -212px ) scale(0.7); opacity: 0; }
+}
+@keyframes fly4 {
+	0%   { transform: translate( 0px, 0px ) scale(1); opacity: 1;	}
+	50%  { transform: translate( -348px, -106px ) scale(1.15); }
+	87%  { opacity: 1; }
+	100% { transform: translate( -696px, -212px ) scale(0.7); opacity: 0; }
+}
+.jackpotContainer .content #endSymbol-4 .flySymbol.animating { 
+	-webkit-animation: fly4 730ms linear 1;
+	animation: fly4 730ms linear 1;
+}
+
+
+
+/* playout (outro) sign */
+@-webkit-keyframes flicker {
+	0%, 49% { opacity: 0; }
+	50%, 100% { opacity: 1; }
+}
+@keyframes flicker {
+	0%, 49% { opacity: 0; }
+	50%, 100% { opacity: 1; }
+}
+.jackpotContainer .jpSign #jpSignAnimHighlight {
+	opacity: 0;
+}
+.jackpotContainer .jpSign #jpSignAnimHighlight.flickering {
+	/*-webkit-animation: flicker 460ms linear infinite;*/
+	/*animation: flicker 460ms linear infinite;*/
+	opacity: 1;
+}
+
+.jackpotContainer .jpSign.outro {
+	background-repeat: no-repeat;
+	background-position: top center;
+	opacity: 0;
+}
+.jackpotContainer .jpSign.outro.fadeInSlow {
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-duration: 700ms;
+	transition-duration: 700ms;
+	opacity: 1;
+}
+.jackpotContainer #jpOutroSignWinLevel {
+	position: relative;
+	width: 590px;
+	height: 204px;
+	margin: 260px auto -104px;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.jackpotContainer #jpOutroSignWinLevel.level-6 {
+	margin-top: 200px;
+	margin-bottom: -44px;
+}
+.jackpotContainer #jpOutroSignWinLevel::after {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 90px;
+	right: 0px;
+}
+.jackpotContainer #jpOutroSignWinLevel.level-0::after { content: url('../../picts/game/1280/goldennights/sign-button-iron.png'); }
+.jackpotContainer #jpOutroSignWinLevel.level-1::after { content: url('../../picts/game/1280/goldennights/sign-button-copper.png'); }
+.jackpotContainer #jpOutroSignWinLevel.level-2::after { content: url('../../picts/game/1280/goldennights/sign-button-bronze.png'); }
+.jackpotContainer #jpOutroSignWinLevel.level-3::after { content: url('../../picts/game/1280/goldennights/sign-button-silver.png'); }
+.jackpotContainer #jpOutroSignWinLevel.level-4::after { content: url('../../picts/game/1280/goldennights/sign-button-gold.png'); }
+.jackpotContainer #jpOutroSignWinLevel.level-5::after { content: url('../../picts/game/1280/goldennights/sign-button-jewel.png'); }
+.jackpotContainer #jpOutroSignWinValue {
+	font-family: 'Roboto Condensed', Arial, Sans-serif;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 116px;
+	text-align: center;
+}
+
+/* jackpot info signs */
+.jackpotContainer .jackpotInfoContainer .content {
+	background-repeat: no-repeat;
+	background-position: top center;
+	font-family: 'Roboto Condensed', Arial, Sans-serif;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 42px;
+	text-align: center;
+}
+
+.jackpotContainer .jackpotInfoContainer .content > div {
+	background-repeat: no-repeat;
+	background-position: top;
+	height: 580px;
+}
+
+.jackpotContainer .jackpotInfoContainer .content  .currLeft 	{ padding-right: 6px; }
+.jackpotContainer .jackpotInfoContainer .content  .currRight 	{ padding-left: 6px; }
+
+.jackpotContainer .jackpotInfoContainer .content .value {
+	padding-left: 10px;
+}
+.jackpotContainer .jackpotInfoContainer.highlightJackpotBet .content .jackpotBet .value {
+	color: #fff600;
+}
+.jackpotContainer .jackpotInfoContainer.highlightJackpotBet .content .jackpotBet .value:before {
+	content: '+';
+	margin-right: 4px;
+	
+}
+.jackpotContainer .jackpotInfoContainer .closeButton { 
+	position: absolute;
+	right: 198px;
+	top: 76px;
+	width: 38px;
+	height: 38px;	
+	background-size: 30px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+/*body.accel3D .jackpotContainer .jackpotInfoContainer .closeButton {  needed to correct webkit issues when using body.accel3D  
+	top: -22px;
+}*/
+
+
+/* jackpot bet info sign */
+.jackpotContainer .jackpotInfoContainer .content .jackpotBet {
+	padding-top: 156px;
+}
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-1 .jackpotBet {
+	padding-top: 194px;
+}
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4 .jackpotBet {
+	padding-top: 100px;
+}
+
+.jackpotContainer .jackpotInfoContainer .content .jackpotWin {
+	position: relative;
+	width: 262px;
+	height: 66px;
+	padding-left: 212px;
+	margin: 52px auto 60px;
+	border-radius: 4px;
+	background-color: #000000;
+	font-size: 50px;
+}
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-1 .jackpotWin {
+	margin-top: 56px;
+}
+.jackpotContainer .jackpotInfoContainer .content .jackpotWin .value {
+	position: absolute;
+	top: 4px;
+	right: 12px;
+	text-align: right;
+}
+.jackpotContainer .jackpotInfoContainer .content .jackpotWin #jackpotWinMetal {
+	position: absolute;
+	top: 4px;
+	left: -58px;
+	width: 340px;
+	height: 58px;
+}
+
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4 .jackpotWin {
+	width: 356px;
+	padding: 0px;
+	margin-top: 46px;
+	margin-bottom: 22px;
+	margin-left: 632px;
+}
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4 .jackpotWin .value {
+	margin: 0px;
+}
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4 .jackpotWin #jackpotWinMetal {
+	left: -350px;
+}
+
+.jackpotContainer .jackpotInfoContainer .content .jackpotBonus .label,
+.jackpotContainer .jackpotInfoContainer .content .jackpotBonus .value {
+	position: relative;
+	bottom: 26px;
+}
+/*.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4 .jackpotBonus .value {
+	bottom: 14px;
+	font-size: 76px;
+}*/
+.jackpotContainer .jackpotInfoContainer .jpBetInfo .jackpotBonus .value {
+	bottom: 14px;
+	font-size: 76px;
+}
+.jackpotContainer .jackpotInfoContainer .content .jackpotBonus .thermometer {
+	background-repeat: no-repeat;
+	background-position: right;
+	font-size: 100px;
+	padding-right: 134px;
+}
+
+.jackpotContainer .jackpotInfoContainer .content .jackpotInfo {
+	margin-top: 14px;
+	font-size: 34px;
+}
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-0 .jackpotInfo {
+	margin-top: 0px;
+	padding-top: 262px;
+	font-size: 60px;
+}
+.jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4 .jackpotInfo {
+	margin-top: -4px;
+	font-size: 30px;
+	color: #f30284;
+}
+
+/* jackpot start info sign */
+.jackpotContainer .jackpotInfoContainer .jpIntro {
+	padding: 104px 220px;
+	height: 480px;
+}
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox {
+	width: 464px;
+}
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-0 { font-size: 42px; }
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-1 { font-size: 32px; }
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-2 { font-size: 54px; }
+
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotThermometer {
+	width: 254px;
+	height: 291px;
+	margin-top: 24px;
+	margin-left: 54px;
+}
+
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotButtonBox {
+	position: relative;
+	width: 156px;
+	height: 156px;
+	margin: 0px auto; 
+}
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotButton {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+}
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotButton.invisible {
+	opacity: 0;
+}
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotButton.animating { 
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-duration: 800ms;
+	transition-duration: 800ms;
+}
+
+.jackpotContainer .jackpotInfoContainer .jpIntro .jackpotSetting {
+	position: relative;
+	top: -8px;
+}
+.jackpotContainer .jackpotInfoContainer .jpIntro .settingCheckbox { 
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 44px;
+	padding-top: 6px;
+	font-size: 26px;
+	cursor: pointer;
+}
+.jackpotContainer .jackpotInfoContainer .jpIntro .confirmButton { 
+	width: 102px;
+	height: 51px;
+	margin: 0px auto;
+	cursor: pointer;
+}
+.jackpotContainer .jackpotInfoContainer .jpIntro .confirmButton .buttonText { 
+	font-size: 30px;
+	padding-top: 9px; 
+}
+
+/* info sites */
+.infoContainer .infoPopup .headline.headline-jackpot {
+	background-color: #2f6dfa;
+}
+.infoContainer .infoPopup .jackpot-phases {
+	width: 960px;
+	height: 496px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 100%
+}
+.infoContainer .infoPopup #jackpotWinValues {
+	/*width: 550px;*/
+	width: auto;
+	margin: 10px auto 0px;
+}
+.infoContainer .infoPopup #jackpotWinValues .winValues {
+	margin-top: 3px;
+	margin-left: 20px;
+}
+.infoContainer .infoPopup #jackpotWinValues .winValues .winValue {
+	/*width: 156px;*/
+	width: auto;
+	line-height: 56px;
+	color: #666963;
+}
+.infoContainer .infoPopup #jackpotWinValues .winValues .winValue + .winValue {
+	/*width: 156px;*/
+	line-height: 42px;
+	color: #ffffff;
+}
+.infoContainer .infoPopup #jackpotWinValues.inactive .winValues .winValue + .winValue {
+	color: #666963;
+}
+.infoContainer[data-jackpotlevel="4"] .infoPopup #jackpotWinValues .winValues .winValue {
+	color: #ffffff;
+}
+.infoContainer .infoPopup #jackpotWinValues .winValues .winValue.topWinOnHighestLevel {
+	color: transparent;
+}
+.infoContainer .infoPopup #jackpotWinValues .thermometer {
+	width: 370px;
+	height: 340px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 100%
+}
+
+
+/* fullscreen workaround */
+.inJackpotMode .mainControlBox,
+.loaded.inJackpotMode .mainControlBox.portrait,
+.inJackpotInfoMode .mainControlBox,
+.loaded.inJackpotInfoMode .mainControlBox.portrait { height: 0 }
+.inJackpotMode .mainControlBox .fullscreenWorkaround, 
+.inJackpotInfoMode .mainControlBox .fullscreenWorkaround { 
+	width: 1px;
+	height: 600px;
+	margin-top:-600px; 
+}
+.container.portrait.inJackpotMode .portraitBottomContainer,
+.container.portrait.inJackpotInfoMode .portraitBottomContainer 		{ margin-top: 1126px; }
+
+
+/* playout background animations */
+.jackpotContainer .bgAnim .bgAnimElement {
+	position: absolute;
+	background-repeat: no-repeat;
+}
+.jackpotContainer .bgAnim .star		{ width: 50px; height: 50px; transform: scale(0); }
+.jackpotContainer .bgAnim #star-1	{ bottom: 721px; left:  246px; }
+.jackpotContainer .bgAnim #star-2	{ bottom: 779px; left:  774px; }
+.jackpotContainer .bgAnim #star-3	{ bottom: 803px; left: 1146px; }
+.jackpotContainer .bgAnim #star-4	{ bottom: 576px; left:   -4px; }
+.jackpotContainer .bgAnim #star-5	{ bottom: 817px; left:  666px; }
+.jackpotContainer .bgAnim #star-6	{ bottom: 689px; left: 1208px; }
+.jackpotContainer .bgAnim #star-7	{ bottom: 759px; left: 1002px; }
+
+.jackpotContainer .bgAnim .shootingStar	{ 
+	width: 151px; 
+	height: 16px; 
+	transform: rotate(34deg); 
+	opacity: 0;
+	background-size: 100%; 
+}
+.jackpotContainer .bgAnim #shootingStar-1	{ bottom: 811px; left: 1004px; }
+.jackpotContainer .bgAnim #shootingStar-2	{ bottom: 693px; left: 1110px; }
+.jackpotContainer .bgAnim #shootingStar-3	{ bottom: 773px; left:   42px; }
+
+.jackpotContainer .bgAnim .window	{
+	opacity: 0;
+}
+.jackpotContainer .bgAnim #window-1	{
+	width: 108px; 
+	height: 71px; 
+	bottom: 239px; 
+	left: 6px;
+	background-position: left top, bottom right;
+}
+.jackpotContainer .bgAnim #window-2	{
+	width: 12px; 
+	height: 27px; 
+	bottom: 355px; 
+	left: 1230px;
+}
+.jackpotContainer .bgAnim #window-3	{
+	width: 60px; 
+	height: 78px; 
+	bottom: 174px; 
+	left: 1113px;
+}
+.jackpotContainer .bgAnim #window-4	{
+	width: 20px; 
+	height: 25px; 
+	bottom: 385px; 
+	left: 400px;
+}
+.jackpotContainer .bgAnim #window-5	{
+	background-size: 100%;
+	width: 8px;
+	height: 10px;
+	bottom: 489px; 
+	left: 165px;
+}
+.jackpotContainer .bgAnim #window-6	{
+	width: 11px; 
+	height: 13px; 
+	bottom: 454px; 
+	left: 1173px;
+}
+
+.jackpotContainer .bgAnim .fog	{
+	width: 1195px; 
+	height: 611px; 
+	bottom: -288px; 
+	left: -860px;
+	opacity: 0;
+}
+
+.jackpotContainer .bgAnim .smoke	{
+	width: 284px;
+	height: 203px;
+	opacity: 0;
+	transform-origin: left bottom;
+}
+.jackpotContainer .bgAnim #smoke-1	{ bottom: 458px; left:   20px; }
+.jackpotContainer .bgAnim #smoke-2	{ bottom: 398px; left:  516px; }
+.jackpotContainer .bgAnim #smoke-3	{ bottom: 526px; left: 1174px; }
+.jackpotContainer .bgAnim #smoke-4	{ bottom: 460px; left:  306px; }
+.jackpotContainer .bgAnim #smoke-5	{ bottom: 414px; left:  170px; }
+
+
+
+/* layout depending on the language */
+html[lang="cs"] .jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-2 { font-size: 48px; }
+
+html[lang="hu"] .jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox { width: 472px; position: relative; left: -4px; }
+html[lang="hu"] .jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-2 { font-size: 44px; }
+
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-2 { font-size: 44px; }
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-1,
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-2 { margin-top: -10px; }
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .content .jackpotBet { padding-top: 150px; }
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .jpBetInfo.level-1 .jackpotBet { padding-top: 188px; }
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4 .jackpotBet { padding-top: 94px; }
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .content .jackpotWin { margin-top: 48px; }
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .jpBetInfo.level-1 .jackpotWin { margin-top: 52px; }
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4 .jackpotWin { margin-top: 42px; }
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .jpBetInfo.level-0 .jackpotInfo { font-size: 54px; }
+html[lang="jp"] .jackpotContainer .jackpotInfoContainer .jpBetInfo.level-4 .jackpotInfo { margin-top: -8px; }
+
+html[lang="ko"] .jackpotContainer .jackpotInfoContainer .jpIntro .confirmButton .buttonText { padding-top: 7px; }
+html[lang="ko"] .container.landscape .jackpotContainer .jackpotInfoContainer .jpIntro .confirmButton .buttonText,
+html[lang="ko"] .container.portrait .jackpotContainer .jackpotInfoContainer .jpIntro .confirmButton .buttonText { padding-top: 9px; }
+
+html[lang="pl"] .jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox { width: 472px; position: relative; left: -4px; }
+html[lang="pl"] .jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-2 { font-size: 44px; }
+
+html[lang="ru"] .jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-2 { font-size: 32px; }
+
+html[lang='th'] .jackpotContainer .jackpotInfoContainer .jpIntro .confirmButton .buttonText { padding-top: 4px; }
+html[lang="th"] .container.landscape .jackpotContainer .jackpotInfoContainer .jpIntro .confirmButton .buttonText,
+html[lang="th"] .container.portrait .jackpotContainer .jackpotInfoContainer .jpIntro .confirmButton .buttonText { padding-top: 1px; }
+
+html[lang="vi"] .jackpotContainer .jackpotInfoContainer .jpIntro .jackpotInfoBox .jackpotText-2 { font-size: 41px; }
+
+html[lang='zh'] .jackpotContainer .jackpotInfoContainer .jpIntro .confirmButton .buttonText { padding-top: 4px; }

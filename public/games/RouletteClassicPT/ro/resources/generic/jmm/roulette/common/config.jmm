@@ -1,0 +1,87 @@
+
+{
+    "config": {
+        "animations": {},
+        "win_ranges": [],
+
+        "server_type":           "casino",
+        "supported_orientation": "both",
+        "settings_enabled" : true,
+
+        "help_enabled":                   true,
+        "tableGame":                      true,
+        "strict_cheats":                  true,
+        "single_login_session_supported": true,
+        "turbo_mode_supported":           true,
+        "show_paytable_as_scene":         true,
+        "show_platform_panel":            false,
+
+        "coin_size_index":             1,
+        "show_additional_table_chips": 1,
+        "offline_selected_index":      3,
+        "online_selected_index":       1,
+        "limit_message_max_pockets":   5,
+        "max_history_size":            100,
+
+        "features": {
+            "bottom_panel": true,
+            "neighbors": true,
+            "autoplay": true,
+            "autoplay_until_feature": false,
+            "golden_chips": true,
+            "both_hands": true,
+            "coverage": true,
+            "limits_panel": true
+        },
+
+        "chips": {
+            "visible_chip_count": 7,
+            "stacked_chip_offset": [0, -5]
+        },
+
+        "bet_types": {
+            "red":      {"limit_type": "fifty_fifty_limit",      "payout_multiplier":  1, "limit_multiplier": 1},
+            "black":    {"limit_type": "fifty_fifty_limit",      "payout_multiplier":  1, "limit_multiplier": 1},
+            "even":     {"limit_type": "fifty_fifty_limit",      "payout_multiplier":  1, "limit_multiplier": 1},
+            "odd":      {"limit_type": "fifty_fifty_limit",      "payout_multiplier":  1, "limit_multiplier": 1},
+            "low":      {"limit_type": "fifty_fifty_limit",      "payout_multiplier":  1, "limit_multiplier": 1},
+            "high":     {"limit_type": "fifty_fifty_limit",      "payout_multiplier":  1, "limit_multiplier": 1},
+            "twelve":   {"limit_type": "column_and_dozen_limit", "payout_multiplier":  2, "limit_multiplier": 1},
+            "column":   {"limit_type": "column_and_dozen_limit", "payout_multiplier":  2, "limit_multiplier": 1},
+            "line":     {"limit_type": "straight_limit",         "payout_multiplier":  5, "limit_multiplier": 6},
+            "corner":   {"limit_type": "straight_limit",         "payout_multiplier":  8, "limit_multiplier": 4},
+            "four":     {"limit_type": "straight_limit",         "payout_multiplier":  8, "limit_multiplier": 4},
+            "street":   {"limit_type": "straight_limit",         "payout_multiplier": 11, "limit_multiplier": 3},
+            "split":    {"limit_type": "straight_limit",         "payout_multiplier": 17, "limit_multiplier": 2},
+            "straight": {"limit_type": "straight_limit",         "payout_multiplier": 35, "limit_multiplier": 1}
+        },
+
+        "game_flow": {
+            "show_win_duration":        3000,
+            "autoplay_duration":        400,
+            "button_hold_delay":        1000,
+            "buttons_animation_delay":  50,
+            "rebet_and_spin_delay":     500,
+            "return_to_table_delay":    5500,
+            "delay_before_show_result": 1000,
+            "error_hide_delay":         3000,
+            "retain_winning_bets":      false,
+            "should_reset_balance_if_low": false,
+            "golden_chips_version":     1
+        },
+
+        "swipe": {
+            "min_distance_landscape": 70,
+            "min_distance_portrait":  40,
+            "max_deviation":          40,
+            "max_time":               450
+        },
+
+        "settings": {
+            "_left_hand":               false,
+            "_auto_return_to_table":    true,
+            "_disable_wheel_auto_zoom": true,
+            "_disable_ambient_sound":   true
+        }
+    }
+}

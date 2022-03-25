@@ -1,0 +1,13 @@
+{
+
+"port":8556,
+
+"host":"zall.winslots.biz",
+"prefix":"http://",
+
+"host_ws":"zall.winslots.biz",
+"prefix_ws":"ws://",
+
+"ssl":false
+
+}

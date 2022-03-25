@@ -1,0 +1,14 @@
+{
+
+"port":8555,
+
+"host":"apache",
+"host_port":8383,
+"prefix":"http://",
+
+"host_ws":"test.izicash.bet",
+"prefix_ws":"ws://",
+
+"ssl":false
+
+}

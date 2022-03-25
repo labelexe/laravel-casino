@@ -1,0 +1,114 @@
+{
+    "resources": {
+        "images": {
+            "scroll_paytable": {"url": "roulette/common/scroll_paytable.png",  "preload": "main-scene"}
+        },
+
+        "slices": {
+            "paytable.bg":              {"image": "scroll_paytable", "size": [90, 528], "pos": [  2, 164], "insets": "30 24 30 24", "border": "50 20"},
+            "paytable.content_bg":      {"image": "scroll_paytable", "size": [10, 312], "pos": [116, 164]},
+            "paytable.btn_ok":          {"image": "scroll_paytable", "size": [143, 80], "pos": [  2,   2], "border": "0 21 21 21", "insets": "0 0 5 0"},
+            "paytable.btn_ok:pressed":  {"image": "scroll_paytable", "size": [143, 80], "pos": [  2,  82], "border": "0 21 21 21", "insets": "0 0 5 0"},
+            "paytable.scroll_slider":   {"image": "scroll_paytable", "size": [20, 150], "pos": [ 94, 164], "border": "30 6"},
+            "paytable.scroll_bg":       {"image": "scroll_paytable", "size": [20,  50], "pos": [ 61, 694], "border": "20 6"},
+            "paytable.row_bg":          {"image": "scroll_paytable", "size": [57,  70], "pos": [  2, 694], "border": "10 23"}
+        },
+
+        "formats": {
+            "paytable.title":        {"font": "Arial", "color": "#fff",    "style": "bold", "align": "center"},
+            "paytable.payout_name":  {"font": "Arial", "color": "#0d91bc", "style": "bold", "align": "center"},
+            "paytable.cell_title":   {"font": "Arial", "color": "#626465", "align": "center"},
+            "paytable.value":        {"font": "Arial", "color": "#fff",    "style": "bold", "align": "center"}
+        }
+    },
+
+    "ui": {
+        "paytable.label.cell": {"@P": "ui/label.def", "alignment": "center"},
+
+        "paytable.label.cell_title": {"@P": "ui/paytable.label.cell",   "format": "paytable.cell_title", "text-group": "paytable.cell_title.autosize"},
+        "paytable.label.cell_value": {"@P": "ui/paytable.label.cell", "format": "paytable.value", "text-group": "paytable.cell_value.autosize"},
+
+        "paytable.cell": {"id": "paytable.payout.cell", "@P": "ui/anchor.def", "content": [
+            {"id": "cell_title", "@P": "ui/paytable.label.cell_title", "props": {"anchor.fit": "0 72 0 0"}},
+            {"id": "value", "@P": "ui/paytable.label.cell_value", "props": {"anchor.fit": "0 0 0 32"}}
+        ]},
+
+        "paytable.payout.cell": {"id": "paytable.payout.cell", "@P": "ui/anchor.def", "content": [
+            {"id": "cell_title", "@P": "ui/paytable.label.cell_title", "props": {"anchor.fit": "0 47 0 0"}},
+            {"id": "value", "@P": "ui/paytable.label.cell_value", "props": {"anchor.fit": "0 0 0 55"}}
+        ]},
+
+        "content_item": {"@P": "ui/anchor.def", "layout": {"alignment": "center"}, "ratio":16,  "content": [
+            {"id": "payout_name", "@P": "ui/anchor.def", "props": {"anchor.fit": "0"}, "content": [
+                {"id": "value", "@P": "ui/label.def", "alignment": "center-left", "props": {"anchor.fit": "0"}}
+            ]}
+        ]},
+
+        "paytable_item": {"id": "paytable_item", "@P": "ui/content_item", "bias": "hor", "content": [
+            {"id": "payout_name", "props": {"anchor.fit": "28 54 28 1"}, "content": [
+                {"id": "value", "format": "paytable.payout_name", "alignment": "center-left", "text-group": "paytable.payout_name.autosize"}
+            ]},
+            {"id": "payout", "@P": "ui/paytable.payout.cell", "props": {"anchor.fit": "30 34 30 46.5"}, "content": [
+                {"id": "cell_title", "text": "scroll_paytable_pays"}
+            ]},
+            {"id": "min", "@P": "ui/paytable.cell", "props": {"anchor.fit": "30 18 30 66"}, "content": [
+                {"id": "cell_title", "text": "scroll_paytable_min"}
+            ]},
+            {"id": "max", "@P": "ui/paytable.cell", "props": {"anchor.fit": "30 0 30 81"}, "content": [
+                {"id": "cell_title", "text": "scroll_paytable_max"}
+            ]}
+        ]},
+
+        "paytable_item_title": {"id": "paytable_item_title", "@P": "ui/content_item", "content": [
+            {"id": "payout_name", "@O": {
+                "landscape": { "props": {"anchor.fit": "25 5.5"} },
+                "portrait": { "props": {"anchor.fit": "25 1.5"} }},
+                "content": [
+                {"id": "value", "format": "paytable.title", "alignment": "center"}
+            ]}
+        ]},
+
+        "scroll_paytable": {"opacity": 0.95, "id": "paytable", "type": "scroll-paytable", "visible": false, "background": "#3000",
+            "layout": {"type": "anchor", "relative": true}, "props": {"anchor.fit": "0"},
+            "paytable_rows": [],
+            "content": [
+                {"id": "content", "type": "anchor",
+                    "props": {"anchor.relative": true, "anchor.fit": "8 3", "anchor.alignment": "center"},
+                    "layout": {"type": "anchor", "relative": true}, "content": [
+
+                    {"id": "_background", "props": {"anchor.fit": 0}, "type": "panel", "background": "paytable.bg"},
+                    {"id": "title", "props": {"anchor.fit": "2 10 90 10"}, "@P": "ui/text-label", "format": "paytable.title", "text": "scroll_paytable_title"},
+                    {"id": "_content_bg", "props": {"anchor.fit": "12 0 18 0"}, "type": "panel", "background": "paytable.content_bg"},
+
+                    {"id": "_content_wrapper",  "type": "stack", "props": {"anchor.fit": "12 2 18 0"}, "content": [
+                        {"id": "paytable_content",  "type": "scroll-paytable-content",
+                            "content": {"type": "panel", "layout": {"type": "cvbox", "alignment": "center"}, "bias": "hor"},
+                            "row": {"@P": "ui/paytable_item"},
+                            "row.odd": {"@P": "ui/paytable_item", "background": "paytable.row_bg"},
+                            "row.title": {"@P": "ui/paytable_item_title"},
+                            "cell": {"@P": "ui/label.def"}
+                        }
+                    ]},
+
+                    {"id": "_scroll_container", "type": "stack", "props": {"anchor.fit": "12 0 18 98"}, "content": [
+                        {"id": "scroll", "type": "scrollbar", "background": "paytable.scroll_bg", "content": [
+                            {"id": "slider", "type": "panel", "background": "paytable.scroll_slider"}
+                        ]}
+                    ]},
+
+                    {"id": "close_button",  "cursor":"hand", "props": {"anchor.fit": "86 0 0 0"}, "type": "ibutton", "slice": "paytable.btn_ok"},
+                    {"id": "label.ok", "props": {"anchor.fit": "90 0 2 0"}, "@P": "ui/label.def", "text": "ok", "format": "white"}
+            ]}
+        ]},
+    
+        "default_paytable" : {"@P": "ui/scroll_paytable", "paytable_rows": [
+            {"bet_type": "straight"},
+            {"bet_type": "split"},
+            {"bet_type": "street"},
+            {"bet_type": "corner"},
+            {"bet_type": "line"},
+            {"bet_type": "column"},
+            {"bet_type": "red"}
+        ]}
+    }
+}

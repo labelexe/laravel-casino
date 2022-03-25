@@ -1,0 +1,718 @@
+{
+
+    "widget-bundles": {
+        "info.autosize": {"type": "text-group", "same-font-height": true}
+    },
+
+    "ui" : {
+        "pocket_place": {"type": "pocket-place", "layout": {"relative": true, "alignment": "center"}, "visible": true, "group": "pocket_places",  "size": [58, 39], "content": [
+            {"id": "highlight", "opacity": 1,"type": "panel", "background": "over_simple_pocket", "visible": false},
+            {"id": "turret_place", "type" : "vport", "layout": {"base": [65, 40]}, "size": [65, 40], "visible": false}
+        ]},
+
+        "pocket_place_zero": {"type": "pocket-place", "layout": {"relative": true, "alignment": "center"}, "visible": true, "group": "pocket_places",  "size": [65, 40], "content": [
+            {"type" : "vport", "layout": {"base": [65, 40]}, "size": [65, 40], "content": [
+                {"id": "highlight", "opacity": 1,"type": "panel",  "background": "over_0",  "visible": false, "pos": [-22, -9], "size": [113, 74]}
+            ]},
+            {"id": "turret_place", "type" : "vport", "layout": {"base": [65, 40]}, "size": [65, 40], "visible": false}
+        ]},
+
+        "pocket_place_1_row": {"@P": "ui/pocket_place", "size": [59, 43], "content": [
+            {"id": "highlight", "background": "over_simple_pocket_row_1"}
+        ]},
+
+        "pocket_place_2_row": {"@P": "ui/pocket_place", "size": [62, 44], "content": [
+            {"id": "highlight", "background": "over_simple_pocket_row_2"}
+        ]},
+
+        "pocket_place_3_row": {"@P": "ui/pocket_place", "size": [63, 48], "content": [
+            {"id": "highlight", "background": "over_simple_pocket_row_3"}
+        ]},
+
+        "pocket_place_6": {"@P": "ui/pocket_place", "size": [63,  38], "content": [
+            {"id": "highlight", "background": "over_6"}
+        ]},
+        "pocket_place_7": {"@P": "ui/pocket_place", "size": [62, 42], "content": [
+            {"id": "highlight", "background": "over_7"}
+        ]},
+        "pocket_place_31": {"@P": "ui/pocket_place", "size": [71, 56], "content": [
+            {"id": "highlight", "background": "over_31"}
+        ]},
+        "pocket_place_34": {"@P": "ui/pocket_place", "size": [71, 56], "content": [
+            {"id": "highlight", "background": "over_34"}
+        ]},
+        "pocket_place_36": {"@P": "ui/pocket_place", "size": [68,  52], "content": [
+            {"id": "highlight", "background": "over_36"}
+        ]},
+
+        "hover_highlight":   {"opacity": 1, "background": "over_simple_pocket",   "size": [58, 39]},
+        "hover_highlight_1_row": {"@P" : "ui/hover_highlight", "background": "over_simple_pocket_row_1",  "size": [59, 43]},
+        "hover_highlight_2_row": {"@P" : "ui/hover_highlight", "background": "over_simple_pocket_row_2",  "size": [62, 44]},
+        "hover_highlight_3_row": {"@P" : "ui/hover_highlight", "background": "over_simple_pocket_row_3",  "size": [63, 48]},
+
+
+        "hover_highlight_6":  {"@P" : "ui/hover_highlight", "background": "over_6",   "size": [63, 38]},
+        "hover_highlight_7":  {"@P" : "ui/hover_highlight", "background": "over_7",   "size": [62, 42]},
+        "hover_highlight_31": {"@P" : "ui/hover_highlight", "background": "over_31",  "size": [71, 56]},
+        "hover_highlight_34": {"@P" : "ui/hover_highlight", "background": "over_34",  "size": [71, 56]},
+        "hover_highlight_36": {"@P" : "ui/hover_highlight", "background": "over_36",  "size": [68, 52]},
+
+
+        "turret": {"id": "turret_image", "type": "image", "visible": false, "slice": "turret", "size": [29, 45], "pos": [17,-9]},
+
+        "bet_place": {"type": "bet-place", "visible": false, "group": "bet_places", "alignment": "center", "size": [30, 30], "layout": {"base": [30, 30]}, "content": [
+            {"id": "chip_stack", "type": "chip-stack", "chips.round_delay": "${chip_stack_round_delay}", "visible": false, "props": {"anchor.alignment": "center", "anchor.fit": -1}, "size": [30, 30],  "pos": [0, 0]},
+            {"id": "stroke_anim_tw","managed": false, "type": "anchor", "visible": false,  "size": [74, 82], "pos": [0, 0]}
+        ]},
+
+        "win_chip_anim_place":   {"id": "win-chip-anim-place",  "type": "chip-stack", "chips.round_delay": "${chip_stack_round_delay}",  "visible": false,  "props": {"anchor.alignment": "center", "anchor.fit": -1}, "size": [30, 30],  "pos": [0, 0]},
+        "loose_chip_anim_place": {"id": "lose-chip-anim-place", "type": "panel", "visible": false, "size": [30, 30],  "pos": [0, 0]},
+
+        "msg_place": {"type": "msg-place", "size": [30, 30], "visible": false, "group": "msg_places", "alignment": "center", "layout": {"base": [30, 30]}, "content": [
+            {"id": "bet_label", "type": "label", "background": "box_round", "pos": [-4, -20], "size": [40, 19.62],  "opacity": 0,
+                "format": "tooltip_fd", "alignment": "center", "text-fit": [true, true],"visible": false
+            }
+        ]},
+
+        "table_message_panel": {
+            "id": "table_message_panel",
+            "type": "table-message-panel",
+            "layout": {"type" : "anchor", "relative" : true, "alignment": "center"},
+            "props": {"anchor.fit" : "0"},
+            "content": [
+                {"type": "anchor", "props": {"anchor.fit": "0", "anchor.relative": true}, "ratio": 1.490304,  "content": [
+                    {"id" : "msg_places","type" : "vport", "props" : {"anchor.fit" : 1, "anchor.alignment" : "center"}, "layout": {"base": [538, 361]},
+                        "content": [
+                            {"@P" : "ui/msg_place",  "id": "1",    "pos": [100,   15]},
+                            {"@P" : "ui/msg_place",  "id": "7",    "pos": [139,    3]},
+                            {"@P" : "ui/msg_place",  "id": "123",  "pos": [149,    9]},
+                            {"@P" : "ui/msg_place",  "id": "124",  "pos": [165,   18]},
+                            {"@P" : "ui/msg_place",  "id": "125",  "pos": [175,   24]},
+                            {"@P" : "ui/msg_place",  "id": "126",  "pos": [189,   33]},
+                            {"@P" : "ui/msg_place",  "id": "127",  "pos": [200,   40]},
+                            {"@P" : "ui/msg_place",  "id": "128",  "pos": [216,   49]},
+                            {"@P" : "ui/msg_place",  "id": "129",  "pos": [227,   56]},
+                            {"@P" : "ui/msg_place",  "id": "130",  "pos": [238,   63]},
+                            {"@P" : "ui/msg_place",  "id": "131",  "pos": [254,   72]},
+                            {"@P" : "ui/msg_place",  "id": "132",  "pos": [265,   79]},
+                            {"@P" : "ui/msg_place",  "id": "133",  "pos": [281,   88]},
+                            {"@P" : "ui/msg_place",  "id": "134",  "pos": [294,   97]},
+                            {"@P" : "ui/msg_place",  "id": "135",  "pos": [310,  106]},
+                            {"@P" : "ui/msg_place",  "id": "136",  "pos": [323,  115]},
+                            {"@P" : "ui/msg_place",  "id": "137",  "pos": [338,  124]},
+                            {"@P" : "ui/msg_place",  "id": "138",  "pos": [352,  133]},
+                            {"@P" : "ui/msg_place",  "id": "139",  "pos": [366,  142]},
+                            {"@P" : "ui/msg_place",  "id": "140",  "pos": [380,  150]},
+                            {"@P" : "ui/msg_place",  "id": "141",  "pos": [397,  161]},
+                            {"@P" : "ui/msg_place",  "id": "142",  "pos": [412,  171]},
+                            {"@P" : "ui/msg_place",  "id": "143",  "pos": [426,  180]},
+                            {"@P" : "ui/msg_place",  "id": "144",  "pos": [442,  189]},
+                            {"@P" : "ui/msg_place",  "id": "145",  "pos": [458,  199]},
+                            {"@P" : "ui/msg_place",  "id": "148",  "pos": [490,  218]},
+                            {"@P" : "ui/msg_place",  "id": "6",    "pos": [125,   12]},
+                            {"@P" : "ui/msg_place",  "id": "100",  "pos": [135,   20]},
+                            {"@P" : "ui/msg_place",  "id": "101",  "pos": [148,   29]},
+                            {"@P" : "ui/msg_place",  "id": "102",  "pos": [159,   37]},
+                            {"@P" : "ui/msg_place",  "id": "103",  "pos": [173,   45]},
+                            {"@P" : "ui/msg_place",  "id": "104",  "pos": [184,   53]},
+                            {"@P" : "ui/msg_place",  "id": "105",  "pos": [199,   61]},
+                            {"@P" : "ui/msg_place",  "id": "106",  "pos": [211,   68]},
+                            {"@P" : "ui/msg_place",  "id": "107",  "pos": [223,   77]},
+                            {"@P" : "ui/msg_place",  "id": "108",  "pos": [237,   85]},
+                            {"@P" : "ui/msg_place",  "id": "109",  "pos": [250,   94]},
+                            {"@P" : "ui/msg_place",  "id": "110",  "pos": [265,  103]},
+                            {"@P" : "ui/msg_place",  "id": "111",  "pos": [279,  111]},
+                            {"@P" : "ui/msg_place",  "id": "112",  "pos": [293,  120]},
+                            {"@P" : "ui/msg_place",  "id": "113",  "pos": [306,  129]},
+                            {"@P" : "ui/msg_place",  "id": "114",  "pos": [321,  138]},
+                            {"@P" : "ui/msg_place",  "id": "115",  "pos": [335,  147]},
+                            {"@P" : "ui/msg_place",  "id": "116",  "pos": [349,  156]},
+                            {"@P" : "ui/msg_place",  "id": "117",  "pos": [363,  164]},
+                            {"@P" : "ui/msg_place",  "id": "118",  "pos": [380,  175]},
+                            {"@P" : "ui/msg_place",  "id": "119",  "pos": [395,  185]},
+                            {"@P" : "ui/msg_place",  "id": "120",  "pos": [410,  194]},
+                            {"@P" : "ui/msg_place",  "id": "121",  "pos": [426,  204]},
+                            {"@P" : "ui/msg_place",  "id": "122",  "pos": [442,  214]},
+                            {"@P" : "ui/msg_place",  "id": "5",    "pos": [109,   23]},
+                            {"@P" : "ui/msg_place",  "id": "77",   "pos": [119,   31]},
+                            {"@P" : "ui/msg_place",  "id": "78",   "pos": [132,   40]},
+                            {"@P" : "ui/msg_place",  "id": "79",   "pos": [143,   48]},
+                            {"@P" : "ui/msg_place",  "id": "80",   "pos": [157,   56]},
+                            {"@P" : "ui/msg_place",  "id": "81",   "pos": [168,   64]},
+                            {"@P" : "ui/msg_place",  "id": "82",   "pos": [183,   72]},
+                            {"@P" : "ui/msg_place",  "id": "83",   "pos": [195,   79]},
+                            {"@P" : "ui/msg_place",  "id": "84",   "pos": [207,   88]},
+                            {"@P" : "ui/msg_place",  "id": "85",   "pos": [221,   96]},
+                            {"@P" : "ui/msg_place",  "id": "86",   "pos": [234,  105]},
+                            {"@P" : "ui/msg_place",  "id": "87",   "pos": [249,  114]},
+                            {"@P" : "ui/msg_place",  "id": "88",   "pos": [262,  124]},
+                            {"@P" : "ui/msg_place",  "id": "89",   "pos": [276,  133]},
+                            {"@P" : "ui/msg_place",  "id": "90",   "pos": [289,  142]},
+                            {"@P" : "ui/msg_place",  "id": "91",   "pos": [304,  151]},
+                            {"@P" : "ui/msg_place",  "id": "92",   "pos": [318,  160]},
+                            {"@P" : "ui/msg_place",  "id": "93",   "pos": [332,  169]},
+                            {"@P" : "ui/msg_place",  "id": "94",   "pos": [346,  177]},
+                            {"@P" : "ui/msg_place",  "id": "95",   "pos": [363,  188]},
+                            {"@P" : "ui/msg_place",  "id": "96",   "pos": [378,  198]},
+                            {"@P" : "ui/msg_place",  "id": "97",   "pos": [393,  207]},
+                            {"@P" : "ui/msg_place",  "id": "98",   "pos": [409,  217]},
+                            {"@P" : "ui/msg_place",  "id": "99",   "pos": [425,  227]},
+                            {"@P" : "ui/msg_place",  "id": "147",  "pos": [458,  247]},
+                            {"@P" : "ui/msg_place",  "id": "4",    "pos": [ 92,   35]},
+                            {"@P" : "ui/msg_place",  "id": "54",   "pos": [103,   42]},
+                            {"@P" : "ui/msg_place",  "id": "55",   "pos": [116,   51]},
+                            {"@P" : "ui/msg_place",  "id": "56",   "pos": [127,   59]},
+                            {"@P" : "ui/msg_place",  "id": "57",   "pos": [141,   67]},
+                            {"@P" : "ui/msg_place",  "id": "58",   "pos": [152,   75]},
+                            {"@P" : "ui/msg_place",  "id": "59",   "pos": [167,   83]},
+                            {"@P" : "ui/msg_place",  "id": "60",   "pos": [179,   92]},
+                            {"@P" : "ui/msg_place",  "id": "61",   "pos": [191,  101]},
+                            {"@P" : "ui/msg_place",  "id": "62",   "pos": [206,  109]},
+                            {"@P" : "ui/msg_place",  "id": "63",   "pos": [219,  118]},
+                            {"@P" : "ui/msg_place",  "id": "64",   "pos": [232,  127]},
+                            {"@P" : "ui/msg_place",  "id": "65",   "pos": [245,  137]},
+                            {"@P" : "ui/msg_place",  "id": "66",   "pos": [259,  146]},
+                            {"@P" : "ui/msg_place",  "id": "67",   "pos": [272,  155]},
+                            {"@P" : "ui/msg_place",  "id": "68",   "pos": [290,  164]},
+                            {"@P" : "ui/msg_place",  "id": "69",   "pos": [301,  173]},
+                            {"@P" : "ui/msg_place",  "id": "70",   "pos": [315,  182]},
+                            {"@P" : "ui/msg_place",  "id": "71",   "pos": [329,  190]},
+                            {"@P" : "ui/msg_place",  "id": "72",   "pos": [346,  201]},
+                            {"@P" : "ui/msg_place",  "id": "73",   "pos": [363,  213]},
+                            {"@P" : "ui/msg_place",  "id": "74",   "pos": [378,  222]},
+                            {"@P" : "ui/msg_place",  "id": "75",   "pos": [394,  232]},
+                            {"@P" : "ui/msg_place",  "id": "76",   "pos": [410,  242]},
+                            {"@P" : "ui/msg_place",  "id": "3",    "pos": [ 76,   45]},
+                            {"@P" : "ui/msg_place",  "id": "31",   "pos": [ 86,   53]},
+                            {"@P" : "ui/msg_place",  "id": "32",   "pos": [ 99,   62]},
+                            {"@P" : "ui/msg_place",  "id": "33",   "pos": [110,   70]},
+                            {"@P" : "ui/msg_place",  "id": "34",   "pos": [123,   79]},
+                            {"@P" : "ui/msg_place",  "id": "35",   "pos": [135,   88]},
+                            {"@P" : "ui/msg_place",  "id": "36",   "pos": [149,   97]},
+                            {"@P" : "ui/msg_place",  "id": "37",   "pos": [160,  105]},
+                            {"@P" : "ui/msg_place",  "id": "38",   "pos": [172,  114]},
+                            {"@P" : "ui/msg_place",  "id": "39",   "pos": [186,  122]},
+                            {"@P" : "ui/msg_place",  "id": "40",   "pos": [199,  131]},
+                            {"@P" : "ui/msg_place",  "id": "41",   "pos": [212,  140]},
+                            {"@P" : "ui/msg_place",  "id": "42",   "pos": [226,  150]},
+                            {"@P" : "ui/msg_place",  "id": "43",   "pos": [240,  159]},
+                            {"@P" : "ui/msg_place",  "id": "44",   "pos": [255,  167]},
+                            {"@P" : "ui/msg_place",  "id": "45",   "pos": [271,  177]},
+                            {"@P" : "ui/msg_place",  "id": "46",   "pos": [286,  187]},
+                            {"@P" : "ui/msg_place",  "id": "47",   "pos": [300,  196]},
+                            {"@P" : "ui/msg_place",  "id": "48",   "pos": [314,  205]},
+                            {"@P" : "ui/msg_place",  "id": "49",   "pos": [331,  216]},
+                            {"@P" : "ui/msg_place",  "id": "50",   "pos": [346,  226]},
+                            {"@P" : "ui/msg_place",  "id": "51",   "pos": [363,  237]},
+                            {"@P" : "ui/msg_place",  "id": "52",   "pos": [379,  247]},
+                            {"@P" : "ui/msg_place",  "id": "53",   "pos": [395,  257]},
+                            {"@P" : "ui/msg_place",  "id": "146",  "pos": [425,  278]},
+                            {"@P" : "ui/msg_place",  "id": "2",    "pos": [ 54,   58]},
+                            {"@P" : "ui/msg_place",  "id": "8",    "pos": [ 64,   66]},
+                            {"@P" : "ui/msg_place",  "id": "9",    "pos": [ 77,   75]},
+                            {"@P" : "ui/msg_place",  "id": "10",   "pos": [ 88,   83]},
+                            {"@P" : "ui/msg_place",  "id": "11",   "pos": [101,   92]},
+                            {"@P" : "ui/msg_place",  "id": "12",   "pos": [114,  100]},
+                            {"@P" : "ui/msg_place",  "id": "13",   "pos": [128,  109]},
+                            {"@P" : "ui/msg_place",  "id": "14",   "pos": [140,  117]},
+                            {"@P" : "ui/msg_place",  "id": "15",   "pos": [152,  126]},
+                            {"@P" : "ui/msg_place",  "id": "16",   "pos": [166,  134]},
+                            {"@P" : "ui/msg_place",  "id": "17",   "pos": [179,  143]},
+                            {"@P" : "ui/msg_place",  "id": "18",   "pos": [192,  152]},
+                            {"@P" : "ui/msg_place",  "id": "19",   "pos": [206,  162]},
+                            {"@P" : "ui/msg_place",  "id": "20",   "pos": [221,  170]},
+                            {"@P" : "ui/msg_place",  "id": "21",   "pos": [235,  179]},
+                            {"@P" : "ui/msg_place",  "id": "22",   "pos": [251,  189]},
+                            {"@P" : "ui/msg_place",  "id": "23",   "pos": [266,  199]},
+                            {"@P" : "ui/msg_place",  "id": "24",   "pos": [280,  208]},
+                            {"@P" : "ui/msg_place",  "id": "25",   "pos": [295,  219]},
+                            {"@P" : "ui/msg_place",  "id": "26",   "pos": [311,  230]},
+                            {"@P" : "ui/msg_place",  "id": "27",   "pos": [327,  241]},
+                            {"@P" : "ui/msg_place",  "id": "28",   "pos": [343,  250]},
+                            {"@P" : "ui/msg_place",  "id": "29",   "pos": [359,  260]},
+                            {"@P" : "ui/msg_place",  "id": "30",   "pos": [375,  270]},
+                            {"@P" : "ui/msg_place",  "id": "149",  "pos": [85,   101]},
+                            {"@P" : "ui/msg_place",  "id": "150",  "pos": [190,  172]},
+                            {"@P" : "ui/msg_place",  "id": "151",  "pos": [309,  254]},
+                            {"@P" : "ui/msg_place",  "id": "153",  "pos": [27,   108]},
+                            {"@P" : "ui/msg_place",  "id": "152",  "pos": [309,  304]},
+                            {"@P" : "ui/msg_place",  "id": "156",  "pos": [ 75,  143]},
+                            {"@P" : "ui/msg_place",  "id": "157",  "pos": [247,  262]},
+                            {"@P" : "ui/msg_place",  "id": "155",  "pos": [133,  182]},
+                            {"@P" : "ui/msg_place",  "id": "154",  "pos": [188,  222]}
+                        ]}
+                ]}
+            ]
+        },
+
+        "table": {
+            "id": "table_widget",
+            "type": "euro-table", "size-min": [1, 1],
+            "chips_animation_duration": 500,
+            "layout": {"type" : "anchor", "relative" : true, "alignment": "center"},
+            "props": {"anchor.fit" : "0"},
+            "mapBetIdsToHoverhiglightsIds": {"146": 38, "147": 39, "148": 40, "149": 41, "150": 42, "151": 43,
+                "152": 44, "153":45, "154": 46, "155": 47, "156": 48, "157": 49},
+            "content": [
+                {"type": "anchor", "props": {"anchor.fit": "0", "anchor.relative": true}, "ratio": 1.490304, "content": [
+                    {"id": "mask_image", "type": "mask-image", "size-min": [1, 1], "slice": "perspective_table", "mask.slice": "perspective_table_mask", "props": {"anchor.fit" : "0", "anchor.alignment": "center"}},
+                    {"type": "anchor", "size-min": [1, 1], "layout": {"relative": true}, "props" : {"anchor.fit" : "0", "anchor.alignment" : "center"}, "content":[
+                        {"type": "image", "slice": "logo",
+                            "@H": {
+                                "right": {"props": {"anchor.fit": "68 -1 6 86"}},
+                                "left":  {"props": {"anchor.fit": "68 -1 6 86"}}
+                            }
+                        }
+                    ]},
+                    {"id": "hover_place",  "mask": {"slice": "table_mask_hover", "hitcolor": "#000", "invert": true}, "propagative": true, "type": "hover-layer", "props": {"anchor.fit" : "0", "anchor.alignment" : "center"}, "layout": {"type": "vport", "base": [538, 361]},
+                        "content":[
+                            {"@P": "ui/hover_highlight",       "id": "0",  "pos": [ 59,       1], "size": [113, 74],  "background": "over_0"},
+                            {"@P": "ui/hover_highlight",       "id": "1",  "pos": [ 67,      50], "size": [65, 41]},
+                            {"@P": "ui/hover_highlight",       "id": "2",  "pos": [104,      28], "size": [60, 40]},
+                            {"@P": "ui/hover_highlight",       "id": "3",  "pos": [138,       6]},
+                            {"@P": "ui/hover_highlight",       "id": "4",  "pos": [ 92,      66], "size": [65, 41]},
+                            {"@P": "ui/hover_highlight",       "id": "5",  "pos": [128,      43], "size": [61, 40]},
+                            {"@P": "ui/hover_highlight",       "id": "6",  "pos": [161,      21], "size": [60, 40.5]},
+                            {"@P": "ui/hover_highlight_7",     "id": "7",  "pos": [118,      82], "size": [62, 42]},
+                            {"@P": "ui/hover_highlight",       "id": "8",  "pos": [152,      59], "size": [63, 41]},
+                            {"@P": "ui/hover_highlight",       "id": "9",  "pos": [187,      36], "size": [59, 41]},
+                            {"@P": "ui/hover_highlight",       "id": "10", "pos": [142,      98], "size": [66, 44]},
+                            {"@P": "ui/hover_highlight_2_row", "id": "11", "pos": [178,      74], "size": [64, 43]},
+                            {"@P": "ui/hover_highlight_1_row", "id": "12", "pos": [212,      51]},
+                            {"@P": "ui/hover_highlight_3_row", "id": "13", "pos": [167,     115], "size": [68, 46]},
+                            {"@P": "ui/hover_highlight_2_row", "id": "14", "pos": [204,      91], "size": [62, 44]},
+                            {"@P": "ui/hover_highlight_1_row", "id": "15", "pos": [238,      68], "size": [61, 42]},
+                            {"@P": "ui/hover_highlight_3_row", "id": "16", "pos": [194,   132.5], "size": [69, 46]},
+                            {"@P": "ui/hover_highlight_2_row", "id": "17", "pos": [232,     107], "size": [62, 46]},
+                            {"@P": "ui/hover_highlight_1_row", "id": "18", "pos": [266,      84], "size": [61, 44]},
+                            {"@P": "ui/hover_highlight_3_row", "id": "19", "pos": [223,     150], "size": [66, 48]},
+                            {"@P": "ui/hover_highlight_2_row", "id": "20", "pos": [259,     125], "size": [64, 46]},
+                            {"@P": "ui/hover_highlight_1_row", "id": "21", "pos": [293,     100], "size": [61, 45]},
+                            {"@P": "ui/hover_highlight_3_row", "id": "22", "pos": [253,     168], "size": [64, 50]},
+                            {"@P": "ui/hover_highlight_2_row", "id": "23", "pos": [287,     142], "size": [64, 46]},
+                            {"@P": "ui/hover_highlight_1_row", "id": "24", "pos": [321,     118], "size": [61, 44]},
+                            {"@P": "ui/hover_highlight_3_row", "id": "25", "pos": [282,     186], "size": [65, 52]},
+                            {"@P": "ui/hover_highlight_2_row", "id": "26", "pos": [314,     161], "size": [69, 47]},
+                            {"@P": "ui/hover_highlight_1_row", "id": "27", "pos": [349,     135], "size": [63, 47]},
+                            {"@P": "ui/hover_highlight_3_row", "id": "28", "pos": [311,     205], "size": [67, 53]},
+                            {"@P": "ui/hover_highlight_2_row", "id": "29", "pos": [343,     180], "size": [70, 48]},
+                            {"@P": "ui/hover_highlight_1_row", "id": "30", "pos": [379,     152], "size": [63, 49]},
+                            {"@P": "ui/hover_highlight_31",    "id": "31", "pos": [340,     224], "size": [71, 56]},
+                            {"@P": "ui/hover_highlight_2_row", "id": "32", "pos": [375,     198], "size": [68, 50]},
+                            {"@P": "ui/hover_highlight_1_row", "id": "33", "pos": [409,     170.5], "size": [64, 50]},
+                            {"@P": "ui/hover_highlight_34",    "id": "34", "pos": [373,     245], "size": [69, 56]},
+                            {"@P": "ui/hover_highlight_2_row", "id": "35", "pos": [405,     217], "size": [71, 52]},
+                            {"@P": "ui/hover_highlight_36",    "id": "36", "pos": [439,     189], "size": [68, 52]},
+
+                            {"@P": "ui/hover_highlight", "id": "146", "pos": [405, 266], "size": [70,  56],  "background": "over_row3"},
+                            {"@P": "ui/hover_highlight", "id": "147", "pos": [441, 235], "size": [65,  56],  "background": "over_row2"},
+                            {"@P": "ui/hover_highlight", "id": "148", "pos": [472, 210], "size": [66,  50],  "background": "over_row1"},
+
+                            {"@P": "ui/hover_highlight", "id": "149", "pos": [36,   72], "size": [136,  96],  "background": "over_1st-12"},
+                            {"@P": "ui/hover_highlight", "id": "150", "pos": [137, 140], "size": [148, 104],  "background": "over_2end-12"},
+                            {"@P": "ui/hover_highlight", "id": "151", "pos": [249, 215], "size": [159, 114],  "background": "over_3-12"},
+
+                            {"@P": "ui/hover_highlight", "id": "152", "pos": [275,  285], "size": [98, 75],  "background": "over_19to-36"},
+                            {"@P": "ui/hover_highlight", "id": "153", "pos": [  2,   94], "size": [86, 59],  "background": "over_1-to-18"},
+
+                            {"@P": "ui/hover_highlight", "id": "154", "pos": [157, 202], "size": [93,  70],  "background": "over_black"},
+                            {"@P": "ui/hover_highlight", "id": "155", "pos": [103, 164], "size": [90,  66],  "background": "over_red"},
+                            {"@P": "ui/hover_highlight", "id": "156", "pos": [50,  130], "size": [87,  60],  "background": "over_even"},
+                            {"@P": "ui/hover_highlight", "id": "157", "pos": [215, 242], "size": [96,  72],  "background": "over_odd"},
+
+                            {"@P" : "ui/bet_info",   "id": "bet_info",   "pos": [0, 0], "visible": false}
+                        ]
+                    },
+                    {"id": "anim_places", "type": "vport", "props": {"anchor.fit" : "0", "anchor.alignment" : "center"}, "layout": {"base": [538, 361]},
+                        "content":[
+                            {"@P": "ui/pocket_place_zero",  "id": "0",  "pos": [ 81,       9]},
+                            {"@P": "ui/pocket_place",       "id": "1",  "pos": [ 67,      50], "size": [65, 41]},
+                            {"@P": "ui/pocket_place",       "id": "2",  "pos": [104,      28], "size": [60, 40]},
+                            {"@P": "ui/pocket_place",       "id": "3",  "pos": [138,       6]},
+                            {"@P": "ui/pocket_place",       "id": "4",  "pos": [ 92,      66], "size": [65, 41]},
+                            {"@P": "ui/pocket_place",       "id": "5",  "pos": [128,      43], "size": [61, 40]},
+                            {"@P": "ui/pocket_place",       "id": "6",  "pos": [161,      21], "size": [60, 40.5]},
+                            {"@P": "ui/pocket_place_7",     "id": "7",  "pos": [118,      82], "size": [62, 42]},
+                            {"@P": "ui/pocket_place",       "id": "8",  "pos": [152,      59], "size": [63, 41]},
+                            {"@P": "ui/pocket_place",       "id": "9",  "pos": [187,      36], "size": [59, 41]},
+                            {"@P": "ui/pocket_place",       "id": "10", "pos": [142,      98], "size": [66, 44]},
+                            {"@P": "ui/pocket_place_2_row", "id": "11", "pos": [178,      74], "size": [64, 43]},
+                            {"@P": "ui/pocket_place_1_row", "id": "12", "pos": [212,      51]},
+                            {"@P": "ui/pocket_place_3_row", "id": "13", "pos": [167,     115], "size": [68, 46]},
+                            {"@P": "ui/pocket_place_2_row", "id": "14", "pos": [204,      91], "size": [62, 44]},
+                            {"@P": "ui/pocket_place_1_row", "id": "15", "pos": [238,      68], "size": [61, 42]},
+                            {"@P": "ui/pocket_place_3_row", "id": "16", "pos": [194,   132.5], "size": [69, 46]},
+                            {"@P": "ui/pocket_place_2_row", "id": "17", "pos": [232,     107], "size": [62, 46]},
+                            {"@P": "ui/pocket_place_1_row", "id": "18", "pos": [266,      84], "size": [61, 44]},
+                            {"@P": "ui/pocket_place_3_row", "id": "19", "pos": [223,     150], "size": [66, 48]},
+                            {"@P": "ui/pocket_place_2_row", "id": "20", "pos": [259,     125], "size": [64, 46]},
+                            {"@P": "ui/pocket_place_1_row", "id": "21", "pos": [293,     100], "size": [61, 45]},
+                            {"@P": "ui/pocket_place_3_row", "id": "22", "pos": [253,     168], "size": [64, 50]},
+                            {"@P": "ui/pocket_place_2_row", "id": "23", "pos": [287,     142], "size": [64, 46]},
+                            {"@P": "ui/pocket_place_1_row", "id": "24", "pos": [321,     118], "size": [61, 44]},
+                            {"@P": "ui/pocket_place_3_row", "id": "25", "pos": [282,     186], "size": [64, 52]},
+                            {"@P": "ui/pocket_place_2_row", "id": "26", "pos": [314,     161], "size": [69, 47]},
+                            {"@P": "ui/pocket_place_1_row", "id": "27", "pos": [349,     135], "size": [63, 47]},
+                            {"@P": "ui/pocket_place_3_row", "id": "28", "pos": [311,     205], "size": [67, 53]},
+                            {"@P": "ui/pocket_place_2_row", "id": "29", "pos": [343,     180], "size": [70, 48]},
+                            {"@P": "ui/pocket_place_1_row", "id": "30", "pos": [379,     152], "size": [63, 49]},
+                            {"@P": "ui/pocket_place_31",    "id": "31", "pos": [340,     224], "size": [71, 56]},
+                            {"@P": "ui/pocket_place_2_row", "id": "32", "pos": [375,     198], "size": [68, 50]},
+                            {"@P": "ui/pocket_place_1_row", "id": "33", "pos": [409,     170.5], "size": [64, 50]},
+                            {"@P": "ui/pocket_place_34",    "id": "34", "pos": [373,     245], "size": [69, 56]},
+                            {"@P": "ui/pocket_place_2_row", "id": "35", "pos": [405,     217], "size": [71, 52]},
+                            {"@P": "ui/pocket_place_36", "id": "36", "pos": [439,     189], "size": [68, 52]},
+                            {"@P": "ui/turret"}
+                        ]
+                    },
+                    {"id": "bet_places", "type": "vport", "props": {"anchor.fit": 1, "anchor.alignment": "center"}, "layout": {"base": [538, 361]},
+                        "content":[
+                            {"@P" : "ui/bet_place",                  "id": "1",    "pos": [100,   15]},
+                            {"@P" : "ui/bet_place",                  "id": "7",    "pos": [141,    2]},
+                            {"@P" : "ui/bet_place",                  "id": "123",  "pos": [153,    9]},
+                            {"@P" : "ui/bet_place",                  "id": "124",  "pos": [165,   18]},
+                            {"@P" : "ui/bet_place",                  "id": "125",  "pos": [175,   24]},
+                            {"@P" : "ui/bet_place",                  "id": "126",  "pos": [189,   33]},
+                            {"@P" : "ui/bet_place",                  "id": "127",  "pos": [200,   40]},
+                            {"@P" : "ui/bet_place",                  "id": "128",  "pos": [216,   49]},
+                            {"@P" : "ui/bet_place",                  "id": "129",  "pos": [227,   56]},
+                            {"@P" : "ui/bet_place",                  "id": "130",  "pos": [238,   63]},
+                            {"@P" : "ui/bet_place",                  "id": "131",  "pos": [256,   74]},
+                            {"@P" : "ui/bet_place",                  "id": "132",  "pos": [268,   81]},
+                            {"@P" : "ui/bet_place",                  "id": "133",  "pos": [281,   90]},
+                            {"@P" : "ui/bet_place",                  "id": "134",  "pos": [294,   98]},
+                            {"@P" : "ui/bet_place",                  "id": "135",  "pos": [309,  107]},
+                            {"@P" : "ui/bet_place",                  "id": "136",  "pos": [323,  116]},
+                            {"@P" : "ui/bet_place",                  "id": "137",  "pos": [337,  125]},
+                            {"@P" : "ui/bet_place",                  "id": "138",  "pos": [353,  135]},
+                            {"@P" : "ui/bet_place",                  "id": "139",  "pos": [367,  144]},
+                            {"@P" : "ui/bet_place",                  "id": "140",  "pos": [381,  152]},
+                            {"@P" : "ui/bet_place",                  "id": "141",  "pos": [396,  162]},
+                            {"@P" : "ui/bet_place",                  "id": "142",  "pos": [412,  171]},
+                            {"@P" : "ui/bet_place",                  "id": "143",  "pos": [425,  180]},
+                            {"@P" : "ui/bet_place",                  "id": "144",  "pos": [442,  190]},
+                            {"@P" : "ui/bet_place",                  "id": "145",  "pos": [457,  200]},
+                            {"@P" : "ui/bet_place",                  "id": "148",  "pos": [489,  218]},
+                            {"@P" : "ui/bet_place",                  "id": "6",    "pos": [125,   12]},
+                            {"@P" : "ui/bet_place",                  "id": "100",  "pos": [135,   20]},
+                            {"@P" : "ui/bet_place",                  "id": "101",  "pos": [148,   29]},
+                            {"@P" : "ui/bet_place",                  "id": "102",  "pos": [159,   37]},
+                            {"@P" : "ui/bet_place",                  "id": "103",  "pos": [173,   45]},
+                            {"@P" : "ui/bet_place",                  "id": "104",  "pos": [184,   53]},
+                            {"@P" : "ui/bet_place",                  "id": "105",  "pos": [199,   61]},
+                            {"@P" : "ui/bet_place",                  "id": "106",  "pos": [211,   68]},
+                            {"@P" : "ui/bet_place",                  "id": "107",  "pos": [223,   77]},
+                            {"@P" : "ui/bet_place",                  "id": "108",  "pos": [237,   85]},
+                            {"@P" : "ui/bet_place",                  "id": "109",  "pos": [250,   94]},
+                            {"@P" : "ui/bet_place",                  "id": "110",  "pos": [265,  103]},
+                            {"@P" : "ui/bet_place",                  "id": "111",  "pos": [279,  111]},
+                            {"@P" : "ui/bet_place",                  "id": "112",  "pos": [293,  120]},
+                            {"@P" : "ui/bet_place",                  "id": "113",  "pos": [306,  129]},
+                            {"@P" : "ui/bet_place",                  "id": "114",  "pos": [321,  138]},
+                            {"@P" : "ui/bet_place",                  "id": "115",  "pos": [335,  147]},
+                            {"@P" : "ui/bet_place",                  "id": "116",  "pos": [349,  156]},
+                            {"@P" : "ui/bet_place",                  "id": "117",  "pos": [363,  164]},
+                            {"@P" : "ui/bet_place",                  "id": "118",  "pos": [380,  175]},
+                            {"@P" : "ui/bet_place",                  "id": "119",  "pos": [395,  185]},
+                            {"@P" : "ui/bet_place",                  "id": "120",  "pos": [410,  194]},
+                            {"@P" : "ui/bet_place",                  "id": "121",  "pos": [426,  204]},
+                            {"@P" : "ui/bet_place",                  "id": "122",  "pos": [442,  214]},
+                            {"@P" : "ui/bet_place",                  "id": "5",    "pos": [109,   23]},
+                            {"@P" : "ui/bet_place",                  "id": "77",   "pos": [121,   31]},
+                            {"@P" : "ui/bet_place",                  "id": "78",   "pos": [132,   38]},
+                            {"@P" : "ui/bet_place",                  "id": "79",   "pos": [144,   45]},
+                            {"@P" : "ui/bet_place",                  "id": "80",   "pos": [157,   54]},
+                            {"@P" : "ui/bet_place",                  "id": "81",   "pos": [170,   62]},
+                            {"@P" : "ui/bet_place",                  "id": "82",   "pos": [183,   70]},
+                            {"@P" : "ui/bet_place",                  "id": "83",   "pos": [197,   79]},
+                            {"@P" : "ui/bet_place",                  "id": "84",   "pos": [210,   87]},
+                            {"@P" : "ui/bet_place",                  "id": "84",   "pos": [210,   87]},
+                            {"@P" : "ui/bet_place",                  "id": "85",   "pos": [221,   96]},
+                            {"@P" : "ui/bet_place",                  "id": "86",   "pos": [236,  104]},
+                            {"@P" : "ui/bet_place",                  "id": "87",   "pos": [249,  114]},
+                            {"@P" : "ui/bet_place",                  "id": "88",   "pos": [264,  123]},
+                            {"@P" : "ui/bet_place",                  "id": "89",   "pos": [278,  132]},
+                            {"@P" : "ui/bet_place",                  "id": "90",   "pos": [292,  141]},
+                            {"@P" : "ui/bet_place",                  "id": "91",   "pos": [306,  151]},
+                            {"@P" : "ui/bet_place",                  "id": "92",   "pos": [320,  158]},
+                            {"@P" : "ui/bet_place",                  "id": "93",   "pos": [334,  168]},
+                            {"@P" : "ui/bet_place",                  "id": "94",   "pos": [349,  177]},
+                            {"@P" : "ui/bet_place",                  "id": "95",   "pos": [365,  188]},
+                            {"@P" : "ui/bet_place",                  "id": "96",   "pos": [379,  197]},
+                            {"@P" : "ui/bet_place",                  "id": "97",   "pos": [394,  206]},
+                            {"@P" : "ui/bet_place",                  "id": "98",   "pos": [409,  216]},
+                            {"@P" : "ui/bet_place",                  "id": "99",   "pos": [425,  227]},
+                            {"@P" : "ui/bet_place",                  "id": "147",  "pos": [458,  247]},
+                            {"@P" : "ui/bet_place",                  "id": "4",    "pos": [ 92,   35]},
+                            {"@P" : "ui/bet_place",                  "id": "54",   "pos": [103,   42]},
+                            {"@P" : "ui/bet_place",                  "id": "55",   "pos": [116,   51]},
+                            {"@P" : "ui/bet_place",                  "id": "56",   "pos": [127,   59]},
+                            {"@P" : "ui/bet_place",                  "id": "57",   "pos": [141,   67]},
+                            {"@P" : "ui/bet_place",                  "id": "58",   "pos": [152,   75]},
+                            {"@P" : "ui/bet_place",                  "id": "59",   "pos": [167,   83]},
+                            {"@P" : "ui/bet_place",                  "id": "60",   "pos": [179,   92]},
+                            {"@P" : "ui/bet_place",                  "id": "61",   "pos": [191,  101]},
+                            {"@P" : "ui/bet_place",                  "id": "62",   "pos": [206,  109]},
+                            {"@P" : "ui/bet_place",                  "id": "63",   "pos": [219,  118]},
+                            {"@P" : "ui/bet_place",                  "id": "64",   "pos": [232,  127]},
+                            {"@P" : "ui/bet_place",                  "id": "65",   "pos": [245,  137]},
+                            {"@P" : "ui/bet_place",                  "id": "66",   "pos": [259,  146]},
+                            {"@P" : "ui/bet_place",                  "id": "67",   "pos": [272,  155]},
+                            {"@P" : "ui/bet_place",                  "id": "68",   "pos": [290,  164]},
+                            {"@P" : "ui/bet_place",                  "id": "69",   "pos": [301,  173]},
+                            {"@P" : "ui/bet_place",                  "id": "70",   "pos": [315,  182]},
+                            {"@P" : "ui/bet_place",                  "id": "71",   "pos": [329,  190]},
+                            {"@P" : "ui/bet_place",                  "id": "72",   "pos": [346,  201]},
+                            {"@P" : "ui/bet_place",                  "id": "73",   "pos": [363,  213]},
+                            {"@P" : "ui/bet_place",                  "id": "74",   "pos": [378,  222]},
+                            {"@P" : "ui/bet_place",                  "id": "75",   "pos": [394,  232]},
+                            {"@P" : "ui/bet_place",                  "id": "76",   "pos": [410,  242]},
+                            {"@P" : "ui/bet_place",                  "id": "3",    "pos": [ 76,   45]},
+                            {"@P" : "ui/bet_place",                  "id": "31",   "pos": [ 86,   53]},
+                            {"@P" : "ui/bet_place",                  "id": "32",   "pos": [100,   62]},
+                            {"@P" : "ui/bet_place",                  "id": "33",   "pos": [110,   69]},
+                            {"@P" : "ui/bet_place",                  "id": "34",   "pos": [126,   78]},
+                            {"@P" : "ui/bet_place",                  "id": "35",   "pos": [134,   85]},
+                            {"@P" : "ui/bet_place",                  "id": "36",   "pos": [151,   95]},
+                            {"@P" : "ui/bet_place",                  "id": "37",   "pos": [162,  103]},
+                            {"@P" : "ui/bet_place",                  "id": "38",   "pos": [176,  112]},
+                            {"@P" : "ui/bet_place",                  "id": "39",   "pos": [189,  121]},
+                            {"@P" : "ui/bet_place",                  "id": "40",   "pos": [203,  129]},
+                            {"@P" : "ui/bet_place",                  "id": "41",   "pos": [217,  140]},
+                            {"@P" : "ui/bet_place",                  "id": "42",   "pos": [229,  146]},
+                            {"@P" : "ui/bet_place",                  "id": "43",   "pos": [243,  157]},
+                            {"@P" : "ui/bet_place",                  "id": "44",   "pos": [259,  167]},
+                            {"@P" : "ui/bet_place",                  "id": "45",   "pos": [274,  177]},
+                            {"@P" : "ui/bet_place",                  "id": "46",   "pos": [286,  185]},
+                            {"@P" : "ui/bet_place",                  "id": "47",   "pos": [300,  196]},
+                            {"@P" : "ui/bet_place",                  "id": "48",   "pos": [314,  205]},
+                            {"@P" : "ui/bet_place",                  "id": "49",   "pos": [331,  216]},
+                            {"@P" : "ui/bet_place",                  "id": "50",   "pos": [346,  226]},
+                            {"@P" : "ui/bet_place",                  "id": "51",   "pos": [363,  237]},
+                            {"@P" : "ui/bet_place",                  "id": "52",   "pos": [379,  247]},
+                            {"@P" : "ui/bet_place",                  "id": "53",   "pos": [394,  257]},
+                            {"@P" : "ui/bet_place",                  "id": "146",  "pos": [425,  278]},
+                            {"@P" : "ui/bet_place",                  "id": "2",    "pos": [ 54,   58]},
+                            {"@P" : "ui/bet_place",                  "id": "8",    "pos": [ 64,   66]},
+                            {"@P" : "ui/bet_place",                  "id": "9",    "pos": [ 77,   75]},
+                            {"@P" : "ui/bet_place",                  "id": "10",   "pos": [ 88,   83]},
+                            {"@P" : "ui/bet_place",                  "id": "11",   "pos": [101,   92]},
+                            {"@P" : "ui/bet_place",                  "id": "12",   "pos": [114,  100]},
+                            {"@P" : "ui/bet_place",                  "id": "13",   "pos": [128,  109]},
+                            {"@P" : "ui/bet_place",                  "id": "14",   "pos": [140,  117]},
+                            {"@P" : "ui/bet_place",                  "id": "15",   "pos": [152,  126]},
+                            {"@P" : "ui/bet_place",                  "id": "16",   "pos": [166,  134]},
+                            {"@P" : "ui/bet_place",                  "id": "17",   "pos": [179,  143]},
+                            {"@P" : "ui/bet_place",                  "id": "18",   "pos": [192,  152]},
+                            {"@P" : "ui/bet_place",                  "id": "19",   "pos": [206,  162]},
+                            {"@P" : "ui/bet_place",                  "id": "20",   "pos": [221,  170]},
+                            {"@P" : "ui/bet_place",                  "id": "21",   "pos": [235,  179]},
+                            {"@P" : "ui/bet_place",                  "id": "22",   "pos": [251,  189]},
+                            {"@P" : "ui/bet_place",                  "id": "23",   "pos": [266,  199]},
+                            {"@P" : "ui/bet_place",                  "id": "24",   "pos": [280,  208]},
+                            {"@P" : "ui/bet_place",                  "id": "25",   "pos": [295,  219]},
+                            {"@P" : "ui/bet_place",                  "id": "26",   "pos": [311,  230]},
+                            {"@P" : "ui/bet_place",                  "id": "27",   "pos": [327,  241]},
+                            {"@P" : "ui/bet_place",                  "id": "28",   "pos": [343,  250]},
+                            {"@P" : "ui/bet_place",                  "id": "29",   "pos": [359,  260]},
+                            {"@P" : "ui/bet_place",                  "id": "30",   "pos": [375,  270]},
+                            {"@P" : "ui/bet_place",                  "id": "149",  "pos": [85,   101]},
+                            {"@P" : "ui/bet_place",                  "id": "150",  "pos": [190,  172]},
+                            {"@P" : "ui/bet_place",                  "id": "151",  "pos": [309,  254]},
+                            {"@P" : "ui/bet_place",                  "id": "153",  "pos": [27,   108]},
+                            {"@P" : "ui/bet_place",                  "id": "152",  "pos": [309,  304]},
+                            {"@P" : "ui/bet_place",                  "id": "156",  "pos": [ 75,  143]},
+                            {"@P" : "ui/bet_place",                  "id": "157",  "pos": [247,  262]},
+                            {"@P" : "ui/bet_place",                  "id": "155",  "pos": [133,  182]},
+                            {"@P" : "ui/bet_place",                  "id": "154",  "pos": [188,  222]},
+
+                            {"@P": "ui/win_chip_anim_place", "pos": [4,  63], "visible": true},
+                            {"@P": "ui/loose_chip_anim_place", "pos": [460,  0], "visible": false},
+                            {"@P" : "ui/bet_info", "id": "table_bet_info",   "pos": [0, 0], "visible": false}
+                        ]}
+                ]}
+            ]
+        },
+
+        "neighbor_place": {"type": "neighbor-place",  "layout": {"relative": true}, "group": "neighbor_bet_places", "size": [51, 83], "content": [
+            {"id": "highlight", "type": "panel",  "visible": false,  "props" : {"anchor.fit": "0"}},
+            {"id": "stroke","managed": false, "type": "panel", "visible": false,   "props": {"anchor.fit": "0"}},
+            {"id": "chip_stack", "managed": false, "type": "chip-stack", "props": {"anchor.fit": "11 11 11 11"}, "chips.round_delay": "${chip_stack_round_delay}", "visible": false},
+            {"id": "bet_label", "managed": false,  "@P" :  "ui/label.def", "background": "box_round", "visible": false, "format": "tooltip_fd", "alignment": "center", "ratio": [62, 35],  "text-fit": [true, true], "props": {"anchor.fit": "-25 6 40 6"}}
+        ]},
+
+        "neighbors_btn": {"type": "itoggle", "alignment": "center", "format": "button_text", "text-fit": [true, false], "ratio": 1, "group": "neighbors_buttons",
+            "slice": "neighbors_btn_normal", "slice.selected": "neighbors_btn_active"},
+
+        "neighbors_table": {"id": "neighbors_widget",  "type": "neighbors", "size-min": [1, 1], "layout": {"type" : "anchor", "relative": true}, "content": [
+            {"id": "mask_image", "type": "mask-image", "props": {"anchor.fit": "0", "anchor.alignment" : "center"}, "size-min": [1, 1], "slice": "perspective_neighbors", "mask.slice": "perspective_neighbors_mask", "ratio": 1.6},
+
+            {"id": "anim_places", "type": "vport", "props": {"anchor.fit": "0", "anchor.alignment": "center"}, "layout" : {"base" : [393, 243]},
+                "content":[
+                    {"@P": "ui/neighbor_place", "id": 81,  "size": [40, 25], "pos": [ 2, 13], "content": [
+                        {"id": "highlight", "background": "neighboar_8"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 141, "size": [39, 26], "pos": [2, 31], "content": [
+                        {"id": "highlight", "background": "neighboar_30"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 83, "size": [44, 31], "pos": [13, 37], "content": [
+                        {"id": "highlight", "background": "neighboar_11"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 145, "size": [44, 30], "pos": [31, 48], "content": [
+                        {"id": "highlight", "background": "neighboar_36"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 39, "size": [48, 32], "pos": [45, 57], "content": [
+                        {"id": "highlight", "background": "neighboar_13"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 139, "size": [44, 34], "pos": [65, 67], "content": [
+                        {"id": "highlight", "background": "neighboar_27"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 125, "size": [58, 39], "pos": [82, 79],  "content": [
+                        {"id": "highlight", "background": "neighboar_6"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 53,  "size": [58, 41], "pos": [112,  96],  "content": [
+                        {"id": "highlight", "background": "neighboar_34"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 87, "size": [59, 41], "pos": [142,  114], "content": [
+                        {"id": "highlight", "background": "neighboar_17"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 47, "size": [46, 33], "pos": [173,  133], "content": [
+                        {"id": "highlight", "background": "neighboar_25"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 77,  "size": [46, 35], "pos": [192,  143], "content": [
+                        {"id": "highlight", "background": "neighboar_2"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 135, "size": [47, 34], "pos": [211,  156], "content": [
+                        {"id": "highlight", "background": "neighboar_21"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 33, "size": [46, 37], "pos": [231,  166], "content": [
+                        {"id": "highlight", "background": "neighboar_4"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 43, "size": [47, 35], "pos": [251,  179], "content": [
+                        {"id": "highlight", "background": "neighboar_19"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 131,  "size": [48, 36], "pos": [270,  190], "content": [
+                        {"id": "highlight", "background": "neighboar_15"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 97,  "size": [41, 39], "pos": [291,  202], "content": [
+                        {"id": "highlight", "background": "neighboar_32"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 91, "size": [36, 27], "pos": [19, 1], "content": [
+                        {"id": "highlight", "background": "neighboar_23"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 37, "size": [36, 24], "pos": [50, 1], "content": [
+                        {"id": "highlight", "background": "neighboar_10"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 79, "size": [43, 30], "pos": [60, 6],  "content": [
+                        {"id": "highlight", "background": "neighboar_5"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 137, "size": [44, 30], "pos": [76, 15], "content": [
+                        {"id": "highlight", "background": "neighboar_24"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 41, "size": [44, 31], "pos": [93, 25], "content": [
+                        {"id": "highlight", "background": "neighboar_16"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 143, "size": [45, 31], "pos": [110, 35], "content": [
+                        {"id": "highlight", "background": "neighboar_33"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 31, "size": [46, 30], "pos": [127, 46], "content": [
+                        {"id": "highlight", "background": "neighboar_1"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 89,  "size": [47, 32], "pos": [145, 55], "content": [
+                        {"id": "highlight", "background": "neighboar_20"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 85, "size": [45, 31], "pos": [164, 67], "content": [
+                        {"id": "highlight", "background": "neighboar_14"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 51,  "size": [45, 32], "pos": [181, 76], "content": [
+                        {"id": "highlight", "background": "neighboar_31"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 127, "size": [45, 32], "pos": [200, 87], "content": [
+                        {"id": "highlight", "background": "neighboar_9"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 45, "size": [47, 33], "pos": [217, 97], "content": [
+                        {"id": "highlight", "background": "neighboar_22"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 133, "size": [44, 33], "pos": [238, 108], "content": [
+                        {"id": "highlight", "background": "neighboar_18"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 95, "size": [45, 33], "pos": [257, 119], "content": [
+                        {"id": "highlight", "background": "neighboar_29"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 35, "size": [45, 34], "pos": [276, 130], "content": [
+                        {"id": "highlight", "background": "neighboar_7"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 49,  "size": [46, 34], "pos": [295, 141], "content": [
+                        {"id": "highlight", "background": "neighboar_28"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 129, "size": [48, 35], "pos": [314, 152], "content": [
+                        {"id": "highlight", "background": "neighboar_12"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 99, "size": [50, 32], "pos": [335, 164], "content": [
+                        {"id": "highlight", "background": "neighboar_35"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 123, "size": [42, 32], "pos": [349, 179], "content": [
+                        {"id": "highlight", "background": "neighboar_3"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 93, "size": [45, 34], "pos": [343, 203], "content": [
+                        {"id": "highlight", "background": "neighboar_26"}
+                    ]},
+                    {"@P":"ui/neighbor_place", "id": 1, "size": [45, 34], "pos": [317, 210], "content": [
+                        {"id": "highlight", "background": "neighboar_0"}
+                    ]},
+                    {"@P": "ui/neighbor_place", "id": -1, "size": [ 95, 59], "pos": [36, 22], "content": [
+                        {"id": "highlight", "background": "neighboar_tier"}
+                    ]},
+                    {"@P": "ui/neighbor_place", "id": -2, "size": [116, 72], "pos": [106, 64], "content": [
+                        {"id": "highlight", "background": "neighboar_orphelins"}
+                    ]},
+                    {"@P": "ui/neighbor_place", "id": -3, "size": [157, 97], "pos": [198, 116], "content": [
+                        {"id": "highlight", "background": "neighboar_voisins"}
+                    ]}
+                ]},
+            {"id": "hover_place","ratio": 1.6173, "propagative": true, "type": "neighbor-hover-layer", "props": {"anchor.fit": "0", "anchor.alignment": "center"},  "layout" : {"type": "vport", "base" : [393, 243]}, "mask": {"slice": "neighbors_mask_hover", "hitcolor": "#000", "invert": true},
+                "content":[
+                    {"@P": "ui/hover_highlight", "id":  81, "size": [40, 25], "pos": [ 2, 13], "background": "neighboar_8"},
+                    {"@P":"ui/hover_highlight",  "id": 141, "size": [39, 26], "pos": [ 2, 31], "background": "neighboar_30"},
+                    {"@P":"ui/hover_highlight",  "id":  83, "size": [44, 31], "pos": [13, 37], "background": "neighboar_11"},
+                    {"@P":"ui/hover_highlight",  "id": 145, "size": [44, 30], "pos": [31, 48], "background": "neighboar_36"},
+                    {"@P":"ui/hover_highlight",  "id":  39, "size": [48, 32], "pos": [45, 57], "background": "neighboar_13"},
+                    {"@P":"ui/hover_highlight",  "id": 139, "size": [44, 34], "pos": [65, 67], "background": "neighboar_27"},
+                    {"@P":"ui/hover_highlight",  "id": 125, "size": [58, 39], "pos": [82, 79], "background": "neighboar_6"},
+                    {"@P":"ui/hover_highlight",  "id": 53,  "size": [58, 41], "pos": [112,  96], "background": "neighboar_34"},
+                    {"@P":"ui/hover_highlight",  "id": 87,  "size": [59, 41], "pos": [142,  114],"background": "neighboar_17"},
+                    {"@P":"ui/hover_highlight",  "id": 47,  "size": [46, 33], "pos": [173,  133], "background": "neighboar_25"},
+                    {"@P":"ui/hover_highlight",  "id": 77,  "size": [46, 35], "pos": [192,  143], "background": "neighboar_2"},
+                    {"@P":"ui/hover_highlight",  "id": 135, "size": [47, 34], "pos": [211,  156], "background": "neighboar_21"},
+                    {"@P":"ui/hover_highlight",  "id": 33,  "size": [46, 37], "pos": [231,  166],  "background": "neighboar_4"},
+                    {"@P":"ui/hover_highlight",  "id": 43,  "size": [47, 35], "pos": [251,  179],  "background": "neighboar_19"},
+                    {"@P":"ui/hover_highlight",  "id": 131,  "size": [48, 36], "pos": [270,  190],  "background": "neighboar_15"},
+                    {"@P":"ui/hover_highlight",  "id": 97,  "size": [41, 39], "pos": [291,  202], "background": "neighboar_32"},
+                    {"@P":"ui/hover_highlight",  "id": 91,  "size": [36, 27], "pos": [19, 1],  "background": "neighboar_23"},
+                    {"@P":"ui/hover_highlight",  "id": 37,  "size": [36, 24], "pos": [50, 1], "background": "neighboar_10"},
+                    {"@P":"ui/hover_highlight",  "id": 79,  "size": [43, 30], "pos": [60, 6],  "background": "neighboar_5"},
+                    {"@P":"ui/hover_highlight",  "id": 137, "size": [44, 30], "pos": [76, 15],  "background": "neighboar_24"},
+                    {"@P":"ui/hover_highlight",  "id": 41,  "size": [44, 31], "pos": [93, 25], "background": "neighboar_16"},
+                    {"@P":"ui/hover_highlight",  "id": 143, "size": [45, 31], "pos": [110, 35], "background": "neighboar_33"},
+                    {"@P":"ui/hover_highlight",  "id": 31,  "size": [46, 30], "pos": [127, 46], "background": "neighboar_1"},
+                    {"@P":"ui/hover_highlight",  "id": 89,  "size": [47, 32], "pos": [145, 55],  "background": "neighboar_20"},
+                    {"@P":"ui/hover_highlight",  "id": 85,  "size": [45, 31], "pos": [164, 67], "background": "neighboar_14"},
+                    {"@P":"ui/hover_highlight",  "id": 51,  "size": [45, 32], "pos": [181, 76], "background": "neighboar_31"},
+                    {"@P":"ui/hover_highlight",  "id": 127,  "size": [45, 32], "pos": [200, 87],  "background": "neighboar_9"},
+                    {"@P":"ui/hover_highlight",  "id": 45,  "size": [47, 33], "pos": [217, 97],  "background": "neighboar_22"},
+                    {"@P":"ui/hover_highlight",  "id": 133,  "size": [44, 33], "pos": [238, 108], "background": "neighboar_18"},
+                    {"@P":"ui/hover_highlight",  "id": 95,  "size": [45, 33], "pos": [257, 119], "background": "neighboar_29"},
+                    {"@P":"ui/hover_highlight",  "id": 35,  "size": [45, 34], "pos": [276, 130], "background": "neighboar_7"},
+                    {"@P":"ui/hover_highlight",  "id": 49,  "size": [46, 34], "pos": [295, 141],  "background": "neighboar_28"},
+                    {"@P":"ui/hover_highlight",  "id": 129,  "size": [48, 35], "pos": [314, 152], "background": "neighboar_12"},
+                    {"@P":"ui/hover_highlight",  "id": 99,  "size": [50, 32], "pos": [335, 164],  "background": "neighboar_35"},
+                    {"@P":"ui/hover_highlight",  "id": 123,  "size": [42, 32], "pos": [349, 179],  "background": "neighboar_3"},
+                    {"@P":"ui/hover_highlight",  "id": 93,  "size": [45, 34], "pos": [343, 203],  "background": "neighboar_26"},
+                    {"@P":"ui/hover_highlight",  "id": 1,  "size": [45, 34], "pos": [317, 210],  "background": "neighboar_0"},
+                    {"@P": "ui/hover_highlight",  "id": -1,  "size": [ 95, 59], "pos": [36, 22],  "background": "neighboar_tier"},
+                    {"@P": "ui/hover_highlight",  "id": -2,  "size": [116, 72], "pos": [106, 64], "background": "neighboar_orphelins"},
+                    {"@P": "ui/hover_highlight",  "id": -3,  "size": [157, 97], "pos": [198, 116], "background": "neighboar_voisins"}
+                ]}
+        ]}
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "date": "2018-12-21",
+    "buildNumber": "208",
+    "sw-autotestclientframework": "0.0.27",
+    "sw-client-env": "1.0.0",
+    "sw-core": "7.0.1",
+    "sw-extension-common": "15.1.0",
+    "sw-extension-mark2": "11.3.0",
+    "sw-font-parser": "0.2.1",
+    "sw-freebets": "2.1.0",
+    "sw-lang-report": "0.0.5",
+    "sw-runtime": "7.0.2",
+    "sw-size-report": "0.4.2",
+    "sw-wushijp": "2.0.0"
+}

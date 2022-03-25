@@ -1,0 +1,36 @@
+image: docker:git
+
+cache:
+  paths:
+    - vendor/
+    - node_modules/
+before_script:
+  - echo "Before script"
+
+building:
+  stage: build
+  script:
+    - echo "Build script"
+
+services:
+- docker:dind
+
+deploy:
+  only:
+   refs:
+       - develop
+  image: alpine:latest
+  stage: deploy
+  tags:
+    - deployment
+  script:
+    - echo "id rsa start"
+    - chmod og= $ID_RSA
+    - echo "id rsa end"
+    - apk update && apk add openssh-client
+    - echo "ssl updated"
+    - ssh -i $ID_RSA -p2222 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd ~/projects/casino-backend && git pull"
+    #  - ssh -i $ID_RSA -p2222 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd ~/projects/casino-backend && rm -R data"
+    - ssh -i $ID_RSA -p2222 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd ~/projects/casino-backend && docker-compose build --no-cache"
+    - ssh -i $ID_RSA -p2222 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd ~/projects/casino-backend && docker-compose up -d"
+    - ssh -i $ID_RSA -p2222 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd ~/projects/casino-backend && docker exec back.izicash.bet php /var/www/html/artisan 'l5-swagger:generate'"

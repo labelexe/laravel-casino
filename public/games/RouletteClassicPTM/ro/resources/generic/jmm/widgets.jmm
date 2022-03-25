@@ -1,0 +1,23 @@
+{
+    "ui": {
+        "table_coverage": {"id": "coverage_widget", "content": [
+            {"id": "percentage_label", "type": "label", "format": "coverage", "alignment": "center-right", "layout": {"relative": true}, "text-fit": [true, true], "props": {"anchor.fit": "0 5px 0 70"}}
+        ]},
+
+        "label.limits.tablet":{"type": "label", "format": "tablet.limit.lable", "alignment": "center-left",  "text-fit": [true, true]},
+
+        "limits_panel": {"id": "limits_panel", "group" :"tablet", "type": "limits-panel",
+            "layout" : {"type": "chbox", "relative": true},
+            "content" : [
+                {"@P": "ui/label.limits.tablet", "format": "limits.title.value", "id": "min_label", "text": "limit_text_min"},
+                {"type": "panel", "ratio": 0.6},
+                {"@P": "ui/label.limits.tablet", "format": "limits.title.value", "id": "max_label", "text": "limit_text_max"},
+                {"@P": "ui/label.limits.tablet", "format": "limits.title.value", "id":"table_max_label", "visible": false}
+            ]
+        },
+        
+        "settings_item": {"content":[
+            {"id": "settings_name", "props": {"anchor.fit": "18 25 18 0"}}
+        ]}
+    }
+}

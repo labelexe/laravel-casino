@@ -1,0 +1,172 @@
+                                                       {"frames": {
+
+"plaqueWinSuper-4":
+{
+	"frame": {"x":763,"y":1367,"w":728,"h":186},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":48,"w":728,"h":186},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-5":
+{
+	"frame": {"x":757,"y":1585,"w":750,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":32,"w":750,"h":208},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-6":
+{
+	"frame": {"x":1,"y":1585,"w":754,"h":216},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":38,"y":24,"w":754,"h":216},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-7":
+{
+	"frame": {"x":1,"y":1367,"w":760,"h":216},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":24,"w":760,"h":216},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-8":
+{
+	"frame": {"x":1,"y":1803,"w":762,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":24,"w":762,"h":208},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-9":
+{
+	"frame": {"x":775,"y":1163,"w":764,"h":198},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":24,"w":764,"h":198},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-12":
+{
+	"frame": {"x":1,"y":979,"w":772,"h":192},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":22,"w":772,"h":192},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-13":
+{
+	"frame": {"x":779,"y":773,"w":774,"h":194},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":20,"w":774,"h":194},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-14":
+{
+	"frame": {"x":777,"y":969,"w":774,"h":192},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":20,"w":774,"h":192},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-15":
+{
+	"frame": {"x":1,"y":783,"w":774,"h":194},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":20,"w":774,"h":194},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-16":
+{
+	"frame": {"x":779,"y":581,"w":776,"h":190},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":22,"w":776,"h":190},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-17":
+{
+	"frame": {"x":779,"y":387,"w":776,"h":192},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":30,"y":22,"w":776,"h":192},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-18":
+{
+	"frame": {"x":781,"y":195,"w":778,"h":190},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":30,"y":24,"w":778,"h":190},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-20":
+{
+	"frame": {"x":781,"y":1,"w":778,"h":192},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":30,"y":22,"w":778,"h":192},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-22":
+{
+	"frame": {"x":1,"y":591,"w":776,"h":190},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":24,"w":776,"h":190},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-23":
+{
+	"frame": {"x":1,"y":397,"w":776,"h":192},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":24,"w":776,"h":192},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-24":
+{
+	"frame": {"x":1,"y":1,"w":778,"h":194},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":30,"y":24,"w":778,"h":194},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-25":
+{
+	"frame": {"x":1,"y":197,"w":776,"h":198},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":24,"w":776,"h":198},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-44":
+{
+	"frame": {"x":1,"y":1173,"w":764,"h":192},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":42,"w":764,"h":192},
+	"sourceSize": {"w":840,"h":240}
+},
+"plaqueWinSuper-45":
+{
+	"frame": {"x":765,"y":1795,"w":760,"h":182},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":38,"y":44,"w":760,"h":182},
+	"sourceSize": {"w":840,"h":240}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "winSuper_0.png",
+	"format": "RGBA8888",
+	"size": {"w":2048,"h":2048},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2aef15bb46a9addb1004733631ed3f65:d4c55f41eb64fa8cb6c148b89115a07e:490cd4bc3b2f7727b4840831951b2920$"
+}
+}

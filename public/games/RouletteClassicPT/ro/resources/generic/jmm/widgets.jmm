@@ -1,0 +1,232 @@
+{
+    "widget-bundles": {
+        "paytable.payout_name.autosize": {"type": "text-group", "same-font-height": true},
+        "paytable.cell_title.autosize":  {"type": "text-group", "same-font-height": true},
+        "paytable.cell_value.autosize":  {"type": "text-group", "same-font-height": true}
+    },
+
+    "ui": {
+        "autoplay_popup": {"id": "autoplay_popup", "content": [
+            {"id": "popup_panel", "content": [
+                {"id": "slider", "values": [10, 20, 30, 40, 50, 60, 70, 80, 90, -1], "slider": {"cursor": "hand"}},
+                {"id": "start_button","mask": {"slice": "b.big_btn_mask", "hitcolor": "#000", "invert": true}, "cursor": "hand"},
+                {"id": "switch_button", "cursor": "hand"}
+            ]}
+        ]},
+
+        "button_big": {"cursor": "hand", "size": [125, 125], "@O": {
+            "landscape": {"@H": {"right": {"pos": [172, 47]}, "left": {"pos": [172, 47]}}},
+            "portrait":  {"@H": {"right": {"pos": [172, 47]}, "left": {"pos": [172, 47]}}}
+        }},
+
+        "button_2": {"cursor": "hand","size": [125, 125], "@O": {
+            "landscape": {"@H": {"right": {"pos": [46, 47]}, "left": {"pos": [46, 47]}}},
+            "portrait":  {"@H": {"right": {"pos": [46, 47]}, "left": {"pos": [46, 47]}}}
+        }},
+        "button_3": {"cursor": "hand","size": [125, 125], "@O": {
+            "landscape": {"@H": {"right": {"pos": [435, 47]}, "left": {"pos": [435, 47]}}},
+            "portrait":  {"@H": {"right": {"pos": [435, 47]}, "left": {"pos": [435, 47]}}}
+        }},
+        "button_4": {"cursor": "hand","size": [125, 125], "@O": {
+            "landscape": {"@H": {"right": {"pos": [308, 47]}, "left": {"pos": [308, 47]}}},
+            "portrait":  {"@H": {"right": {"pos": [308, 47]}, "left": {"pos": [308, 47]}}}
+        }},
+
+        "buttons_container_state": {"type": "vport", "id": "buttons_container_state", "props": {"anchor.relative": true},
+            "layout": {"relative": true}, "@O": {
+            "landscape": {"layout": {"type": "stack"}, "size": [586, 178], "ratio": 3.2921, "@H": {
+                "right": {"layout": {"base": [586, 178]}, "props": {"anchor.fit": "78 27 -2 22"}},
+                "left":  {"layout": {"base": [586, 178]}, "props": {"anchor.fit": "78 27 -2 22"}}
+            }},
+            "portrait": {"layout": {"type": "stack"}, "size": [586, 178], "ratio": 3.2921, "@H": {
+                "right": {"layout": {"base": [586, 178]}, "props": {"anchor.fit": "78 27 -2 22"}},
+                "left":  {"layout": {"base": [586, 178]}, "props": {"anchor.fit": "78 27 -2 22"}}
+            }}
+        }},
+
+        "spin_autoplay_button": {"cursor": "hand", "id": "spin_autoplay_btn", "action": "spin_autoplay", "slice": "b.spin",
+            "regulations": {"no_autoplay": "b.spin.no_autoplay"}
+        },
+        "autoplay.spins_left": {"size": [31, 31], "@O": {
+            "landscape": {"@H": {"right": {"pos": [219, 94]}, "left": {"pos": [219, 94]}}},
+            "portrait":  {"@H": {"right": {"pos": [219, 94]}, "left": {"pos": [219, 94]}}}
+        }},
+
+
+        "buttons_container_ro": {"id": "buttons_container", "type": "multistate", "props": {"anchor.fit": "0 10px", "anchor.relative": true}, "layout": {"type": "anchor", "relative": true}, "content": {
+            "idle": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/spin_autoplay_button"}
+            ]},
+            "bet_placed": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_4", "id": "undo_btn",   "action": "undo",   "slice": "b.undo"},
+                {"@P": "ui/button_3", "id": "clear_btn",  "action": "clear",  "slice": "b.clear-bets"},
+                {"@P": "ui/button_2", "id": "double_btn", "action": "double", "slice": "b.double"},
+                {"@P": "ui/spin_autoplay_button"}
+            ]},
+            "wheel_no_bet": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/spin_autoplay_button"}
+            ]},
+            "wheel_bet_placed": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_2", "id": "double_btn", "action": "double", "slice": "b.double"},
+                {"@P": "ui/spin_autoplay_button"}
+            ]},
+            "dealing": {"@P": "ui/buttons_container_state", "content": []},
+            "after_round_wheel": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_2",   "id": "double_and_spin_btn", "action": "double_and_spin", "slice": "b.double-and-spin"},
+                {"@P": "ui/button_big", "id": "rebet_and_spin_btn",  "action": "rebet_and_spin",  "slice": "b.rebet-and-spin"}
+            ]},
+            "after_round_bet_placed": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_4",   "id": "clear_btn",           "action": "clear",           "slice": "b.clear-bets"},
+                {"@P": "ui/button_3",   "id": "spin_btn",            "action": "spin",            "slice": "b.spin.small"},
+                {"@P": "ui/button_2",   "id": "double_and_spin_btn", "action": "double_and_spin", "slice": "b.double-and-spin"},
+                {"@P": "ui/button_big", "id": "rebet_and_spin_btn",  "action": "rebet_and_spin",  "slice": "b.rebet-and-spin"}
+            ]},
+            "after_round_no_bet": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_4",   "id": "rebet_btn",           "action": "rebet",           "slice": "b.rebet"},
+                {"@P": "ui/button_2",   "id": "double_and_spin_btn", "action": "double_and_spin", "slice": "b.double-and-spin"},
+                {"@P": "ui/button_big", "id": "rebet_and_spin_btn",  "action": "rebet_and_spin",  "slice": "b.rebet-and-spin"}
+            ]},
+            "autoplay": {"@P": "ui/buttons_container_state", "content": [
+                {"@P": "ui/button_big", "id": "stop_autoplay_btn", "action": "stop_autoplay", "slice": "b.stop-autoplay", "format": "autoplay.spins_left"},
+                {"@P": "ui/autoplay.spins_left"}
+            ]}
+        }},
+
+        "shadow": {"type": "stack", "opacity": 0.5, "background": "chip_shadow", "group": "shadows", "-visible": false},
+
+        "settings_item": {"type": "settings-item",  "size-min": [150, 35]},
+
+        "ro_settings": {"id": "settings", "type": "fade-popup", "visible": false, "opacity": 0, "layout": {"type": "anchor", "relative": true, "alignment": "center"}, "props": {"anchor.fit": "0"}, "background": "#3000", "content": [
+            {"id": "bg_panel", "type": "stack", "props": {"anchor.fit": "0"}},
+            {"id": "settings_panel", "ratio": 1.3, "background":  "pop-up", "type": "anchor", "propagative": false, "layout": { "relative": true},
+                "props": {"anchor.fit": "30 25 30 25"}, "content": [
+                {"@P": "ui/text-label",  "format": "white.settings", "text": "settings", "props": {"anchor.fit": "10 20 75 20"}},
+                {"id": "popup_panel", "type": "anchor", "layout": {"alignment": "center", "relative": true},
+                    "props": {"anchor.fit": "30 5 0 5"}, "content": [
+                    {"@P": "ui/settings_item", "id": "ambient_sound_item", "label_text": "disable_ambient_sound", "props": {"anchor.fit": "0 1 70 1"}},
+                    {"@P": "ui/settings_line", "props": {"anchor.fit": "26 1 73 1"}},
+                    {"@P": "ui/settings_item", "id": "turbo_item", "label_text": "turbo_mode", "props": {"anchor.fit": "45 1 40 1"}},
+                    {"@P": {"#ID": "ui/settings_line"}, "id": "turbo_line", "managed": false, "props": {"anchor.fit": "62 1 37 1"}},
+                    {"@P": "ui/settings_item", "id": "disable_wheel_item", "label_text": "disable_wheel", "managed": false}
+                ]},
+                {"id": "close_button", "type": "anchor", "props": {"anchor.fit": "0 0 70 0"}}
+            ]}
+        ]},
+
+
+
+        "chips_panel_ro": {"id": "chips_panel", "group": "controls", "type": "scroll-chips-panel", "layout": {"relative": true},
+            "chips.spacing": "0.1%",
+            "chips.slide_anim": "chips.slide",
+            "chips.visible_offset": 1,
+            "chips.orientation": "landscape", "chips.clip_mask": "chips.mask",
+            "content": [
+                {"id": "clip_panel", "type": "anchor", "props": {"anchor.fit": "0"}, "layout": {"relative": true},
+                    "renderer": {"cache": "branch"}, "clipped": true, "content": [
+                        {"id": "container_panel", "type": "anchored-panel", "layout": {"relative": true}, "props": {"anchor.fit": "42 0 -30 0"}}
+                ]}
+            ]
+        },
+
+        "desktop_golden_chips_panel_ro": {"@P": "ui/chips_panel_ro", "type": "desktop-golden-chips-panel", "scroll.step": 60},
+
+        "ro_wheel": {"id": "wheel_widget", "ball_fall_accuracy": 2, "type": "wheel-widget","ratio": 1, "size": [1055, 1055], "rotation_time": 6400, "@O": {
+            "landscape": {"layout": {"base": [1055, 1055]}, "ball_fall_accuracys": {""  : {"1": [0, 2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15, 19, 22, 25, 28, 31, 32, 33, 34, 35, 36]},
+                "_1": {"1": [0, 2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15, 19, 22, 25, 28, 31, 32, 33, 34, 35, 36]},
+                "_2": {"3": [9,  10, 11, 15, 16, 17, 20, 21, 27, 29, 30]},
+                "_3": {"1": [0, 4, 5, 6, 8, 14, 22, 28,  32, 33, 34, 36]},
+                "_4": {"1": [0,  8], "3": [17, 21]},
+                "_5": {"1": [35], "3": [9, 11, 15, 21]}}, "ball_fall_deviations": {"": 0, "_1": 1, "_2": 27, "_3": 8, "_4": 16, "_5": 26}},
+            "portrait": {"layout": {"base": [1055, 1055]}, "ball_fall_accuracys": {""  : {"1": [0, 2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15, 19, 22, 25, 28, 31, 32, 33, 34, 35, 36]},
+                "_1": {"1": [0, 2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15, 19, 22, 25, 28, 31, 32, 33, 34, 35, 36]},
+                "_2": {"3": [9,  10, 11, 15, 16, 17, 20, 21, 27, 29, 30]},
+                "_3": {"1": [0, 4, 5, 6, 8, 14, 22, 28,  32, 33, 34, 36]},
+                "_4": {"1": [0,  8], "3": [17, 21]},
+                "_5": {"1": [35], "3": [9, 11, 15, 21]}}, "ball_fall_deviations": {"": 0, "_1": 1, "_2": 27, "_3": 8, "_4": 15, "_5": 26}}},
+        "content": [
+            {"id": "wheel_shadow",  "type": "image", "slice": "null",  "size": [977, 665], "pos": [40, 280], "visible": false},
+            {"id": "centerSprite",  "type": "sprite.new", "slices": ["center"], "frame.size": [150, 90], "size": [350, 210.008], "pos": [350, 328]},
+            {"id": "numbersSprite", "type": "sprite.new", "size": [539, 322], "pos": [254.5, 268], "frame.size": [234, 140], "frame.limit": 160,
+                "slices": ["p1", "p2"]},
+            {"id": "wheel_base",    "type": "image",  "slice": "wheel_base",  "size": [760, 566.5870], "pos": [140, 176]},
+            {"id": "ball",  "type": "image",      "slice": "ball_002",          "size": [ 22,  24], "visible": false},
+            {"id": "turk", "type": "image",  "slice": "null", "visible": false, "size":  [ 94, 190], "pos": [480.5, 218]},
+            {"id": "turkSprite", "type": "sprite.new", "slices": ["turk_sprite"], "orientation": "portrait", "size": [90, 175.267], "frame.limit": 160,
+                "pos": [476, 255], "frame.size": [38, 74]},
+
+             {"@P": "ui/ball_lay",    "size": [539, 322], "pos": [140, 175], "id": "ball_lay",     "group": "ball_sprites"},
+             {"@P": "ui/ball_circle", "size": [539, 322], "pos": [140, 175], "id": "ball_circle",  "group": "ball_sprites"},
+             {"@P": "ui/ball_fall",   "size": [539, 322], "pos": [140, 175], "id": "ball_fall",    "group": "ball_sprites"},
+             {"@P": "ui/ball_fall_1", "size": [539, 322], "pos": [141, 173], "id": "ball_fall_1",  "group": "ball_sprites"},
+             {"@P": "ui/ball_fall_2", "size": [539, 322], "pos": [146, 178], "id": "ball_fall_2",  "group": "ball_sprites"},
+             {"@P": "ui/ball_fall_3", "size": [539, 322], "pos": [140, 175], "id": "ball_fall_3",  "group": "ball_sprites"},
+             {"@P": "ui/ball_fall_4", "size": [539, 322], "pos": [146, 172], "id": "ball_fall_4",  "group": "ball_sprites"},
+             {"@P": "ui/ball_fall_5", "size": [539, 322], "pos": [140, 175], "id": "ball_fall_5",  "group": "ball_sprites"}
+
+        ]},
+
+        "label.limits.tablet_ro":{"@P": "ui/label.limits.tablet", "format": "limits.text"},
+
+        "limits_panel_tablet_ro": {"id": "limits_panel", "group" :"tablet", "type": "limits-panel", "size-min": [1, 1],
+            "layout" : {"type": "vbox","format": "bet.value", "relative": true, "spacing": 15},
+            "content" : [
+                {"type": "anchor", "content": [
+                    {"@P": "ui/label.limits.tablet_ro", "alignment": "center", "id": "min_label", "text": "limit_text_min", "props": {"anchor.fit": "0 5 52 3", "anchor.relative": true}},
+                    {"@P": "ui/label.limits.tablet_ro", "alignment": "center", "id": "max_label", "text": "limit_text_max", "props": {"anchor.fit": "50 5 -50 3", "anchor.relative": true}}
+                ]},
+                {"type": "anchor", "content": [
+                    {"@P": "ui/label.limits.tablet_ro", "alignment": "center", "id":"table_max_label", "props": {"anchor.fit": "0 5 0 5", "anchor.relative": true}, "managed":false, "visible": false},
+                    {"@P": "ui/label.limits.tablet_ro", "alignment": "center", "props": {"anchor.fit": "30 5 30 5", "anchor.relative": true}, "text": "details"}
+
+                ]}
+            ]
+        },
+
+        "win_panel_ro": {"id": "win_panel",  "type": "win-panel", "layout": {"type": "stack"}, "win_panel.show_anim": "win_panel.show",
+            "win_panel.hide_anim": "win_panel.hide", "background": "bp.win.big", "state": "win", "content": {
+                "win": {"type": "anchor", "layout": {"relative": true}, "content": [
+                    {"type": "stack", "props": {"anchor.fit": "6 0 65 0"}, "content": [
+                        {"@P": "ui/label.def", "format": "win_panel.label", "text": "win_panel.you_win"}
+                    ]},
+                    {"type": "stack", "@O": {
+                        "landscape": {"props": {"anchor.fit": "32 0 0 0"}},
+                        "portrait":  {"props": {"anchor.fit": "32 0 0 0"}}
+                    }, "content": [
+                        {"id": "win_value", "@P": "ui/label.def", "format": "win_panel.label", "background": "bp.win.glow"}
+                    ]}
+                ]},
+                "push": {"type": "anchor", "layout": {"relative": true}, "content": [
+                    {"id": "push", "@P": "ui/label.def", "format": "win_panel.value", "text": "win_panel.push", "props": {"anchor.fit": "20 0"}}
+                ]}
+            }
+        },
+
+        "desktop_bottom_panel_ro": {"id": "bottom_panel", "type": "desktop-bottom-panel", "background": "bottom_panel_bg", "layout": {"type": "anchor", "relative": true},
+            "ratio": 1.6, "content": [
+                {"type": "anchor", "layout": {"relative": true}, "content": [
+                    {"id": "bet_label", "debug":true, "@P": "ui/label.def", "format": "desktop.bet", "text": "bet_text", "alignment": "center-left", "props": {"anchor.fit": "28 18 57 18"}, "visible": false},
+                    {"id": "total_bet_label", "@P": "ui/label.def", "format": "desktop.bet", "text": "bet_text", "alignment": "center-left", "props": {"anchor.fit": "28 18 57 18"}},
+                    {"id": "win_label", "@P": "ui/label.def", "format": "desktop.bet", "text": "win_text", "alignment": "center-left", "props": {"anchor.fit": "57 18 28 18"}}
+                ]}
+            ]
+        },
+
+        "bottom-panel_ro": { "id": "bottom_container", "type": "anchor", "layout": {"relative": true}, "@O": {
+            "landscape": {"clipped": false, "props": {"anchor.relative": true, "anchor.fit": "88.75 0 0 0"}},
+            "portrait":  {"clipped": false,  "props": {"anchor.relative": true, "anchor.fit": "88.75 0 0 0"}}
+        }, "content": [
+            {"@P": "ui/desktop_bottom_panel_ro", "id": "bottom_panel", "props": {"anchor.fit": "-102 2 -33 -2", "anchor.alignment": "bottom-left"}},
+
+            {"@P": "ui/win_panel_ro", "id": "win_panel", "ratio": 4, "props": {"anchor.fit": "-400 30 0 30", "anchor.alignment": "top-center"}, "visible": false},
+
+            {"id": "_middle_container", "type": "anchor", "layout": {"relative": true}, "visible": false,
+                "@O": {"landscape": {"ratio": 15.75}, "portrait":  {"ratio": 8}}, "content": [
+
+                {"@P": "ui/message_panel", "@O": {
+                    "landscape": {"props": {"anchor.fit": "0 34.1 0 34.1"}},
+                    "portrait":  {"props": {"anchor.fit": "0 32 0 32"}}
+                }}
+            ]}
+        ]}
+    }
+}
